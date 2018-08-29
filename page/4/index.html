@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-WebPage-Get-SMS"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/12/18/WebPage-Get-SMS/">Android 网页获取短信验证码 可行性预研</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-7/">Go微服务教程-第七部分</a>
     </h1>
   
 
@@ -273,12 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2017/12/18/WebPage-Get-SMS/" class="article-date">
-	  <time datetime="2017-12-18T08:09:01.000Z" itemprop="datePublished">2017-12-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-7/" class="article-date">
+	  <time datetime="2018-05-10T13:56:56.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -286,20 +286,13 @@
       
         <p class="article-excerpt-content">
           
-目标： Android 网页获取短信验证码
-目前状态： 预言阶段（技术上未实现）
+在前一篇文章中，我们简要介绍了用户界面和web客户端，以及如何使用微工具包rpc代理与新创建的rpc服务进行交互。
+这篇文章，我们将讨论如何创建一个云环境来承载我们的服务。我们将使用Terraform来架构我们的云集群在谷歌云平台上。这应该是一篇相当短的文章，但它很重要。
 
-网页端方案： Android WebKit插件开发 SMS-BrowserPlugin
-
-方案描述： WebKit插件包括PluginService和Plugin.so动态库, Plugin.so提供与WebKit的交互，提供JS的接口；PluginService静态注册WebKit插件action，实现短信拦截功能。
-
-Android端拦截短信方案
-
-方案一： 监听SMS广播
-方案二： Notifica...
+为什么Terraform
         </p>
         <p class="article-more-link">
-          <a href="/2017/12/18/WebPage-Get-SMS/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -316,7 +309,7 @@ Android端拦截短信方案
 <!-- Table of Contents -->
 
   
-    <article id="post-merge-odex-apk"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -324,7 +317,7 @@ Android端拦截短信方案
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/12/14/merge-odex-apk/">Android中odex和apk文件的合并方法</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-6/">Go微服务教程-第六部分</a>
     </h1>
   
 
@@ -332,12 +325,12 @@ Android端拦截短信方案
     
     <div class="article-meta">
       
-	<a href="/2017/12/14/merge-odex-apk/" class="article-date">
-	  <time datetime="2017-12-14T03:48:01.000Z" itemprop="datePublished">2017-12-14</time>
+	<a href="/2018/05/10/go-micro-tutorial-6/" class="article-date">
+	  <time datetime="2018-05-10T13:56:52.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android逆向/">Android逆向</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -345,12 +338,15 @@ Android端拦截短信方案
       
         <p class="article-excerpt-content">
           
-Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离出来成了单独的文件odex,包括了Java编译的文件，而apk包含了资源文件和.so。
-这样做可以使其厂商保证一定的反盗版，因为没有dex文件的apk是无法正常安装的，而厂商直接将odex和不完整的apk文件放到手机rom固化到/system/bin中可以让一般用户无法正常导出使用。
-可能想到的是合并odex和apk变成apk中包含dex文件的，这样合并后最终apk文件安装在/data/中，而rom存...
+在上一篇文章中，我们讨论了一些在go-micro和go中事件驱动架构的各种方法。这一部分，我们将深入到客户端，看看如何创建与我们的平台交互的web客户端。
+我们将研究微型工具包，使您能够将内部rpc方法从外部代理到web客户端。
+我们将为我们的平台创建一个用户界面，一个登录界面，以及一个创建委托界面。这将把以前的一些帖子联系在一起。
+所以让我们开始吧!
+
+RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户端和服务器之间资源的goto方式。REST的出现，取代了RPC和SO...
         </p>
         <p class="article-more-link">
-          <a href="/2017/12/14/merge-odex-apk/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -367,7 +363,7 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
 <!-- Table of Contents -->
 
   
-    <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -375,7 +371,7 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/12/04/BrowserPlugin/">SampleBrowserPlugin介绍</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-5/">Go微服务教程-第五部分</a>
     </h1>
   
 
@@ -383,12 +379,12 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
     
     <div class="article-meta">
       
-	<a href="/2017/12/04/BrowserPlugin/" class="article-date">
-	  <time datetime="2017-12-04T14:56:21.000Z" itemprop="datePublished">2017-12-04</time>
+	<a href="/2018/05/10/go-micro-tutorial-5/" class="article-date">
+	  <time datetime="2018-05-10T13:56:48.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -396,13 +392,14 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
       
         <p class="article-excerpt-content">
           
-对于Android浏览器插件的开发可以参考源码的实例,development/samples/browseplugin实例。本文对此实例进行介绍。
+在本系列的前一部分中，我们讨论了用户身份验证和JWT。在这节课中，我们将快速浏览一下go-micro的代理功能，甚至是代理。
+正如前文所提到的，go-micro是一个可插拔的框架，它接口许多不同的常用技术。如果您查看一下plugins repo，您会看到它支持了多少个插件。
+在我们的例子中，我们将使用NATS代理插件。
 
-介绍这个示例插件是为了给插件开发者一个参考点，看看android浏览器插件是如何创建的，以及如何使用可用的APIs。一个插件就像标准的apk一样被打包，可以通过市场或adb安装。示例插件尝试尽可能多地使用APIs，但不幸的是，并不是所有的APIs都被覆盖。
-试图让一个插件演示一个屏幕上所有可能的API交互是不现实的。另一方面，我们也不希望每...
+事件驱动架构事件驱动的体系结构是一个非常简单的概念。我们通常认为好的体系结构是可以解耦的;这些服务不应该与其他服务相耦合。当我们使用gRPC这样的协议时，这在某些情况下...
         </p>
         <p class="article-more-link">
-          <a href="/2017/12/04/BrowserPlugin/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -419,7 +416,7 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
 <!-- Table of Contents -->
 
   
-    <article id="post-sdkman"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -427,7 +424,7 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/30/sdkman/">SDKMAN! 软件开发工具包管理器</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-4/">Go微服务教程-第四部分</a>
     </h1>
   
 
@@ -435,12 +432,12 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
     
     <div class="article-meta">
       
-	<a href="/2017/11/30/sdkman/" class="article-date">
-	  <time datetime="2017-11-30T05:11:25.000Z" itemprop="datePublished">2017-11-30</time>
+	<a href="/2018/05/10/go-micro-tutorial-4/" class="article-date">
+	  <time datetime="2018-05-10T13:56:32.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -448,12 +445,15 @@ Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离�
       
         <p class="article-excerpt-content">
           
-SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本的工具。它提供了一个方便的命令行接口(CLI)和用于安装、切换、删除和列出候选对象的API。以前被称为GVM的Groovy环境管理器，它是由非常有用的RVM和rbenv工具所启发的，这些工具在Ruby社区中广泛使用。
+在本系列的前一部分中，我们研究了创建用户服务并开始存储一些用户。现在我们需要考虑使我们的用户服务存储用户密码安全，并创建一些功能来验证用户，并在我们的微服务中发布安全令牌。
 
-安装在类unix平台上安装SDKMAN!，就像以前一样容易。SDKMAN!在Mac OSX、Linux、Cygwin、Solaris和FreeBSD上可以顺利安装。我们还支持Bash和ZSH shell。...
+注意，我现在已经将我们的服务分离到单独的存储库中。我发现这更容易部署。最初，我打算尝试做一个monorepo，但是我发现用Go的dep管理来设置它太麻烦了，不会有各种冲突。我还将开始演示如何独立运行和测试微服务。
+不幸的是，使用这种方法，我们将会失去docker。但现在还好。
+现在需要手动运行数据库:
+12$ do...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/30/sdkman/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -470,7 +470,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-cocoapods"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -478,7 +478,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/30/cocoapods/">CocoaPods 简介</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-3/">Go微服务教程-第三部分</a>
     </h1>
   
 
@@ -486,27 +486,27 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/30/cocoapods/" class="article-date">
-	  <time datetime="2017-11-30T05:03:18.000Z" itemprop="datePublished">2017-11-30</time>
+	<a href="/2018/05/10/go-micro-tutorial-3/" class="article-date">
+	  <time datetime="2018-05-10T13:56:27.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          CocoaPods是Swift和Objective-C Cocoa项目的一个依赖关系管理器。它有超过4万个libraries，在超过280万个应用程序中被使用。CocoaPods可以帮助你优雅地扩展你的项目。
+          
+在之前的文章中，我们介绍了go-micro和Docker的一些基础知识。我们还介绍了第二种服务。在这篇文章中，我们将讨论docker-compose，以及如何在本地更轻松地运行我们的服务。我们将介绍一些不同的数据库，最后我们将介绍第三种服务。
 
-安装CocoaPods是用Ruby构建的，在OS X上默认安装有Ruby，我们建议你使用默认的Ruby。
-使用默认的Ruby安装要求您在安装gems时使用sudo。指南中还有进一步的安装说明。
-12# Xcode 8 + 9$ sudo gem install cocoapods
-...
+先决条件安装docker-compose:https://docs.docker.com/compose/install/
+但是首先，让我们看看数据库。
+选择数据库到目前为止，我们的数据实际上并没有存储在任何地方，而是存储在我们的服务中，当我们的...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/30/cocoapods/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -523,7 +523,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-introduction-automated-android-testing-part-6"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -531,7 +531,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-6/">Android 自动化测试 - 第6部分</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-2/">Go微服务教程-第二部分(Docker和go-micro)</a>
     </h1>
   
 
@@ -539,12 +539,12 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/20/introduction-automated-android-testing-part-6/" class="article-date">
-	  <time datetime="2017-11-20T10:31:58.000Z" itemprop="datePublished">2017-11-20</time>
+	<a href="/2018/05/10/go-micro-tutorial-2/" class="article-date">
+	  <time datetime="2018-05-10T13:56:23.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -552,19 +552,13 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
       
         <p class="article-excerpt-content">
           
-在之前的5篇博客文章中，我们讨论了从头开始构建Android应用的不同方面。我们专注于在过程中包括测试。以下是与前几篇文章的链接:
+介绍在之前的文章中，我们介绍了编写基于gRPC的微服务的基础知识。在这一部分;我们将介绍dockeringa服务的基本内容，我们还将更新我们的服务以使用go-micro，最后，引入第二个服务。
 
-第1部分 - 为什么我们要写测试?
-第2部分 - 进行测试设置你的应用程序
-第3部分 - 创建API调用
-第4部分 - 创建repositories
-第5部分 - 遵循MVP模式
-
-在本系列的最后一篇文章中，我们将介绍为我们在第5部分中创建的视图创建Espresso测试。这篇文章的Github repo可以在这里找到。
-如果数据是动态的，那么测试一个视图包...
+介绍 Docker随着云计算的出现和微服务的诞生。部署更多、但更小的代码块的压力导致了一些有趣的新想法和技术。其中之一是容器的概念。
+传统上，团队会将一个整体系统部署到静态服务器上，运行一个操作系统，并使用预定义的依赖集来跟踪。或者可能是由Chef或Puppet提供的虚拟机。扩大规模是很昂贵的，...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/20/introduction-automated-android-testing-part-6/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -581,7 +575,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-introduction-automated-android-testing-part-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-1"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -589,7 +583,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-5/">Android 自动化测试 - 第5部分</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-1/">Go微服务教程-第一部分</a>
     </h1>
   
 
@@ -597,12 +591,12 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/20/introduction-automated-android-testing-part-5/" class="article-date">
-	  <time datetime="2017-11-20T09:15:26.000Z" itemprop="datePublished">2017-11-20</time>
+	<a href="/2018/05/10/go-micro-tutorial-1/" class="article-date">
+	  <time datetime="2018-05-10T13:56:15.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -610,14 +604,22 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
       
         <p class="article-excerpt-content">
           
-在这一系列的博客文章中，我们正在研究一个叫做Github用户搜索的样本应用。第1-4部分介绍了为什么我们应该进行测试、设置测试、创建API调用并创建一个演示程序。看一下前面的文章，第5部分是这个系列的延续。
-在第5部分中，我们将查看与第4部分中创建的Presenter的交互，我们将创建UI来显示搜索结果的列表。
+介绍这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
+在本教程中，我们将介绍一些基本概念、术语，并以最原始的形式创建我们的第一个微服务。
 
-创建UI对于用户界面，我们需要一个简单的列表来显示列表中的avatar、name和其他用户信息。
-在第4部分中，我们定义了一个Activity应该实现的视图契约。这是Andro...
+我们将在整个系列中创建以下服务:
+
+货物
+库存
+用户
+身份验证
+角色
+船只
+
+我们最终将会用到:golang, mongodb, grpc, d...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/20/introduction-automated-android-testing-part-5/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-1/#more">阅读全文</a>
         </p>
       
     </div>
@@ -634,7 +636,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-introduction-android-testing-part-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-readme"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -642,7 +644,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-android-testing-part-4/">Android 自动化测试 - 第4部分</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-readme/">Go微服务教程</a>
     </h1>
   
 
@@ -650,12 +652,12 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/17/introduction-android-testing-part-4/" class="article-date">
-	  <time datetime="2017-11-17T12:28:15.000Z" itemprop="datePublished">2017-11-17</time>
+	<a href="/2018/05/10/go-micro-tutorial-readme/" class="article-date">
+	  <time datetime="2018-05-10T13:33:53.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -663,14 +665,12 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
       
         <p class="article-excerpt-content">
           
-在这篇博文中，我们正在开发一个名为Github用户搜索的Android应用程序。在之前的博客文章中，我们研究了为测试创建应用程序、创建API调用和编写API转换的第一个基本测试。阅读第1部分、第2部分和第3部分。
-这篇文章将着眼于创建一个与repository通信并向视图传递信息的presenter。这还包括为presenter编写单元测试。这篇博文的示例github repo将会在这里找到。
+这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
+目录第一部分第二部分第三部分第四部分第五部分第六部分第七部分第八部分
 
-创建Presenter
-为了开始创建，创建称为MvpView和MvpPresenter的基本...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/17/introduction-android-testing-part-4/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-readme/#more">阅读全文</a>
         </p>
       
     </div>
@@ -687,7 +687,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-introduction-android-testing-part3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-webapp-update-ios"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -695,7 +695,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-android-testing-part3/">Android 自动化测试 - 第3部分</a>
+      <a class="article-title" href="/2018/04/19/webapp-update-ios/">WebAPP升级方案(iOS版)</a>
     </h1>
   
 
@@ -703,26 +703,38 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/17/introduction-android-testing-part3/" class="article-date">
-	  <time datetime="2017-11-17T11:30:11.000Z" itemprop="datePublished">2017-11-17</time>
+	<a href="/2018/04/19/webapp-update-ios/" class="article-date">
+	  <time datetime="2018-04-19T03:33:51.000Z" itemprop="datePublished">2018-04-19</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
           
-在之前的两篇博文中，我介绍了如何在Android中进行测试，我们创建了一个样本应用，我们将继续在这篇博文中继续开发。如果您错过了这两个帖子，我建议您阅读第1部分和第2部分。
-在本文中，我们将从Github API中获取用户列表，并为其编写单元测试。我们将从这个检查点的下一个repo开始。
 
-创建Web服务调用要使用Github API，我们将使用翻新和RxJava。我不打算在本系列中解释RxJava或Retrofit。如果您不熟悉RxJava，我建议您阅读这些文章。如果你没有使用过Ret...
+服务器部分服务端提供:
+
+版本检测接口e.g. http://192.168.11.1:3000/version
+H5+包下载地址e.g. http://192.168.11.1:3000/download/HelloH5.wgtu
+
+H5+包命名： Supervisor.wgtu格式： package_name.wgtu
+
+H5+包使用zip压缩
+
+JS部分执行步骤:
+
+版本检测
+下载wgtu包
+安装wgtu包
+重启
+
+版本检测1234567891011121314151617181...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/17/introduction-android-testing-part3/#more">阅读全文</a>
+          <a href="/2018/04/19/webapp-update-ios/#more">阅读全文</a>
         </p>
       
     </div>
@@ -739,7 +751,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 <!-- Table of Contents -->
 
   
-    <article id="post-automated-android-testing-part-2-setup"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-micro-heartbeat"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -747,7 +759,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/automated-android-testing-part-2-setup/">Android 自动化测试 - 第2部分 安装</a>
+      <a class="article-title" href="/2018/03/24/micro-heartbeat/">micro-heartbeat</a>
     </h1>
   
 
@@ -755,12 +767,12 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
     
     <div class="article-meta">
       
-	<a href="/2017/11/17/automated-android-testing-part-2-setup/" class="article-date">
-	  <time datetime="2017-11-17T10:34:14.000Z" itemprop="datePublished">2017-11-17</time>
+	<a href="/2018/03/24/micro-heartbeat/" class="article-date">
+	  <time datetime="2018-03-24T13:36:35.000Z" itemprop="datePublished">2018-03-24</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
 
       
     </div>
@@ -768,15 +780,15 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
       
         <p class="article-excerpt-content">
           
-在本系列文章中，我们将介绍自动化的Android测试的介绍。在这个自动化测试系列的第1部分中，我们讨论了为什么要编写测试、测试文件夹所在的位置以及在Android中使用的不同类型的测试。
-在本文中，我们将介绍Android应用程序的典型结构和设置，以便进行测试。我将在本系列中从头开始创建一个简单的应用程序，并逐步完成我的思想过程中的每一步。我们将要创建的应用是一个简单的应用，它可以为用户搜索Github的API。下面是我们将要创建的一个粗略的模型:
+演示服务发现使用心跳。
 
-
-开始使用一款新应用
-打开Andro...
+依据服务发现在启动和注销时提供服务发现。有时，这些服务可能会意外地死亡或被强行杀死或面临暂时的网络问题。在这些情况下，将在服务发现中保留陈旧的节点。如果自动删除服务，那将是理想的。
+解决方案Micro支持一个注册器TTL的选项，并为这个确切的原因注册间隔。TTL指定一个注册在发现之后应该存在多长时间，它会过期并被删除。间隔是服务重新注册以保存其在服务发现中的注册的时间。
+这些选项都可以在go-micro和micro Toolkit中使用。
+Toolkit使用像这...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/17/automated-android-testing-part-2-setup/#more">阅读全文</a>
+          <a href="/2018/03/24/micro-heartbeat/#more">阅读全文</a>
         </p>
       
     </div>
@@ -797,7 +809,7 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/">下一页 &raquo;</a>
   </nav>
 
 </section>

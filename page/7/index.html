@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-MasteringAndroidNDKBuildSystem2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cocoapods"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/MasteringAndroidNDKBuildSystem2/">掌握Android NDK构建系统——第2部分:独立的工具链</a>
+      <a class="article-title" href="/2017/11/30/cocoapods/">CocoaPods 简介</a>
     </h1>
   
 
@@ -273,570 +273,513 @@
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/" class="article-date">
-	  <time datetime="2017-11-02T03:31:23.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/11/30/cocoapods/" class="article-date">
+	  <time datetime="2017-11-30T05:03:18.000Z" itemprop="datePublished">2017-11-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第2部分:独立的工具链原英文文章
-
-这是“掌握NDK”的第2部分。在前面的部分(第1部分)中，我们介绍了如何使用ndk-build构建Android本地项目，我们还介绍了一些高级技术来管理和定制大型项目的构建脚本。
-尽管对于大多数Android本地项目来说，ndk-build可能已经足够了，但是在某些情况下仍然可能需要独立的工具链。例如，如果您已经有一个c/c++项目，它可能非常复杂，并且有一个复杂的makefile。在这种情况下，你可能不想把...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-MasteringAndroidNDKBuildSystem1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/MasteringAndroidNDKBuildSystem1/">掌握Android NDK构建系统——第1部分:使用ndk-build技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/" class="article-date">
-	  <time datetime="2017-11-01T10:31:23.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第1部分:使用ndk-build技巧原英文文章
-
-这篇文章不是一个“Hello world!”类型的NDK”教程。尽管我仍将简要介绍ndk构建的基本知识，但这并不是本文的重点。相反，我将总结一些非常有用的NDK技巧和我在项目中使用的技巧。希望这些建议对于那些想要建立一些实际项目的人来说是非常有用的，而不是一个学习NDK的玩具项目。因此，目标读者是中或高级Android开发人员。这篇文章包含两个部分:
-
-第1部分:ndk-build 在这一部分中...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-AndroidNDKNativeProgramLauncher"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/AndroidNDKNativeProgramLauncher/">Android原生程序启动工具</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/AndroidNDKNativeProgramLauncher/" class="article-date">
-	  <time datetime="2017-11-01T08:38:27.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]Android原生程序启动工具
-
-介绍
-主要功能
-入门指南
-下载地址
-提供了什么?
-使用说明
-一些细节
-
-
-示例
-示例1
-示例2
-
-
-
-
-介绍在使用原生代码开发Android应用程序时，我们通常需要使用纯原生模式来调试它(使用NDK编译代码，生成可执行文件，并通过adb shell执行它)。有时，我们甚至不想花时间开发Android应用，因为我们只是想测试一些原生函数。
-以处理OpenCL和GPU为例。编写的程序中超过80%将是性能和基准代码。由于它们直接操作系统驱动程序或硬件，所...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/AndroidNDKNativeProgramLauncher/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-App研发录-笔记-二"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/App研发录-笔记-二/">App研发录 笔记二: App开发中的高级技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/App研发录-笔记-二/" class="article-date">
-	  <time datetime="2017-10-27T09:50:58.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-第二部分 App开发中的高级技巧
-Crash 异常收集与统计异常收集UncaughtExceptionHandler - 用于处理未捕获的异常 (App级别)
- 1 
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/App研发录-笔记-二/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-Warnings"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Warnings/">RxSwift 警告</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Warnings/" class="article-date">
-	  <time datetime="2017-10-27T06:02:45.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-警告
-未使用 disposable
-未使用 observable 序列
-
-
-未使用 disposable (unused-disposable)下面的内容对于subscribe*、bind*和drive*家族函数 返回Disposable。
-你会收到这样的警告:
-1234567891011let xs: Observable&lt;E&gt; ....xs  .filter &#123; ... &#125;  .map &#123; ... &#125;  .switchLatest(...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Warnings/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-Traits"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Traits/">RxSwift 特征</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Traits/" class="article-date">
-	  <time datetime="2017-10-27T03:26:51.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-特征(以前的单位)本文将尝试描述什么是特征，为什么它们是一个有用的概念，以及如何使用和创建它们。
-
-概括
-为什么
-它们是如何工作的
-
-
-RxSwift 特征
-Single
-创建Single
-
-
-Completable
-创建Completable
-
-
-Maybe
-创建Maybe
-
-
-
-
-RxCocoa 特征
-Driver
-为什么它被命名为 Driver
-实际使用的例子
-
-
-ControlProperty / ControlEvent
-
-
-
-
-概括为什么Swift有一个强大的类型系统，可以用...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Traits/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-Schedulers"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Schedulers/">RxSwift 调度器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Schedulers/" class="article-date">
-	  <time datetime="2017-10-27T01:56:45.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-调度器
-串行和并行调度器
-定制的调度器
-内置的调度器
-
-
-调度器抽象出执行工作的机制.
-执行工作的不同机制包括当前线程、调度队列、操作队列、新线程、线程池和运行循环.
-有两个主要的操作符与调度器有关，observeOn和subscribeOn.
-如果您想在不同的调度器上执行工作，只需使用observeOn(scheduler)操作符.
-你通常会比subscribeOn更频繁地使用observeOn.
-如果没有显式地指定observeOn，那么将在生成的任何线程/调度器上执行工作.
-使用o...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Schedulers/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-MathBehindRx"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-MathBehindRx/">RxSwift 背后的数学</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-MathBehindRx/" class="article-date">
-	  <time datetime="2017-10-27T01:39:57.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-Rx背后的数学观察者和迭代器/迭代器/生成器/序列之间的二元性
-在观察者和生成器模式之间有一个对偶性。这使我们能够从异步回调世界过渡到序列转换的同步世界.
-简而言之，迭代器和观察者模式都描述了序列。为什么迭代器定义一个序列是很明显的，但是观察者稍微复杂一点.
-然而，有一个非常简单的例子，不需要太多的数学知识。假设在给定的时间，您正在观察鼠标光标在屏幕上的位置。随着时间的推移，这些鼠标位置形成了一个序列。这是一个可观察的序列.
-可以访问一个序列的两种基本方法:
-
-推(Push)接口 - 观...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-MathBehindRx/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-HotAndColdObservables"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-HotAndColdObservables/">RxSwift 热&amp;冷Observables</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-HotAndColdObservables/" class="article-date">
-	  <time datetime="2017-10-27T01:14:19.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-热&amp;冷 Observables
-建议更多地把它看作是序列的属性而不是单独的类型，因为它们是由相同的抽象来表示的，它们是完全符合Observable序列.
-这是ReactiveX.io的一个定义
-
-一个Observable什么时候开始发射它的序列?这取决于这个Observable。一个“热”的Observable可以在它被创建的时候就开始发射，所以任何后来订阅这个Observable的观察者都可以开始在中间的某个地方观察这个序列。另一方面，一个“冷”的Observable，在它开始...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-HotAndColdObservables/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-RxSwift-GettingStarted"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/26/RxSwift-GettingStarted/">RxSwift 入门指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/26/RxSwift-GettingStarted/" class="article-date">
-	  <time datetime="2017-10-26T04:28:14.000Z" itemprop="datePublished">2017-10-26</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-RxSwift试图与ReactiveX.io保持一致.在RxSwift的情况下，通用跨平台的文档和教程也应该是有效的.
-
-Observables又叫序列
-Disposing
-Observable的隐式保障
-创造你自己的 Observable (observable序列)
-创造一个 Observable 执行工作
-共享订阅和shareReplay操作符
-操作符
-Playgrounds
-自定义操作符
-错误处理
-调试编译错误
-调试
-调试内存泄漏
-启用调试模式
-KVO
-UI层提示
-HTTP请求
+          CocoaPods是Swift和Objective-C Cocoa项目的一个依赖关系管理器。它有超过4万个libraries，在超过280万个应用程序中被使用。CocoaPods可以帮助你优雅地扩展你的项目。
+
+安装CocoaPods是用Ruby构建的，在OS X上默认安装有Ruby，我们建议你使用默认的Ruby。
+使用默认的Ruby安装要求您在安装gems时使用sudo。指南中还有进一步的安装说明。
+12# Xcode 8 + 9$ sudo gem install cocoapods
 ...
         </p>
         <p class="article-more-link">
-          <a href="/2017/10/26/RxSwift-GettingStarted/#more">阅读全文</a>
+          <a href="/2017/11/30/cocoapods/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-introduction-automated-android-testing-part-6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-6/">Android 自动化测试 - 第6部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/20/introduction-automated-android-testing-part-6/" class="article-date">
+	  <time datetime="2017-11-20T10:31:58.000Z" itemprop="datePublished">2017-11-20</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在之前的5篇博客文章中，我们讨论了从头开始构建Android应用的不同方面。我们专注于在过程中包括测试。以下是与前几篇文章的链接:
+
+第1部分 - 为什么我们要写测试?
+第2部分 - 进行测试设置你的应用程序
+第3部分 - 创建API调用
+第4部分 - 创建repositories
+第5部分 - 遵循MVP模式
+
+在本系列的最后一篇文章中，我们将介绍为我们在第5部分中创建的视图创建Espresso测试。这篇文章的Github repo可以在这里找到。
+如果数据是动态的，那么测试一个视图包...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/20/introduction-automated-android-testing-part-6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-introduction-automated-android-testing-part-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-5/">Android 自动化测试 - 第5部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/20/introduction-automated-android-testing-part-5/" class="article-date">
+	  <time datetime="2017-11-20T09:15:26.000Z" itemprop="datePublished">2017-11-20</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在这一系列的博客文章中，我们正在研究一个叫做Github用户搜索的样本应用。第1-4部分介绍了为什么我们应该进行测试、设置测试、创建API调用并创建一个演示程序。看一下前面的文章，第5部分是这个系列的延续。
+在第5部分中，我们将查看与第4部分中创建的Presenter的交互，我们将创建UI来显示搜索结果的列表。
+
+创建UI对于用户界面，我们需要一个简单的列表来显示列表中的avatar、name和其他用户信息。
+在第4部分中，我们定义了一个Activity应该实现的视图契约。这是Andro...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/20/introduction-automated-android-testing-part-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-introduction-android-testing-part-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/17/introduction-android-testing-part-4/">Android 自动化测试 - 第4部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/17/introduction-android-testing-part-4/" class="article-date">
+	  <time datetime="2017-11-17T12:28:15.000Z" itemprop="datePublished">2017-11-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在这篇博文中，我们正在开发一个名为Github用户搜索的Android应用程序。在之前的博客文章中，我们研究了为测试创建应用程序、创建API调用和编写API转换的第一个基本测试。阅读第1部分、第2部分和第3部分。
+这篇文章将着眼于创建一个与repository通信并向视图传递信息的presenter。这还包括为presenter编写单元测试。这篇博文的示例github repo将会在这里找到。
+
+创建Presenter
+为了开始创建，创建称为MvpView和MvpPresenter的基本...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/17/introduction-android-testing-part-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-introduction-android-testing-part3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/17/introduction-android-testing-part3/">Android 自动化测试 - 第3部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/17/introduction-android-testing-part3/" class="article-date">
+	  <time datetime="2017-11-17T11:30:11.000Z" itemprop="datePublished">2017-11-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在之前的两篇博文中，我介绍了如何在Android中进行测试，我们创建了一个样本应用，我们将继续在这篇博文中继续开发。如果您错过了这两个帖子，我建议您阅读第1部分和第2部分。
+在本文中，我们将从Github API中获取用户列表，并为其编写单元测试。我们将从这个检查点的下一个repo开始。
+
+创建Web服务调用要使用Github API，我们将使用翻新和RxJava。我不打算在本系列中解释RxJava或Retrofit。如果您不熟悉RxJava，我建议您阅读这些文章。如果你没有使用过Ret...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/17/introduction-android-testing-part3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-automated-android-testing-part-2-setup"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/17/automated-android-testing-part-2-setup/">Android 自动化测试 - 第2部分 安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/17/automated-android-testing-part-2-setup/" class="article-date">
+	  <time datetime="2017-11-17T10:34:14.000Z" itemprop="datePublished">2017-11-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在本系列文章中，我们将介绍自动化的Android测试的介绍。在这个自动化测试系列的第1部分中，我们讨论了为什么要编写测试、测试文件夹所在的位置以及在Android中使用的不同类型的测试。
+在本文中，我们将介绍Android应用程序的典型结构和设置，以便进行测试。我将在本系列中从头开始创建一个简单的应用程序，并逐步完成我的思想过程中的每一步。我们将要创建的应用是一个简单的应用，它可以为用户搜索Github的API。下面是我们将要创建的一个粗略的模型:
+
+
+开始使用一款新应用
+打开Andro...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/17/automated-android-testing-part-2-setup/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-introduction-automated-android-testing"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/17/introduction-automated-android-testing/">Android 自动化测试 - 第1部分 介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/17/introduction-automated-android-testing/" class="article-date">
+	  <time datetime="2017-11-17T09:29:12.000Z" itemprop="datePublished">2017-11-17</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+很多人对如何在Android中进行测试感到困惑和不确定。在过去，测试Android应用程序是非常困难的，并没有太多的方向。在这个系列中，将尝试让你的测试更容易一些。这第一篇文章只是为了让你开始测试，接下来的几章将深入Android的测试。让我们开始吧！
+
+为什么要测试呢？
+测试迫使你以不同的方式思考，并隐含地使你的代码更清晰。
+如果您的代码有测试，您会对自己的代码更有信心。
+闪亮的绿色状态栏和详细的报告详细，说明编写测试的后果覆盖了你多少的代码。
+回归测试变得容易很多，因为自动化测试会首...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/17/introduction-automated-android-testing/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-resources-getting-started-android-development"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/14/resources-getting-started-android-development/">现代ANDROID开发入门资源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/14/resources-getting-started-android-development/" class="article-date">
+	  <time datetime="2017-11-14T01:54:31.000Z" itemprop="datePublished">2017-11-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+原文地址
+作者：Rebecca
+在为DVT的移动开发者研究生项目汇集了资源之后，我意识到我所引用的内容可以成为现代Android开发入门的重要指导。
+值得注意的是，我们有一个非常实际的方法来培养DVT的毕业生。我们举办工作坊和实际项目，以确保我们的毕业生对Android的发展有一个很好的理解。
+随着网上大量的内容可用，当我开始Android开发时，我不知道在开发应用程序时应该注意哪些地方或什么。有一个简洁的列表，就像这个博客文章中的那个，对我来说是非常宝贵的。我希望你也能找到它的价值。
+...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/14/resources-getting-started-android-development/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-ReactorKit"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/ReactorKit/">ReactorKit 介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/ReactorKit/" class="article-date">
+	  <time datetime="2017-11-09T10:40:18.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+ReactorKit是一个响应式和单向的Swift应用程序架构的框架。这个文章介绍了ReactorKit的基本概念，并描述了如何使用ReactorKit构建应用程序。
+如果您希望看到实际的代码，您可能希望首先看到示例部分。访问API参考的代码级文档。
+
+基本概念ReactorKit是Flux和响应式编程的结合。user actions和view states通过可观察的流传递到每一层。这些流是单向的: view只能发射actions，reactor只能发射states。
+
+设计目标
+可测...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/ReactorKit/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-architecture-paging"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/architecture-paging/">Android 架构组件 - 分页库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/architecture-paging/" class="article-date">
+	  <time datetime="2017-11-09T06:45:09.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+分页库使您的应用程序可以更容易地根据需要从数据源加载信息，而不会使设备超载，或者等待一个大的数据库查询等待太长的时间。
+
+概述许多应用程序都使用大量的数据，但只需要在任何时候加载和显示一小部分数据。一个应用程序可能会有数千个可能显示的项目，但它可能只需要一次访问其中的几十个。如果应用程序不小心，它可能最终会请求它实际上不需要的数据，从而给设备和网络带来性能负担。如果数据被存储或与远程数据库同步，这也会降低应用程序的速度，并浪费用户的数据计划。
+尽管现有的Android api允许在内容中...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/architecture-paging/#more">阅读全文</a>
         </p>
       
     </div>
@@ -857,7 +800,7 @@ HTTP请求
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
   </nav>
 
 </section>

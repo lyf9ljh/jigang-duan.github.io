@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-Hexi"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring10"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/04/Hexi/">Hexi</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring10/">编写自己的Yeoman生成器-10.将Yeoman集成到其他工具中</a>
     </h1>
   
 
@@ -273,24 +273,25 @@
     
     <div class="article-meta">
       
-	<a href="/2018/07/04/Hexi/" class="article-date">
-	  <time datetime="2018-07-04T12:11:28.000Z" itemprop="datePublished">2018-07-04</time>
+	<a href="/2018/08/30/yeoman-authoring10/" class="article-date">
+	  <time datetime="2018-08-29T16:53:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Pixi-js/">Pixi.js</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-Hexi是一种有趣而简单的方法，可以用纯JavaScript代码制作HTML5游戏或任何其他类型的交互媒体。看看开始的特性列表和示例文件夹。继续滚动，你会找到一个完整的快速入门指南和初学者指南。如果你以前从来没有做过游戏，教程是最好的开始。
-Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，该API允许您以极简的、声明性的方式编写代码。它使得编写一款游戏像写诗或画一样简单有趣。试一试!如果您需要任何帮助或有任何问题，请在此存储库的问题中发布一些内容。问...
+          每次运行生成器时，您实际上都在使用yeoman-environment。环境是一个与任何UI组件分离的基础系统，可以通过任何工具进行抽象。当你运行时yo，你基本上只是在核心Yeoman环境之上运行终端UI外观。
+基础您需要知道的第一件事是环境系统包含在yeoman-environment包中。您可以通过运行来安装它：
+1npm install --save yeoman-environment
+该模块提供了检索已安装的生成器，注册和运行生成器的方法。它还提供了生成器正在使用的用户界面适配器...
         </p>
         <p class="article-more-link">
-          <a href="/2018/07/04/Hexi/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring10/#more">阅读全文</a>
         </p>
       
     </div>
@@ -307,7 +308,7 @@ Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，�
 <!-- Table of Contents -->
 
   
-    <article id="post-WebApp或HybridApp和ReactNative"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring9"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -315,7 +316,7 @@ Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/06/06/WebApp或HybridApp和ReactNative/">WebApp(或HybridApp)和React-Native比较</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring9/">编写自己的Yeoman生成器-9.调试生成器</a>
     </h1>
   
 
@@ -323,30 +324,23 @@ Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，�
     
     <div class="article-meta">
       
-	<a href="/2018/06/06/WebApp或HybridApp和ReactNative/" class="article-date">
-	  <time datetime="2018-06-06T08:37:38.000Z" itemprop="datePublished">2018-06-06</time>
+	<a href="/2018/08/30/yeoman-authoring9/" class="article-date">
+	  <time datetime="2018-08-29T16:50:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          web App(或Hybrid App)开发移动APP的弊端
-用户体验，差强人意，流畅度差
-需要原生接口，但调试原生时非常的不方便，没有工具的支持
-各个机型内置的webview的差异性，带来的适配问题
-难以支撑体量大的业务，只能做轻应用
-没有优秀的技术框架支撑，单页面难以适应移动端的场景；多页面增加业务复杂度，技术落后
-Dcloud等项目陈旧，没有开源，内部出现问题无法跟踪
-
-选择React Native的优势和缺点
-UI 原生渲染，对比H5体验更为高效
-替代传统的WebView，打开效率...
+          要调试生成器，可以通过运行它来传递Node.js调试标志，如下所示：
+123456789101112# OS X / Linuxnode --inspect `which yo` &lt;generator&gt; [arguments]# Windows# Find the path to the yo binary in Command Promptwhere yo# Or find the path to the yo binary in PowerShellget-command ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/06/06/WebApp或HybridApp和ReactNative/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring9/#more">阅读全文</a>
         </p>
       
     </div>
@@ -363,7 +357,7 @@ UI 原生渲染，对比H5体验更为高效
 <!-- Table of Contents -->
 
   
-    <article id="post-前端框架选型"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -371,7 +365,7 @@ UI 原生渲染，对比H5体验更为高效
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/22/前端框架选型/">前端框架选型</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring8/">编写自己的Yeoman生成器-8.测试生成器</a>
     </h1>
   
 
@@ -379,29 +373,27 @@ UI 原生渲染，对比H5体验更为高效
     
     <div class="article-meta">
       
-	<a href="/2018/05/22/前端框架选型/" class="article-date">
-	  <time datetime="2018-05-22T08:48:41.000Z" itemprop="datePublished">2018-05-22</time>
+	<a href="/2018/08/30/yeoman-authoring8/" class="article-date">
+	  <time datetime="2018-08-29T16:40:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-前端框架选型是件困难的事情，困难的原因是各个方面的权衡，包括 项目业务的适应性，前端开发人员的自身技术偏向，各个框架主张的思想，入门和后续的难易程度,性能情况,背后支持及生态系统是否丰富…..综合的考虑，但又没有一定的正确答案。
-
-框架需求
-整合多项功能项目的能力，支撑业务的扩展
-尽量兼容桌面端和移动端
-具有技术先进性可持续发展
-
-三大框架目前主流的前端框架是 Angular, React,Vue
-AngularAngular由Google进行维护，并用于Google 的Adwords ...
+          继续阅读以了解有关Yeoman添加的测试助手的更多信息，以减轻单元测试生成器的痛苦。
+以下示例假设您在BDD模式下使用Mocha。全局概念应该很容易应用于您选择的单元测试框架
+组织你的测试保持测试简单易于编辑非常重要。
+通常，组织测试的最佳方法是将每个生成器和子生成器分隔为自己的describe块。然后，describe为您的生成器接受的每个选项添加一个块。然后，it为每个断言（或相关断言）使用一个块。
+在代码中，您应该得到类似于此的结构：
+12345678describe('backbo...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/22/前端框架选型/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -418,7 +410,7 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-8"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -426,7 +418,7 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-8/">Go微服务教程-第八部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
     </h1>
   
 
@@ -434,25 +426,27 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-8/" class="article-date">
-	  <time datetime="2018-05-10T13:57:01.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
+	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在之前的文章中，我们研究了用Terraform创建一个容器引擎集群。在本文中，我们将使用容器引擎和Kubernetes来研究如何将容器部署到我们的集群中。
-Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框架。它是平台无关的，这意味着您可以在本地机器、AWS、谷歌云或其他任何地方运行它。它允许您使用解密配置控制容器组和它们的网络规则。
-您只需编写描述哪些容器应该运行的yaml/json文件，以及在何处运行。您可以定义您的网络规则，例如任何端口...
+          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
+这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
+以下是您将使用的一些常用方法。
+方法this.config.save()
+此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
+该.yo-r...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-8/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -469,7 +463,7 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-7"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -477,7 +471,7 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-7/">Go微服务教程-第七部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring6/">编写自己的Yeoman生成器-6.使用文件系统</a>
     </h1>
   
 
@@ -485,26 +479,25 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-7/" class="article-date">
-	  <time datetime="2018-05-10T13:56:56.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring6/" class="article-date">
+	  <time datetime="2018-08-29T16:23:20.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在前一篇文章中，我们简要介绍了用户界面和web客户端，以及如何使用微工具包rpc代理与新创建的rpc服务进行交互。
-这篇文章，我们将讨论如何创建一个云环境来承载我们的服务。我们将使用Terraform来架构我们的云集群在谷歌云平台上。这应该是一篇相当短的文章，但它很重要。
-
-为什么Terraform
+          位置上下文和路径Yeoman文件实用程序基于您在磁盘上始终有两个位置上下文的想法。这些上下文是您的生成器最有可能读取和写入的文件夹。
+目标上下文第一个上下文是目标上下文。目标是Yeoman将脚手架新应用程序的文件夹。它是您的用户项目文件夹，它是您编写大部分脚手架的地方。
+目标上下文定义为当前工作目录或包含.yo-rc.json文件的最近父文件夹。该.yo-rc.json文件定义了Yeoman项目的根。此文件允许您的用户在子目录中运行命令并让它们在项目上工作。这确保了最终用户的一致行为。
+你...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-7/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -521,7 +514,7 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-6"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -529,7 +522,7 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-6/">Go微服务教程-第六部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
     </h1>
   
 
@@ -537,28 +530,27 @@ Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-6/" class="article-date">
-	  <time datetime="2018-05-10T13:56:52.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
+	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在上一篇文章中，我们讨论了一些在go-micro和go中事件驱动架构的各种方法。这一部分，我们将深入到客户端，看看如何创建与我们的平台交互的web客户端。
-我们将研究微型工具包，使您能够将内部rpc方法从外部代理到web客户端。
-我们将为我们的平台创建一个用户界面，一个登录界面，以及一个创建委托界面。这将把以前的一些帖子联系在一起。
-所以让我们开始吧!
+          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
+由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
 
-RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户端和服务器之间资源的goto方式。REST的出现，取代了RPC和SO...
+注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
+
+NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-6/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -575,7 +567,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -583,7 +575,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-5/">Go微服务教程-第五部分</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring4/">编写自己的Yeoman生成器-4.组合性</a>
     </h1>
   
 
@@ -591,12 +583,12 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-5/" class="article-date">
-	  <time datetime="2018-05-10T13:56:48.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring4/" class="article-date">
+	  <time datetime="2018-08-29T15:32:44.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
@@ -604,14 +596,16 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
       
         <p class="article-excerpt-content">
           
-在本系列的前一部分中，我们讨论了用户身份验证和JWT。在这节课中，我们将快速浏览一下go-micro的代理功能，甚至是代理。
-正如前文所提到的，go-micro是一个可插拔的框架，它接口许多不同的常用技术。如果您查看一下plugins repo，您会看到它支持了多少个插件。
-在我们的例子中，我们将使用NATS代理插件。
+组合性是一种将较小的部件组合在一起构成一件大事的方法。排序像Voltron®
 
-事件驱动架构事件驱动的体系结构是一个非常简单的概念。我们通常认为好的体系结构是可以解耦的;这些服务不应该与其他服务相耦合。当我们使用gRPC这样的协议时，这在某些情况下...
+Yeoman为生成器提供了多种方式来建立共同点。重写相同的功能没有任何意义，因此提供了一个API来在其他生成器中使用生成器。
+在Yeoman中，可组合性可以通过两种方式启动：
+
+生成器可以决定与另一个生成器（例如，generator-backbone使用generator-mocha）组合。
+最终用户也可以发起合成（例如，Simon想要生成具有SASS和Rails的Backbone项目）。注意：最终用户发起的...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-5/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -628,7 +622,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -636,7 +630,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-4/">Go微服务教程-第四部分</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring3/">编写自己的Yeoman生成器-3.与用户交互</a>
     </h1>
   
 
@@ -644,28 +638,24 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-4/" class="article-date">
-	  <time datetime="2018-05-10T13:56:32.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring3/" class="article-date">
+	  <time datetime="2018-08-29T15:00:05.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在本系列的前一部分中，我们研究了创建用户服务并开始存储一些用户。现在我们需要考虑使我们的用户服务存储用户密码安全，并创建一些功能来验证用户，并在我们的微服务中发布安全令牌。
-
-注意，我现在已经将我们的服务分离到单独的存储库中。我发现这更容易部署。最初，我打算尝试做一个monorepo，但是我发现用Go的dep管理来设置它太麻烦了，不会有各种冲突。我还将开始演示如何独立运行和测试微服务。
-不幸的是，使用这种方法，我们将会失去docker。但现在还好。
-现在需要手动运行数据库:
-12$ do...
+          您的生成器将与最终用户进行大量交互。默认情况下，Yeoman在终端上运行，但它也支持不同工具可以提供的自定义用户界面。例如，没有什么能阻止Yeoman生成器在编辑器或独立应用程序之类的图形工具中运行。
+为了实现这种灵活性，Yeoman提供了一组用户界面元素抽象。作为作者，您有责任在与最终用户交互时仅使用这些抽象。使用其他方法可能会阻止您的生成器在不同的Yeoman工具中正确运行。
+例如，永远不要使用console.log()或process.stdout.write()输出内容很重要。使用...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-4/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -682,7 +672,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -690,7 +680,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-3/">Go微服务教程-第三部分</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring2/">编写自己的Yeoman生成器-2.运行时上下文</a>
     </h1>
   
 
@@ -698,27 +688,27 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-3/" class="article-date">
-	  <time datetime="2018-05-10T13:56:27.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring2/" class="article-date">
+	  <time datetime="2018-08-29T14:30:47.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在之前的文章中，我们介绍了go-micro和Docker的一些基础知识。我们还介绍了第二种服务。在这篇文章中，我们将讨论docker-compose，以及如何在本地更轻松地运行我们的服务。我们将介绍一些不同的数据库，最后我们将介绍第三种服务。
+          编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。
+原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。
+换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。
+辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法或私有方法。有三种不同的方法可以实现这一目标。
 
-先决条件安装docker-compose:https://docs.docker.com/compose/install/
-但是首先，让我们看看数据库。
-选择数据库到目前为止，我们的数据实际上并没有存储在任何地方，而是存储在我们的服务中，当我们的...
+方法名称下划线前缀（例如_private_m...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-3/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -735,7 +725,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro-tutorial-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -743,7 +733,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-2/">Go微服务教程-第二部分(Docker和go-micro)</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring/">编写自己的Yeoman生成器-1.入门</a>
     </h1>
   
 
@@ -751,26 +741,28 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-2/" class="article-date">
-	  <time datetime="2018-05-10T13:56:23.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring/" class="article-date">
+	  <time datetime="2018-08-29T12:18:35.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-介绍在之前的文章中，我们介绍了编写基于gRPC的微服务的基础知识。在这一部分;我们将介绍dockeringa服务的基本内容，我们还将更新我们的服务以使用go-micro，最后，引入第二个服务。
+          Generators(生成器)是Yeoman生态系统的基石。它们是yo为最终用户生成文件所运行的插件。
+阅读本节，您将学习如何创建和分发自己的内容。
 
-介绍 Docker随着云计算的出现和微服务的诞生。部署更多、但更小的代码块的压力导致了一些有趣的新想法和技术。其中之一是容器的概念。
-传统上，团队会将一个整体系统部署到静态服务器上，运行一个操作系统，并使用预定义的依赖集来跟踪。或者可能是由Chef或Puppet提供的虚拟机。扩大规模是很昂贵的，...
+注意：我们构建了一个生成器 - Generator，以帮助用户开始使用自己的生成器。一旦理解了以下概念，请随意使用它来引导您自己的生成器。
+
+组织你的生成器设置为Node Module生成器的核心是Node.js模块
+首先，创建一个文件夹，在其中编写您的生成器。文件夹必须命名generator-name（name您的生成器的名称）。这很重要...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-2/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring/#more">阅读全文</a>
         </p>
       
     </div>
@@ -791,7 +783,7 @@ RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户�
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
   </nav>
 
 </section>

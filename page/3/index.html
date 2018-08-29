@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-micro-on-nats"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-Spring-5-Recipes"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-on-nats/">Micro在NATS - 微服务与消息</a>
+      <a class="article-title" href="/2018/07/29/Spring-5-Recipes/">Spring 5 开发范例代码大全</a>
     </h1>
   
 
@@ -273,12 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro-on-nats/" class="article-date">
-	  <time datetime="2018-03-18T12:41:09.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/07/29/Spring-5-Recipes/" class="article-date">
+	  <time datetime="2018-07-29T07:16:04.000Z" itemprop="datePublished">2018-07-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/Spring5-开发范例代码大全/">Spring5-开发范例代码大全</a>
 
       
     </div>
@@ -286,15 +286,11 @@
       
         <p class="article-excerpt-content">
           
-在这篇文章中，我们将讨论在NATS上使用Micro。它包括关于服务发现的讨论、对微服务的同步和异步通信。
-让我们开始谈正事吧。
-
-NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的消息总线。NATS是由Apcera的创始人Derek Collison创立的。它起源于VMWare，并开始以ruby为基础的系统。它早就被重写了，并且在那些寻找高度可伸缩和高性能的消息传递系统的用户中稳步获得采用。
-如果你想更多地了解NATS本身，请访问nats.io或加入这里的社区。
-为什么NA...
+介绍Spring框架正在增长。关于选择。Java EE专注于一些技术，主要是为了损害替代的、更好的解决方案。当Spring框架初次亮相时，很少有人会认为Java EE代表了当今最好的体系结构。Spring首次大张旗鼓地亮相，是因为它寻求简化Java EE。此后的每一个版本都标记了新特性的引入，这些新特性既简化了解决方案，又简化了解决方案。
+随着版本2.0和更新，Spring框架开始针对多个平台。框架一如既往地在现有平台之上提供服务，但尽可能地与底层平台分离。Java EE仍然是一个主要的...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro-on-nats/#more">阅读全文</a>
+          <a href="/2018/07/29/Spring-5-Recipes/#more">阅读全文</a>
         </p>
       
     </div>
@@ -311,7 +307,7 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
 <!-- Table of Contents -->
 
   
-    <article id="post-go-micro"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cas-Maven-Overlay-Installation"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -319,7 +315,7 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/go-micro/">用Go Micro编写微服务</a>
+      <a class="article-title" href="/2018/07/13/cas-Maven-Overlay-Installation/">CAS企业单点登录-安装(Maven)</a>
     </h1>
   
 
@@ -327,32 +323,24 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/go-micro/" class="article-date">
-	  <time datetime="2018-03-18T11:30:53.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/07/13/cas-Maven-Overlay-Installation/" class="article-date">
+	  <time datetime="2018-07-13T02:03:13.000Z" itemprop="datePublished">2018-07-13</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/CAS企业单点登录/">CAS企业单点登录</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-这是一个高水平的指导，用go-micro来编写微服务。
-如果你想了解更多有关微服务的内容，请点击这里的入门博客文章，如果你想了解更多关于Micro的信息，请点击这里。
-让我们开始吧。
-
-Go Micro是什么?Go Micro是一个可插入的RPC库，它提供了用于编写微服务的基本构件。微哲学是用可插拔的体系结构设计的“电池”。从这个框中，它实现了使用代理的服务发现，通过http和使用proto-rpc或json-rpc进行编码
-Go Micro是:
-
-Go写的库
-一组可插入的接口
-基于RP...
+          CAS安装基本上是一个面向源的过程，我们推荐一个WAR overlay(1)项目来组织定制，比如组件配置和UI设计。WAR覆盖构建的输出是cas。可以部署到servlet容器(如Apache Tomcat)的war文件。
+需求参见本指南了解更多信息。
+什么是WAR覆盖覆盖是一种对抗重复代码和/或资源的策略。覆盖允许您下载由项目本身提供的预构建的普通CAS web应用服务器，并覆盖/插入特定的行为，而不是从源代码下载CAS代码库和构建。在构建时，Maven/Gradle安装过程将首先尝试下载...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/go-micro/#more">阅读全文</a>
+          <a href="/2018/07/13/cas-Maven-Overlay-Installation/#more">阅读全文</a>
         </p>
       
     </div>
@@ -369,7 +357,7 @@ Go写的库
 <!-- Table of Contents -->
 
   
-    <article id="post-micro"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cas-Installation-Requirements"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -377,7 +365,7 @@ Go写的库
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro/">Micro - 微服务工具包</a>
+      <a class="article-title" href="/2018/07/13/cas-Installation-Requirements/">CAS企业单点登录-安装要求</a>
     </h1>
   
 
@@ -385,27 +373,24 @@ Go写的库
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro/" class="article-date">
-	  <time datetime="2018-03-18T10:15:47.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/07/13/cas-Installation-Requirements/" class="article-date">
+	  <time datetime="2018-07-13T01:21:07.000Z" itemprop="datePublished">2018-07-13</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/CAS企业单点登录/">CAS企业单点登录</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-到现在为止，你可能已经听说过这种新的现象，微服务。如果你还不熟悉，而且对学习感兴趣，请在查看这里。
-在这篇博文中，我们将讨论Micro，一个开源的微服务工具包。Micro提供了构建和管理微服务的核心需求。它由一系列的库和工具组成，这些库和工具主要面向Go语言的编程开发，但是通过使用Sidecar来解决其他语言的问题。
-在我们了解微观的细节之前，让我们来谈谈为什么我们决定把时间花在这上面。
-
-开发或部署从我们过去的经验和我们在业界所看到的情况来看，我们需要关注开发而不是部署。PaaS解决方...
+          根据配置组件的选择，可能会有其他需求，如LDAP目录、数据库和缓存基础设施。然而，在大多数情况下，对于选择具有明确硬件和软件依赖关系的组件的部署人员来说，需求应该是不言而喻的。在任何其他需求不明显的情况下，组件配置的讨论都应该提到系统、软件、硬件和其他需求。
+JavaCAS的核心是一个基于java的web应用程序。在部署之前，需要安装JDK v1.8
+Servlet容器没有官方支持的CAS的servlet容器，但是Apache Tomcat是最常用的。对特定servlet容器的支持取决于社...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro/#more">阅读全文</a>
+          <a href="/2018/07/13/cas-Installation-Requirements/#more">阅读全文</a>
         </p>
       
     </div>
@@ -422,7 +407,7 @@ Go写的库
 <!-- Table of Contents -->
 
   
-    <article id="post-micro-introduction"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cas-Getting-Started"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -430,7 +415,7 @@ Go写的库
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-introduction/">介绍Micro - 微服务系统</a>
+      <a class="article-title" href="/2018/07/12/cas-Getting-Started/">CAS企业单点登录-入门指南</a>
     </h1>
   
 
@@ -438,28 +423,24 @@ Go写的库
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro-introduction/" class="article-date">
-	  <time datetime="2018-03-18T09:38:06.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/07/12/cas-Getting-Started/" class="article-date">
+	  <time datetime="2018-07-12T14:33:48.000Z" itemprop="datePublished">2018-07-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/CAS企业单点登录/">CAS企业单点登录</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-Hello World!
-让我们来谈谈软件开发的未来。
-改变正在进行之中。我们正越来越多地走向一个以科技为核心的世界。在当今时代，保持竞争优势正变得越来越困难。组织的执行能力会随着他们试图扩展低效的平台、过程和结构而陷入停顿。十年前，科技公司经历了这些规模的阵痛，大多数公司都采用了同样的方法来克服这些挑战。
-是时候把世界上最成功的公司的竞争优势带给其他人了。因此，让我们谈谈微服务，一种创造竞争优势的方法。
-
-什么是微服务？微服务是一种软件体系结构模式，用于将大型单块应用程序分解为更小的可...
+          本文档提供了关于如何开始使用CAS服务器部署的高级指南。该指南的唯一重点是描述CAS部署人员必须遵循和采用的过程，以便获得成功和可持续的体系结构和部署。
+收集用例在部署之前，记录、编目和分析所需的用例和需求是非常重要的。一旦您有了一些想法，请与CAS社区讨论并分享那些可能已经解决了您今天面临的相同问题的共同趋势、实践和模式。
+学习架构了解什么是CAS，可以做什么。这将帮助您开发一个基础，以实现您的哪些用例和需求在CAS中可能已经是可能的。看一下CAS架构的基本原理，看看部署和应用程序集成可...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro-introduction/#more">阅读全文</a>
+          <a href="/2018/07/12/cas-Getting-Started/#more">阅读全文</a>
         </p>
       
     </div>
@@ -476,7 +457,7 @@ Hello World!
 <!-- Table of Contents -->
 
   
-    <article id="post-WebApp"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cas-architecture"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -484,7 +465,7 @@ Hello World!
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/01/WebApp/">WebAPP 框架方案讨论</a>
+      <a class="article-title" href="/2018/07/12/cas-architecture/">CAS企业单点登录-架构</a>
     </h1>
   
 
@@ -492,41 +473,24 @@ Hello World!
     
     <div class="article-meta">
       
-	<a href="/2018/03/01/WebApp/" class="article-date">
-	  <time datetime="2018-03-01T15:54:43.000Z" itemprop="datePublished">2018-03-01</time>
+	<a href="/2018/07/12/cas-architecture/" class="article-date">
+	  <time datetime="2018-07-12T14:00:17.000Z" itemprop="datePublished">2018-07-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/WebApp/">WebApp</a>
+    <a class="article-category-link" href="/categories/CAS企业单点登录/">CAS企业单点登录</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          框架需求
-H5应用开发响应快速开发
-多客户的定制化
-不同项目呈现不同的功能模块
-移动端原生功能的支持
-升级迭代的便利性
-
-
-目前WebAPP方案对比
-React Native
-Ionic
-H5+
-微信小程序
-
-框架方案思路
-
-APP： 原生APP，MA容器功能和管理功能。
-MA: 微应用，H5+实现的微小应用。尽量功能单一，体量小。
-WebView: 经过封装原生WebView,封装后经过桥接插件支持H5+
-plu...
+          
+系统组件CAS服务器和客户端包含CAS系统体系结构的两个物理组件，通过各种协议进行通信。
+CAS服务器CAS服务器是构建在Spring框架上的Java servlet，其主要职责是通过发出和验证票据，对用户进行身份验证并授予对启用了casas的服务(通常称为CAS客户机)的访问权。当服务器在成功登录时向用户发出通知票(TGT)时，将创建SSO会话。服务票证(ST)是通过浏览器重定向使用TGT作为令牌来发送给服务的。ST随后通过后通道通信在CAS服务器上进行验证。在CAS协议文档中详细描述...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/01/WebApp/#more">阅读全文</a>
+          <a href="/2018/07/12/cas-architecture/#more">阅读全文</a>
         </p>
       
     </div>
@@ -543,7 +507,7 @@ plu...
 <!-- Table of Contents -->
 
   
-    <article id="post-expo-working-with-expo"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cas"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -551,7 +515,7 @@ plu...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/02/08/expo-working-with-expo/">使用Expo工作</a>
+      <a class="article-title" href="/2018/07/12/cas/">CAS企业单点登录</a>
     </h1>
   
 
@@ -559,12 +523,12 @@ plu...
     
     <div class="article-meta">
       
-	<a href="/2018/02/08/expo-working-with-expo/" class="article-date">
-	  <time datetime="2018-02-08T04:15:06.000Z" itemprop="datePublished">2018-02-08</time>
+	<a href="/2018/07/12/cas/" class="article-date">
+	  <time datetime="2018-07-12T12:37:09.000Z" itemprop="datePublished">2018-07-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Expo/">Expo</a>
+    <a class="article-category-link" href="/categories/CAS企业单点登录/">CAS企业单点登录</a>
 
       
     </div>
@@ -572,15 +536,15 @@ plu...
       
         <p class="article-excerpt-content">
           
-
-
-启动和运行创建一个帐户打开XDE后，将提示输入用户名和密码。填入你想要的用户名和密码，然后点击继续-如果用户名还没有被使用，我们会自动为你创建帐户。
-创建项目按下Project并选择New Project，然后选择选项Tab Navigation选项，这将为我们提供一个良好的起点，然后在弹出的对话框中输入项目名称。我将调用我的first-project，并按下创建。
-接下来，选择保存项目的位置。我把所有有趣的项目都保存在~/coding中，所以我导航到那个目录并按下打开。
-XDE现在...
+介绍
+Spring Webflow/Spring Boot Java服务器组件。
+可插认证支持(LDAP、数据库、X.509、SPNEGO、JAAS、JWT、RADIUS、MongoDb等)
+支持多种协议(CAS、SAML、WS-Federation、OAuth2、OpenID、OpenID连接、REST)
+通过各种提供者支持多因素身份验证(Duo Security、FIDO U2F、YubiKey、谷歌身份验证器、Microsoft Azure、Authy等)
+支持将身份验证委托给外部...
         </p>
         <p class="article-more-link">
-          <a href="/2018/02/08/expo-working-with-expo/#more">阅读全文</a>
+          <a href="/2018/07/12/cas/#more">阅读全文</a>
         </p>
       
     </div>
@@ -597,7 +561,7 @@ XDE现在...
 <!-- Table of Contents -->
 
   
-    <article id="post-expo-introduce"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-Hexi"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -605,7 +569,7 @@ XDE现在...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/02/08/expo-introduce/">Expo 介绍</a>
+      <a class="article-title" href="/2018/07/04/Hexi/">Hexi</a>
     </h1>
   
 
@@ -613,12 +577,12 @@ XDE现在...
     
     <div class="article-meta">
       
-	<a href="/2018/02/08/expo-introduce/" class="article-date">
-	  <time datetime="2018-02-08T03:38:08.000Z" itemprop="datePublished">2018-02-08</time>
+	<a href="/2018/07/04/Hexi/" class="article-date">
+	  <time datetime="2018-07-04T12:11:28.000Z" itemprop="datePublished">2018-07-04</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Expo/">Expo</a>
+    <a class="article-category-link" href="/categories/Pixi-js/">Pixi.js</a>
 
       
     </div>
@@ -626,17 +590,11 @@ XDE现在...
       
         <p class="article-excerpt-content">
           
-
-介绍Expo是一套工具、库和服务，让你可以通过编写JavaScript来构建本地的iOS和Android应用程序。
-
-使用Expo工作详细介绍如何使用Expo开发环境和工具的各个方面。如果你对Expo完全陌生，一定要确保你已经安装好了工具并四处看看。在此之后，您可能想要阅读并运行以创建您的第一个项目。
-
-
-
-快速入门介绍Expo应用程序是带有Expo SDK的本地应用程序。SDK是一个native-and-JS库，它提供了对设备的系统功能的访问(像照相机、联系人、本地存储和其他硬件)。...
+Hexi是一种有趣而简单的方法，可以用纯JavaScript代码制作HTML5游戏或任何其他类型的交互媒体。看看开始的特性列表和示例文件夹。继续滚动，你会找到一个完整的快速入门指南和初学者指南。如果你以前从来没有做过游戏，教程是最好的开始。
+Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，该API允许您以极简的、声明性的方式编写代码。它使得编写一款游戏像写诗或画一样简单有趣。试一试!如果您需要任何帮助或有任何问题，请在此存储库的问题中发布一些内容。问...
         </p>
         <p class="article-more-link">
-          <a href="/2018/02/08/expo-introduce/#more">阅读全文</a>
+          <a href="/2018/07/04/Hexi/#more">阅读全文</a>
         </p>
       
     </div>
@@ -653,7 +611,7 @@ XDE现在...
 <!-- Table of Contents -->
 
   
-    <article id="post-jsforcats"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-WebApp或HybridApp和ReactNative"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -661,7 +619,7 @@ XDE现在...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/02/06/jsforcats/">猫的JavaScript</a>
+      <a class="article-title" href="/2018/06/06/WebApp或HybridApp和ReactNative/">WebApp(或HybridApp)和React-Native比较</a>
     </h1>
   
 
@@ -669,25 +627,30 @@ XDE现在...
     
     <div class="article-meta">
       
-	<a href="/2018/02/06/jsforcats/" class="article-date">
-	  <time datetime="2018-02-06T04:24:23.000Z" itemprop="datePublished">2018-02-06</time>
+	<a href="/2018/06/06/WebApp或HybridApp和ReactNative/" class="article-date">
+	  <time datetime="2018-06-06T08:37:38.000Z" itemprop="datePublished">2018-06-06</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/React-Native/">React Native</a>
-
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-新程序员简介你的人类伙伴也可以轻易的做到！
-JavaScript是一种编程语言，或者，换句话说，是一种计算机被指令去做事情的方式。就像一个人用“口哨”和“猫叫”控制人类一样，一个人控制着用编程语言编写的语句。所有的web浏览器都能理解JavaScript，您可以利用它来让web页面做一些疯狂的事情！
-JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在很多地方运行，而不仅仅是web浏览器——它运行在web服务器、手机甚至是机器人上。这篇文章将会教你一些Ja...
+          web App(或Hybrid App)开发移动APP的弊端
+用户体验，差强人意，流畅度差
+需要原生接口，但调试原生时非常的不方便，没有工具的支持
+各个机型内置的webview的差异性，带来的适配问题
+难以支撑体量大的业务，只能做轻应用
+没有优秀的技术框架支撑，单页面难以适应移动端的场景；多页面增加业务复杂度，技术落后
+Dcloud等项目陈旧，没有开源，内部出现问题无法跟踪
+
+选择React Native的优势和缺点
+UI 原生渲染，对比H5体验更为高效
+替代传统的WebView，打开效率...
         </p>
         <p class="article-more-link">
-          <a href="/2018/02/06/jsforcats/#more">阅读全文</a>
+          <a href="/2018/06/06/WebApp或HybridApp和ReactNative/#more">阅读全文</a>
         </p>
       
     </div>
@@ -704,7 +667,7 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
 <!-- Table of Contents -->
 
   
-    <article id="post-hyperoslo-cache"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-前端框架选型"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -712,7 +675,7 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/01/26/hyperoslo-cache/">Hyperoslo Cache介绍</a>
+      <a class="article-title" href="/2018/05/22/前端框架选型/">前端框架选型</a>
     </h1>
   
 
@@ -720,28 +683,29 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
     
     <div class="article-meta">
       
-	<a href="/2018/01/26/hyperoslo-cache/" class="article-date">
-	  <time datetime="2018-01-26T01:20:34.000Z" itemprop="datePublished">2018-01-26</time>
+	<a href="/2018/05/22/前端框架选型/" class="article-date">
+	  <time datetime="2018-05-22T08:48:41.000Z" itemprop="datePublished">2018-05-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
           
-描述在这个领域里，Cache并不是独一无二的，但它并不是另一个让你拥有上帝力量的怪物库。除了缓存，它什么都不做，但它做得很好。它提供了一个良好的公共API，它有开箱即用的实现和巨大的自定义可能性。高速缓存在Swift 4中使用Codable来执行序列化。
+前端框架选型是件困难的事情，困难的原因是各个方面的权衡，包括 项目业务的适应性，前端开发人员的自身技术偏向，各个框架主张的思想，入门和后续的难易程度,性能情况,背后支持及生态系统是否丰富…..综合的考虑，但又没有一定的正确答案。
 
-关键特性
- 与Swift 4 Codable合作。任何符合Codable的东西都将被Storage轻松地保存和加载。
-[X] 默认磁盘存储。可选地使用内存存储来启用混合.
-[X] 选项通过DiskConfig和MemoryConfig...
+框架需求
+整合多项功能项目的能力，支撑业务的扩展
+尽量兼容桌面端和移动端
+具有技术先进性可持续发展
+
+三大框架目前主流的前端框架是 Angular, React,Vue
+AngularAngular由Google进行维护，并用于Google 的Adwords ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/01/26/hyperoslo-cache/#more">阅读全文</a>
+          <a href="/2018/05/22/前端框架选型/#more">阅读全文</a>
         </p>
       
     </div>
@@ -758,7 +722,7 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
 <!-- Table of Contents -->
 
   
-    <article id="post-sylius-set-up"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -766,7 +730,7 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/01/03/sylius-set-up/">基于Sylius搭建电商平台</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-8/">Go微服务教程-第八部分</a>
     </h1>
   
 
@@ -774,24 +738,25 @@ JavaScript是一种使web页面更具交互性的方法。如今，JavaScript在
     
     <div class="article-meta">
       
-	<a href="/2018/01/03/sylius-set-up/" class="article-date">
-	  <time datetime="2018-01-03T04:53:57.000Z" itemprop="datePublished">2018-01-03</time>
+	<a href="/2018/05/10/go-micro-tutorial-8/" class="article-date">
+	  <time datetime="2018-05-10T13:57:01.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
           
-Sylius是一种电子商务技术，它能让你完全自由地创造一种独特的客户体验。它与您现有的系统集成在一起，并保证快速上市。
-Sylius使用PHP编程语言和Symfony框架。像Drupal或eZ这样的大型的开源项目也是如此。它使用doctrine作为ORM、数据库抽象和TWIG(PHP的安全模板引擎)。
-Sylius不是一个单一的解决方案——您可以随时更改或开发它。它可以作为你的自定义电子商务平台的基础，也可以作为你自己系统的核心。
-这篇文章将介绍如何搭建Sylius框架和添加ShopAP...
+在之前的文章中，我们研究了用Terraform创建一个容器引擎集群。在本文中，我们将使用容器引擎和Kubernetes来研究如何将容器部署到我们的集群中。
+Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框架。它是平台无关的，这意味着您可以在本地机器、AWS、谷歌云或其他任何地方运行它。它允许您使用解密配置控制容器组和它们的网络规则。
+您只需编写描述哪些容器应该运行的yaml/json文件，以及在何处运行。您可以定义您的网络规则，例如任何端口...
         </p>
         <p class="article-more-link">
-          <a href="/2018/01/03/sylius-set-up/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -812,7 +777,7 @@ Sylius不是一个单一的解决方案——您可以随时更改或开发它�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
   </nav>
 
 </section>
