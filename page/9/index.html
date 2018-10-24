@@ -257,6 +257,114 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-GuideUIProgrammingCoroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/06/GuideUIProgrammingCoroutines/">使用协程的UI编程指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/06/GuideUIProgrammingCoroutines/" class="article-date">
+	  <time datetime="2017-11-06T11:08:01.000Z" itemprop="datePublished">2017-11-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+本指南假定读者熟悉基本的协程概念，并给出了在UI应用程序中如何使用kotlinx.coroutines的具体示例。
+所有的UI应用程序库都有一个共同点。它们有一个线程，所有UI的状态都被限制，所有的UI更新都必须在这个特定的线程中发生。对于协程，这意味着您需要一个适当的协程分派器上下文，它将协程执行限制在这个UI线程中。
+特别是，kotlinx.coroutines 有三个模块为不同的UI应用程序库提供了协程上下文:
+
+kotlinx-coroutines-android – Andro...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/06/GuideUIProgrammingCoroutines/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
+	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
+介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
+kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-Anko-Coroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -306,6 +414,7 @@ Listener助手asReference()如果您的异步API不支持取消，你的协程�
       
       
       
+      
 
     </footer>
   </div>
@@ -313,6 +422,7 @@ Listener助手asReference()如果您的异步API不支持取消，你的协程�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -370,6 +480,7 @@ Cursor流
       
       
       
+      
 
     </footer>
   </div>
@@ -377,6 +488,7 @@ Cursor流
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-Anko-Layouts"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -450,6 +562,7 @@ XML DSL转换器
       
       
       
+      
 
     </footer>
   </div>
@@ -457,6 +570,7 @@ XML DSL转换器
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-Anko-Commons"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -528,6 +642,7 @@ applyRecursively()
       
       
       
+      
 
     </footer>
   </div>
@@ -535,6 +650,7 @@ applyRecursively()
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-anko"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -589,6 +705,7 @@ A...
       
       
       
+      
 
     </footer>
   </div>
@@ -596,6 +713,7 @@ A...
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-ADBShell"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -654,6 +772,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
       
       
       
+      
 
     </footer>
   </div>
@@ -661,6 +780,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-MasteringAndroidNDKBuildSystem2"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -705,6 +825,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
       
       
       
+      
 
     </footer>
   </div>
@@ -712,6 +833,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-MasteringAndroidNDKBuildSystem1"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -757,72 +879,6 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
       
       
       
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-AndroidNDKNativeProgramLauncher"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/AndroidNDKNativeProgramLauncher/">Android原生程序启动工具</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/AndroidNDKNativeProgramLauncher/" class="article-date">
-	  <time datetime="2017-11-01T08:38:27.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]Android原生程序启动工具
-
-介绍
-主要功能
-入门指南
-下载地址
-提供了什么?
-使用说明
-一些细节
-
-
-示例
-示例1
-示例2
-
-
-
-
-介绍在使用原生代码开发Android应用程序时，我们通常需要使用纯原生模式来调试它(使用NDK编译代码，生成可执行文件，并通过adb shell执行它)。有时，我们甚至不想花时间开发Android应用，因为我们只是想测试一些原生函数。
-以处理OpenCL和GPU为例。编写的程序中超过80%将是性能和基准代码。由于它们直接操作系统驱动程序或硬件，所...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/AndroidNDKNativeProgramLauncher/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
       
 
     </footer>
@@ -832,56 +888,6 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
 <!-- Table of Contents -->
 
-  
-    <article id="post-App研发录-笔记-二"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/App研发录-笔记-二/">App研发录 笔记二: App开发中的高级技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/App研发录-笔记-二/" class="article-date">
-	  <time datetime="2017-10-27T09:50:58.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-第二部分 App开发中的高级技巧
-Crash 异常收集与统计异常收集UncaughtExceptionHandler - 用于处理未捕获的异常 (App级别)
- 1 
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/App研发录-笔记-二/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
 
   
 

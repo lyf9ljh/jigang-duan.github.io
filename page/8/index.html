@@ -257,6 +257,117 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-ReactorKit"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/ReactorKit/">ReactorKit 介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/ReactorKit/" class="article-date">
+	  <time datetime="2017-11-09T10:40:18.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+ReactorKit是一个响应式和单向的Swift应用程序架构的框架。这个文章介绍了ReactorKit的基本概念，并描述了如何使用ReactorKit构建应用程序。
+如果您希望看到实际的代码，您可能希望首先看到示例部分。访问API参考的代码级文档。
+
+基本概念ReactorKit是Flux和响应式编程的结合。user actions和view states通过可观察的流传递到每一层。这些流是单向的: view只能发射actions，reactor只能发射states。
+
+设计目标
+可测...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/ReactorKit/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-paging"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/architecture-paging/">Android 架构组件 - 分页库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/architecture-paging/" class="article-date">
+	  <time datetime="2017-11-09T06:45:09.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+分页库使您的应用程序可以更容易地根据需要从数据源加载信息，而不会使设备超载，或者等待一个大的数据库查询等待太长的时间。
+
+概述许多应用程序都使用大量的数据，但只需要在任何时候加载和显示一小部分数据。一个应用程序可能会有数千个可能显示的项目，但它可能只需要一次访问其中的几十个。如果应用程序不小心，它可能最终会请求它实际上不需要的数据，从而给设备和网络带来性能负担。如果数据被存储或与远程数据库同步，这也会降低应用程序的速度，并浪费用户的数据计划。
+尽管现有的Android api允许在内容中...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/architecture-paging/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-architecture-room"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -301,6 +412,7 @@ Room持久性库为SQLite提供了一个抽象层，以便在充分利用SQLite�
       
       
       
+      
 
     </footer>
   </div>
@@ -308,6 +420,7 @@ Room持久性库为SQLite提供了一个抽象层，以便在充分利用SQLite�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-architecture-saving-states"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -357,6 +470,7 @@ Room持久性库为SQLite提供了一个抽象层，以便在充分利用SQLite�
       
       
       
+      
 
     </footer>
   </div>
@@ -364,6 +478,7 @@ Room持久性库为SQLite提供了一个抽象层，以便在充分利用SQLite�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-architecture-viewmodel"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -411,6 +526,7 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
       
       
       
+      
 
     </footer>
   </div>
@@ -418,6 +534,7 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-architecture-livedata"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -465,6 +582,7 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
       
       
       
+      
 
     </footer>
   </div>
@@ -472,6 +590,7 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-architecture-lifecycle"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -516,6 +635,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
       
       
       
+      
 
     </footer>
   </div>
@@ -523,6 +643,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-adding-components"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -568,6 +689,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
       
       
       
+      
 
     </footer>
   </div>
@@ -575,6 +697,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-GuidetoAppArchitecture"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -622,6 +745,7 @@ app开发人员面临的常见问题与传统的桌面应用不同，在大多�
       
       
       
+      
 
     </footer>
   </div>
@@ -629,6 +753,7 @@ app开发人员面临的常见问题与传统的桌面应用不同，在大多�
 </article>
 
 <!-- Table of Contents -->
+
 
   
     <article id="post-AndroidArchitectectureComponents"  class="article article-type-post" itemscope itemprop="blogPost" >
@@ -682,58 +807,6 @@ Room持久性库
       
       
       
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-GuideUIProgrammingCoroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/06/GuideUIProgrammingCoroutines/">使用协程的UI编程指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/06/GuideUIProgrammingCoroutines/" class="article-date">
-	  <time datetime="2017-11-06T11:08:01.000Z" itemprop="datePublished">2017-11-06</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-本指南假定读者熟悉基本的协程概念，并给出了在UI应用程序中如何使用kotlinx.coroutines的具体示例。
-所有的UI应用程序库都有一个共同点。它们有一个线程，所有UI的状态都被限制，所有的UI更新都必须在这个特定的线程中发生。对于协程，这意味着您需要一个适当的协程分派器上下文，它将协程执行限制在这个UI线程中。
-特别是，kotlinx.coroutines 有三个模块为不同的UI应用程序库提供了协程上下文:
-
-kotlinx-coroutines-android – Andro...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/06/GuideUIProgrammingCoroutines/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
       
 
     </footer>
@@ -743,56 +816,6 @@ kotlinx-coroutines-android – Andro...
 
 <!-- Table of Contents -->
 
-  
-    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
-	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
-介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
-kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
 
   
 
