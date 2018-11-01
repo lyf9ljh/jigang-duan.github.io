@@ -257,6 +257,60 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-custom-views-optimizing-view"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/08/13/custom-views-optimizing-view/">自定义视图(4) —— 优化视图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/08/13/custom-views-optimizing-view/" class="article-date">
+	  <time datetime="2017-08-13T06:50:46.000Z" itemprop="datePublished">2017-08-13</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+现在，您已经有了一个设计良好的视图，可以响应状态之间的手势和转换，确保视图运行得很快。为了避免在回放期间感觉迟钝或停滞的UI，确保动画始终以每秒60帧的速度运行。
+
+少做事，频率少为了加快视图的速度，从经常调用的例程中删除不必要的代码。先从onDraw()开始，这将给你最大的回报。特别是您应该消除onDraw()中的分配，因为分配可能会导致垃圾收集，从而导致口吃。在初始化期间或在动画之间分配对象。当动画运行时，不要进行分配。
+除了使onDraw()更精简，也要确保它被尽可能少地调用。大多...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/08/13/custom-views-optimizing-view/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-custom-views-making-interactive"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -793,58 +847,6 @@ TS-0001-V2.10.0
         </p>
         <p class="article-more-link">
           <a href="/2017/04/05/小巷/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-jade"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/03/25/jade/">Jade - 模板引擎</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/03/25/jade/" class="article-date">
-	  <time datetime="2017-03-25T04:26:28.000Z" itemprop="datePublished">2017-03-25</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          Jade - 模板引擎Jade 是一个高性能的模板引擎，它深受 Haml 影响，它是用 JavaScript 实现的, 并且可以供 Node 使用.
-翻译: 草依山 等
-
-声明从 Jade v0.31.0 开始放弃了对于 &lt;script&gt; 和 &lt;style&gt; 标签的平文本支持. 这个问题你可以在 &lt;script&gt; &lt;style&gt; 标签后加上 . 来解决.
-希望这一点能让 Jade 对新手更友好, 同时也不影响到 Jade 本身的能力或者导致过...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/03/25/jade/#more">阅读全文</a>
         </p>
       
     </div>

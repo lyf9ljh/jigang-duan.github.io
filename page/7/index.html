@@ -257,6 +257,59 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-merge-odex-apk"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/14/merge-odex-apk/">Android中odex和apk文件的合并方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/14/merge-odex-apk/" class="article-date">
+	  <time datetime="2017-12-14T03:48:01.000Z" itemprop="datePublished">2017-12-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android逆向/">Android逆向</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+Android Rom中的APK是被分开的，分为apk和odex。APK中的dex被分离出来成了单独的文件odex,包括了Java编译的文件，而apk包含了资源文件和.so。
+这样做可以使其厂商保证一定的反盗版，因为没有dex文件的apk是无法正常安装的，而厂商直接将odex和不完整的apk文件放到手机rom固化到/system/bin中可以让一般用户无法正常导出使用。
+可能想到的是合并odex和apk变成apk中包含dex文件的，这样合并后最终apk文件安装在/data/中，而rom存...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/14/merge-odex-apk/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -738,62 +791,6 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         </p>
         <p class="article-more-link">
           <a href="/2017/11/17/introduction-automated-android-testing/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-resources-getting-started-android-development"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/14/resources-getting-started-android-development/">现代ANDROID开发入门资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/14/resources-getting-started-android-development/" class="article-date">
-	  <time datetime="2017-11-14T01:54:31.000Z" itemprop="datePublished">2017-11-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-原文地址
-作者：Rebecca
-在为DVT的移动开发者研究生项目汇集了资源之后，我意识到我所引用的内容可以成为现代Android开发入门的重要指导。
-值得注意的是，我们有一个非常实际的方法来培养DVT的毕业生。我们举办工作坊和实际项目，以确保我们的毕业生对Android的发展有一个很好的理解。
-随着网上大量的内容可用，当我开始Android开发时，我不知道在开发应用程序时应该注意哪些地方或什么。有一个简洁的列表，就像这个博客文章中的那个，对我来说是非常宝贵的。我希望你也能找到它的价值。
-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/14/resources-getting-started-android-development/#more">阅读全文</a>
         </p>
       
     </div>

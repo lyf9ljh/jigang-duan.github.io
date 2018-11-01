@@ -257,6 +257,59 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-RxSwift-DesignRationale"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/10/26/RxSwift-DesignRationale/">RxSwift 设计原理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/10/26/RxSwift-DesignRationale/" class="article-date">
+	  <time datetime="2017-10-26T02:13:53.000Z" itemprop="datePublished">2017-10-26</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+为什么不使用普通的错误类型
+12345enum Event&lt;Element&gt;  &#123;    case next(Element)      // next element of a sequence    case error(Error)   // sequence failed with error    case completed          // sequence terminated successfully&#125;
+让我们讨论一下Error的优...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/10/26/RxSwift-DesignRationale/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-RxSwift"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -854,60 +907,6 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
         </p>
         <p class="article-more-link">
           <a href="/2017/10/09/Java界的神器-使用Lombok来消除你的冗余代码量/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-custom-views-optimizing-view"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/13/custom-views-optimizing-view/">自定义视图(4) —— 优化视图</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/08/13/custom-views-optimizing-view/" class="article-date">
-	  <time datetime="2017-08-13T06:50:46.000Z" itemprop="datePublished">2017-08-13</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-现在，您已经有了一个设计良好的视图，可以响应状态之间的手势和转换，确保视图运行得很快。为了避免在回放期间感觉迟钝或停滞的UI，确保动画始终以每秒60帧的速度运行。
-
-少做事，频率少为了加快视图的速度，从经常调用的例程中删除不必要的代码。先从onDraw()开始，这将给你最大的回报。特别是您应该消除onDraw()中的分配，因为分配可能会导致垃圾收集，从而导致口吃。在初始化期间或在动画之间分配对象。当动画运行时，不要进行分配。
-除了使onDraw()更精简，也要确保它被尽可能少地调用。大多...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/08/13/custom-views-optimizing-view/#more">阅读全文</a>
         </p>
       
     </div>
