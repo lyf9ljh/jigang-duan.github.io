@@ -257,6 +257,67 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-WebPage-Get-SMS"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/18/WebPage-Get-SMS/">Android 网页获取短信验证码 可行性预研</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/18/WebPage-Get-SMS/" class="article-date">
+	  <time datetime="2017-12-18T08:09:01.000Z" itemprop="datePublished">2017-12-18</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+目标： Android 网页获取短信验证码
+目前状态： 预言阶段（技术上未实现）
+
+网页端方案： Android WebKit插件开发 SMS-BrowserPlugin
+
+方案描述： WebKit插件包括PluginService和Plugin.so动态库, Plugin.so提供与WebKit的交互，提供JS的接口；PluginService静态注册WebKit插件action，实现短信拦截功能。
+
+Android端拦截短信方案
+
+方案一： 监听SMS广播
+方案二： Notifica...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/18/WebPage-Get-SMS/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-merge-odex-apk"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -734,63 +795,6 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         </p>
         <p class="article-more-link">
           <a href="/2017/11/17/automated-android-testing-part-2-setup/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-automated-android-testing"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-automated-android-testing/">Android 自动化测试 - 第1部分 介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/introduction-automated-android-testing/" class="article-date">
-	  <time datetime="2017-11-17T09:29:12.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-很多人对如何在Android中进行测试感到困惑和不确定。在过去，测试Android应用程序是非常困难的，并没有太多的方向。在这个系列中，将尝试让你的测试更容易一些。这第一篇文章只是为了让你开始测试，接下来的几章将深入Android的测试。让我们开始吧！
-
-为什么要测试呢？
-测试迫使你以不同的方式思考，并隐含地使你的代码更清晰。
-如果您的代码有测试，您会对自己的代码更有信心。
-闪亮的绿色状态栏和详细的报告详细，说明编写测试的后果覆盖了你多少的代码。
-回归测试变得容易很多，因为自动化测试会首...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/introduction-automated-android-testing/#more">阅读全文</a>
         </p>
       
     </div>
