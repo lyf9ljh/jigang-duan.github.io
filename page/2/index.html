@@ -257,6 +257,61 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
+	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
+由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
+
+注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
+
+NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -733,63 +788,6 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         </p>
         <p class="article-more-link">
           <a href="/2018/08/11/vscode-extensions-1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Sentry"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/Sentry/">Sentry服务搭建</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/Sentry/" class="article-date">
-	  <time datetime="2018-08-11T01:08:32.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          官方引导运行您自己的 Sentry 使用 Docker.
-需求
-Docker 1.10.0+
-Compose 1.6.0+ (可选)
-
-启动和运行假设您刚刚克隆了这个存储库，下面的步骤将立即启动并运行!
-可能需要对包含的docker-compose.yml文件进行修改，以适应您的需要或环境。这些指导方针是你应该做的事情。
-
-mkdir -p data/{sentry,postgres} - 使我们的本地数据库和哨兵配置目录。这个目录是用postgres绑定安装的，所以不会丢失状态!
-doc...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/Sentry/#more">阅读全文</a>
         </p>
       
     </div>
