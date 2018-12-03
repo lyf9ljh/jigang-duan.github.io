@@ -257,6 +257,229 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-architecture-saving-states"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/architecture-saving-states/">Android 架构组件 - 保存界面状态</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/architecture-saving-states/" class="article-date">
+	  <time datetime="2017-11-09T05:12:41.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+您所做的或者不做的，保持UI状态是用户体验的一个关键部分。无论用户是旋转设备，用户重新启动应用，还是系统关闭应用，重要的是你的activity保持了用户所期望的状态
+
+如果要保存的UI数据是简单而轻量级的，那么您可以单独使用onSaveInstanceState()来保存您的状态数据。
+如果要保存的是复杂数据，可以使用ViewModel对象、onSaveInstanceState()方法和持久化本地存储的组合。
+
+本页讨论了这些方法中的每一个。
+
+管理简单的情况: onSaveInsta...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/architecture-saving-states/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-viewmodel"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/09/architecture-viewmodel/">Android 架构组件 - ViewModel</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/09/architecture-viewmodel/" class="article-date">
+	  <time datetime="2017-11-09T03:26:10.000Z" itemprop="datePublished">2017-11-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+ViewModel类旨在以生命周期的方式存储和管理与ui相关的数据。ViewModel类允许数据在诸如屏幕旋转之类的配置更改中存活。
+
+注意:要将ViewModel导入到您的Android项目中，请参见向您的项目添加组件。
+
+Android框架管理UI控制器的生命周期，比如activities和fragments。该框架可能会决定销毁或重新创建UI控制器，以响应完全超出您控制的某些用户操作或设备事件。
+如果系统破坏或重新创建一个UI控制器，那么存储在其中的任何与UI相关的数据都将丢失。例...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/09/architecture-viewmodel/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-livedata"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/architecture-livedata/">Android 架构组件 - LiveData</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/architecture-livedata/" class="article-date">
+	  <time datetime="2017-11-08T10:47:44.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+LiveData是一个可观察的数据持有者类。与常规的可观察到的不同，LiveData是生命周期感知的，这意味着它尊重其他应用组件的生命周期，比如activities、fragments或services。这一认识确保了LiveData只更新了处于活动生命周期状态的应用程序组件观察者。
+
+
+注意:要将LiveData组件导入到您的Android项目中，请参见向您的项目添加组件。
+
+LiveData考虑一个观察者，它由Observer类表示，如果它的生命周期处于STARTED或RESUMED...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/architecture-livedata/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-lifecycle"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/architecture-lifecycle/">Android 架构组件 - 使用Lifecycle组件来处理生命周期</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/architecture-lifecycle/" class="article-date">
+	  <time datetime="2017-11-08T08:50:06.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+Lifecycle组件执行操作以响应另一个组件的生命周期状态的变化，例如activities和fragments。这些组件可以帮助您生成更有组织的、更轻的代码，这样更容易维护。
+一个常见的模式是在activities和fragments的生命周期方法中实现相关组件的操作。然而，这种模式导致了代码的糟糕组织和错误的扩散。通过使用lifecycle组件，您可以将依赖组件的代码从生命周期方法中转移到本身组件中
+android.arch.lifecycle包提供了类和接口，允许您构建基于生命周期...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/architecture-lifecycle/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-adding-components"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -579,297 +802,6 @@ Listener助手asReference()如果您的异步API不支持取消，你的协程�
         </p>
         <p class="article-more-link">
           <a href="/2017/11/03/Anko-Coroutines/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-SQLite/">Anko SQLite</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/03/Anko-SQLite/" class="article-date">
-	  <time datetime="2017-11-03T03:05:26.000Z" itemprop="datePublished">2017-11-03</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-您是否厌倦了使用Android Cursor解析SQLite查询结果?您必须编写大量的样板代码来解析查询结果行，并将其封装在无数的try..finally块中，以便正确地关闭所有打开的资源。
-Anko提供了许多扩展功能，以简化与SQLite数据库的工作。
-目录
-在项目中使用Anko SQLite
-访问数据库
-创建和删除表
-插入数据
-查询数据
-解析查询结果
-自定义行解析器
-Cursor流
-更新值
-事务
-
-
-在项目中使用Anko SQLite将anko-sqlite的依赖添加到您的build...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/03/Anko-SQLite/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-Layouts"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Layouts/">Anko 布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/Anko-Layouts/" class="article-date">
-	  <time datetime="2017-11-02T10:56:23.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-
-为什么Anko布局?
-DSL的原因?
-支持现有的代码
-它是如何工作的
-它是可扩展的吗?
-
-
-在你的项目中使用Anko Layouts
-理解Anko
-基础知识
-AnkoComponent
-辅助块
-主题块
-布局和LayoutParams
-Listeners
-定制的协程上下文
-使用资源标识符
-实例简化符号
-UI包装
-Include标签
-
-
-Anko支持插件
-安装Anko支持插件
-使用插件
-XML DSL转换器
-
-
-
-
-为什么Anko布局?DSL的原因?默认情况下，Android中的UI是用X...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Layouts/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-Commons"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Commons/">Anko 通用模块</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/Anko-Commons/" class="article-date">
-	  <time datetime="2017-11-02T09:24:52.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-目录
-在您的项目中使用anko-commons助手
-Intents
-Intent构建器函数
-有用Intent调用
-
-
-Dialogs
-Toasts
-SnackBars
-Alerts
-Selectors
-进度dialogs
-
-
-日志
-强风格
-日志记录器对象风格
-
-
-Misc
-颜色
-维度值
-applyRecursively()
-
-
-
-
-在您的项目中使用anko-commons助手添加anko-commons到对您的build.gradle的依赖:
-1234dependencies &#123...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Commons/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-anko"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/anko/">Anko 简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/anko/" class="article-date">
-	  <time datetime="2017-11-02T09:02:35.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-Anko是一个Kotlin库，它使Android应用程序开发的速度更快、更容易。它使您的代码干净、易于阅读，并且让您忘记了Android SDK的粗糙边缘。
-Anko由几个部分组成:
-
-Anko Commons:一个全是助手的轻量级的库:
-Intents;
-Dialogs和toasts;
-Logging;
-资源和尺寸;
-
-
-Anko Layouts:一种快速和类型安全的方式来编写动态的Android布局
-Anko SQLite:用于Android SQLite的查询DSL和解析器集合
-A...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/anko/#more">阅读全文</a>
         </p>
       
     </div>
