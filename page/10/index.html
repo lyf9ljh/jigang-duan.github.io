@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-ReactorKit"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
+      <a class="article-title" href="/2017/11/09/ReactorKit/">ReactorKit 介绍</a>
     </h1>
   
 
@@ -273,12 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
-	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
+	<a href="/2017/11/09/ReactorKit/" class="article-date">
+	  <time datetime="2017-11-09T10:40:18.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
 
       
     </div>
@@ -286,12 +286,16 @@
       
         <p class="article-excerpt-content">
           
-这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
-介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
-kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
+ReactorKit是一个响应式和单向的Swift应用程序架构的框架。这个文章介绍了ReactorKit的基本概念，并描述了如何使用ReactorKit构建应用程序。
+如果您希望看到实际的代码，您可能希望首先看到示例部分。访问API参考的代码级文档。
+
+基本概念ReactorKit是Flux和响应式编程的结合。user actions和view states通过可观察的流传递到每一层。这些流是单向的: view只能发射actions，reactor只能发射states。
+
+设计目标
+可测...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
+          <a href="/2017/11/09/ReactorKit/#more">阅读全文</a>
         </p>
       
     </div>
@@ -310,7 +314,7 @@ kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可�
 
 
   
-    <article id="post-Anko-Coroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-paging"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -318,7 +322,7 @@ kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-Coroutines/">Anko 协程</a>
+      <a class="article-title" href="/2017/11/09/architecture-paging/">Android 架构组件 - 分页库</a>
     </h1>
   
 
@@ -326,359 +330,8 @@ kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可�
     
     <div class="article-meta">
       
-	<a href="/2017/11/03/Anko-Coroutines/" class="article-date">
-	  <time datetime="2017-11-03T05:14:08.000Z" itemprop="datePublished">2017-11-03</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-目录
-在你的项目中使用Anko协程
-Listener助手
-asReference()
-bg()
-
-
-在你的项目中使用Anko协程添加anko-coroutines 到你的build.gradle：
-123dependencies &#123;    compile &quot;org.jetbrains.anko:anko-coroutines:$anko_version&quot;&#125;
-Listener助手asReference()如果您的异步API不支持取消，你的协程可能会被...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/03/Anko-Coroutines/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-SQLite/">Anko SQLite</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/03/Anko-SQLite/" class="article-date">
-	  <time datetime="2017-11-03T03:05:26.000Z" itemprop="datePublished">2017-11-03</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-您是否厌倦了使用Android Cursor解析SQLite查询结果?您必须编写大量的样板代码来解析查询结果行，并将其封装在无数的try..finally块中，以便正确地关闭所有打开的资源。
-Anko提供了许多扩展功能，以简化与SQLite数据库的工作。
-目录
-在项目中使用Anko SQLite
-访问数据库
-创建和删除表
-插入数据
-查询数据
-解析查询结果
-自定义行解析器
-Cursor流
-更新值
-事务
-
-
-在项目中使用Anko SQLite将anko-sqlite的依赖添加到您的build...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/03/Anko-SQLite/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-Layouts"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Layouts/">Anko 布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/Anko-Layouts/" class="article-date">
-	  <time datetime="2017-11-02T10:56:23.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-
-为什么Anko布局?
-DSL的原因?
-支持现有的代码
-它是如何工作的
-它是可扩展的吗?
-
-
-在你的项目中使用Anko Layouts
-理解Anko
-基础知识
-AnkoComponent
-辅助块
-主题块
-布局和LayoutParams
-Listeners
-定制的协程上下文
-使用资源标识符
-实例简化符号
-UI包装
-Include标签
-
-
-Anko支持插件
-安装Anko支持插件
-使用插件
-XML DSL转换器
-
-
-
-
-为什么Anko布局?DSL的原因?默认情况下，Android中的UI是用X...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Layouts/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-Commons"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Commons/">Anko 通用模块</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/Anko-Commons/" class="article-date">
-	  <time datetime="2017-11-02T09:24:52.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-目录
-在您的项目中使用anko-commons助手
-Intents
-Intent构建器函数
-有用Intent调用
-
-
-Dialogs
-Toasts
-SnackBars
-Alerts
-Selectors
-进度dialogs
-
-
-日志
-强风格
-日志记录器对象风格
-
-
-Misc
-颜色
-维度值
-applyRecursively()
-
-
-
-
-在您的项目中使用anko-commons助手添加anko-commons到对您的build.gradle的依赖:
-1234dependencies &#123...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Commons/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-anko"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/anko/">Anko 简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/anko/" class="article-date">
-	  <time datetime="2017-11-02T09:02:35.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-Anko是一个Kotlin库，它使Android应用程序开发的速度更快、更容易。它使您的代码干净、易于阅读，并且让您忘记了Android SDK的粗糙边缘。
-Anko由几个部分组成:
-
-Anko Commons:一个全是助手的轻量级的库:
-Intents;
-Dialogs和toasts;
-Logging;
-资源和尺寸;
-
-
-Anko Layouts:一种快速和类型安全的方式来编写动态的Android布局
-Anko SQLite:用于Android SQLite的查询DSL和解析器集合
-A...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/anko/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-ADBShell"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/ADBShell/">ADB Shell</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/ADBShell/" class="article-date">
-	  <time datetime="2017-11-02T05:09:20.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/11/09/architecture-paging/" class="article-date">
+	  <time datetime="2017-11-09T06:45:09.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
@@ -690,26 +343,13 @@ A...
       
         <p class="article-excerpt-content">
           
-Android调试桥(adb)是一种命令行工具，可以让您与仿真器或连接的Android设备进行通信。您可以在android sdk/platform-tools中找到adb工具，或者下载adb工具包。
-目录
-ADB调试
-无线
-包管理器
-文件管理器
-网络
-调试
-截图
-系统
+分页库使您的应用程序可以更容易地根据需要从数据源加载信息，而不会使设备超载，或者等待一个大的数据库查询等待太长的时间。
 
-
-
-ADB调试adb devices打印所有附加的模拟器/设备的列表
-1adb devices
-打印所有附加的模拟器/设备的列表
-12e4b25377        deviceemulator-5554  devic...
+概述许多应用程序都使用大量的数据，但只需要在任何时候加载和显示一小部分数据。一个应用程序可能会有数千个可能显示的项目，但它可能只需要一次访问其中的几十个。如果应用程序不小心，它可能最终会请求它实际上不需要的数据，从而给设备和网络带来性能负担。如果数据被存储或与远程数据库同步，这也会降低应用程序的速度，并浪费用户的数据计划。
+尽管现有的Android api允许在内容中...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/ADBShell/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-paging/#more">阅读全文</a>
         </p>
       
     </div>
@@ -728,7 +368,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
 
   
-    <article id="post-MasteringAndroidNDKBuildSystem2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-room"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -736,7 +376,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/MasteringAndroidNDKBuildSystem2/">掌握Android NDK构建系统——第2部分:独立的工具链</a>
+      <a class="article-title" href="/2017/11/09/architecture-room/">Android 架构组件 - Room持久性库</a>
     </h1>
   
 
@@ -744,8 +384,8 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/" class="article-date">
-	  <time datetime="2017-11-02T03:31:23.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/11/09/architecture-room/" class="article-date">
+	  <time datetime="2017-11-09T06:03:04.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
@@ -756,13 +396,15 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第2部分:独立的工具链原英文文章
+          
+Room持久性库为SQLite提供了一个抽象层，以便在充分利用SQLite的同时，允许流畅的数据库访问。
+该库帮助用户在运行应用程序的设备上创建应用程序的数据缓存，该缓存作为应用程序的单一来源，允许用户在应用内查看关键信息的一致副本，而不管用户是否有互联网连接。
+要将Room导入到您的Android项目中，请参见向您的项目添加组件。
+要想在应用程序的数据存储持久性解决方案中应用Room的功能，请参阅Room培训指南。
 
-这是“掌握NDK”的第2部分。在前面的部分(第1部分)中，我们介绍了如何使用ndk-build构建Android本地项目，我们还介绍了一些高级技术来管理和定制大型项目的构建脚本。
-尽管对于大多数Android本地项目来说，ndk-build可能已经足够了，但是在某些情况下仍然可能需要独立的工具链。例如，如果您已经有一个c/c++项目，它可能非常复杂，并且有一个复杂的makefile。在这种情况下，你可能不想把...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-room/#more">阅读全文</a>
         </p>
       
     </div>
@@ -781,7 +423,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
 
   
-    <article id="post-MasteringAndroidNDKBuildSystem1"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-saving-states"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -789,7 +431,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/MasteringAndroidNDKBuildSystem1/">掌握Android NDK构建系统——第1部分:使用ndk-build技巧</a>
+      <a class="article-title" href="/2017/11/09/architecture-saving-states/">Android 架构组件 - 保存界面状态</a>
     </h1>
   
 
@@ -797,8 +439,8 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     
     <div class="article-meta">
       
-	<a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/" class="article-date">
-	  <time datetime="2017-11-01T10:31:23.000Z" itemprop="datePublished">2017-11-01</time>
+	<a href="/2017/11/09/architecture-saving-states/" class="article-date">
+	  <time datetime="2017-11-09T05:12:41.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
@@ -809,14 +451,18 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第1部分:使用ndk-build技巧原英文文章
+          
+您所做的或者不做的，保持UI状态是用户体验的一个关键部分。无论用户是旋转设备，用户重新启动应用，还是系统关闭应用，重要的是你的activity保持了用户所期望的状态
 
-这篇文章不是一个“Hello world!”类型的NDK”教程。尽管我仍将简要介绍ndk构建的基本知识，但这并不是本文的重点。相反，我将总结一些非常有用的NDK技巧和我在项目中使用的技巧。希望这些建议对于那些想要建立一些实际项目的人来说是非常有用的，而不是一个学习NDK的玩具项目。因此，目标读者是中或高级Android开发人员。这篇文章包含两个部分:
+如果要保存的UI数据是简单而轻量级的，那么您可以单独使用onSaveInstanceState()来保存您的状态数据。
+如果要保存的是复杂数据，可以使用ViewModel对象、onSaveInstanceState()方法和持久化本地存储的组合。
 
-第1部分:ndk-build 在这一部分中...
+本页讨论了这些方法中的每一个。
+
+管理简单的情况: onSaveInsta...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-saving-states/#more">阅读全文</a>
         </p>
       
     </div>
@@ -835,7 +481,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
 
   
-    <article id="post-AndroidNDKNativeProgramLauncher"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-viewmodel"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -843,7 +489,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/AndroidNDKNativeProgramLauncher/">Android原生程序启动工具</a>
+      <a class="article-title" href="/2017/11/09/architecture-viewmodel/">Android 架构组件 - ViewModel</a>
     </h1>
   
 
@@ -851,8 +497,8 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     
     <div class="article-meta">
       
-	<a href="/2017/11/01/AndroidNDKNativeProgramLauncher/" class="article-date">
-	  <time datetime="2017-11-01T08:38:27.000Z" itemprop="datePublished">2017-11-01</time>
+	<a href="/2017/11/09/architecture-viewmodel/" class="article-date">
+	  <time datetime="2017-11-09T03:26:10.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
@@ -863,29 +509,297 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          [翻译]Android原生程序启动工具
+          
+ViewModel类旨在以生命周期的方式存储和管理与ui相关的数据。ViewModel类允许数据在诸如屏幕旋转之类的配置更改中存活。
 
-介绍
-主要功能
-入门指南
-下载地址
-提供了什么?
-使用说明
-一些细节
+注意:要将ViewModel导入到您的Android项目中，请参见向您的项目添加组件。
 
-
-示例
-示例1
-示例2
-
-
-
-
-介绍在使用原生代码开发Android应用程序时，我们通常需要使用纯原生模式来调试它(使用NDK编译代码，生成可执行文件，并通过adb shell执行它)。有时，我们甚至不想花时间开发Android应用，因为我们只是想测试一些原生函数。
-以处理OpenCL和GPU为例。编写的程序中超过80%将是性能和基准代码。由于它们直接操作系统驱动程序或硬件，所...
+Android框架管理UI控制器的生命周期，比如activities和fragments。该框架可能会决定销毁或重新创建UI控制器，以响应完全超出您控制的某些用户操作或设备事件。
+如果系统破坏或重新创建一个UI控制器，那么存储在其中的任何与UI相关的数据都将丢失。例...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/01/AndroidNDKNativeProgramLauncher/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-viewmodel/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-livedata"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/architecture-livedata/">Android 架构组件 - LiveData</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/architecture-livedata/" class="article-date">
+	  <time datetime="2017-11-08T10:47:44.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+LiveData是一个可观察的数据持有者类。与常规的可观察到的不同，LiveData是生命周期感知的，这意味着它尊重其他应用组件的生命周期，比如activities、fragments或services。这一认识确保了LiveData只更新了处于活动生命周期状态的应用程序组件观察者。
+
+
+注意:要将LiveData组件导入到您的Android项目中，请参见向您的项目添加组件。
+
+LiveData考虑一个观察者，它由Observer类表示，如果它的生命周期处于STARTED或RESUMED...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/architecture-livedata/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-architecture-lifecycle"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/architecture-lifecycle/">Android 架构组件 - 使用Lifecycle组件来处理生命周期</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/architecture-lifecycle/" class="article-date">
+	  <time datetime="2017-11-08T08:50:06.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+Lifecycle组件执行操作以响应另一个组件的生命周期状态的变化，例如activities和fragments。这些组件可以帮助您生成更有组织的、更轻的代码，这样更容易维护。
+一个常见的模式是在activities和fragments的生命周期方法中实现相关组件的操作。然而，这种模式导致了代码的糟糕组织和错误的扩散。通过使用lifecycle组件，您可以将依赖组件的代码从生命周期方法中转移到本身组件中
+android.arch.lifecycle包提供了类和接口，允许您构建基于生命周期...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/architecture-lifecycle/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-adding-components"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/adding-components/">Android架构组件 添加到你的项目</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/adding-components/" class="article-date">
+	  <time datetime="2017-11-08T08:24:19.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+架构组件可以从Google的Maven存储库中获得。要使用这些步骤，请遵循以下步骤:
+添加Google Maven存储库在默认情况下，Android Studio项目不会被配置为访问这个存储库。
+要将它添加到您的项目中，为您的项目打开 build.gradle文件(而不是您的应用程序或模块)，如下所示:
+123456allprojects &#123;    repositories &#123;        jcenter()        maven &#123; url 'htt...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/adding-components/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-GuidetoAppArchitecture"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/GuidetoAppArchitecture/">Android 架构组件指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/GuidetoAppArchitecture/" class="article-date">
+	  <time datetime="2017-11-08T03:23:22.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+本指南适用于开发app的开发人员，现在希望了解最佳实践和推荐的体系结构，构建健壮、高质量的apps。
+
+注意:本指南假定读者熟悉Android框架。如果你是应用开发的新手，请查看入门培训系列，其中包含了本指南的必备主题。
+
+
+app开发人员面临的常见问题与传统的桌面应用不同，在大多数情况下，它们都有一个单一入口点，并作为一个单一的整体流程运行，而Android应用程序的结构要复杂得多。一个典型的Android应用程序是由多个应用组件组成的，包括activities、fragments、s...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/GuidetoAppArchitecture/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-AndroidArchitectectureComponents"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/08/AndroidArchitectectureComponents/">Android 架构组件简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/08/AndroidArchitectectureComponents/" class="article-date">
+	  <time datetime="2017-11-08T01:35:45.000Z" itemprop="datePublished">2017-11-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+一组帮助您设计健壮的、可测试的和可维护的应用程序库。管理UI组件生命周期和处理数据持久性。
+
+应用架构指南
+添加组件到你的项目
+使用Lifecycle组件来处理生命周期
+LiveData
+ViewModel
+保存UI状态
+Room持久性库
+分页库
+
+轻松管理app的生命周期新的lifecycle组件感知生命周期，可以帮助您管理您的活动和片段生命周期。保存配置更改，避免内存泄漏，并使用LiveData、ViewModel、LifecycleObserver和LifecycleOwner，轻...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/08/AndroidArchitectectureComponents/#more">阅读全文</a>
         </p>
       
     </div>
@@ -908,7 +822,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
   </nav>
 
 </section>
