@@ -257,6 +257,353 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-my-common-grammar5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar5/">MySQL简单操作(5)-操作数据表中的记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar5/" class="article-date">
+	  <time datetime="2017-12-09T02:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          插入记录
+INSERT
+  1INSERT [INTO] tal_name [(col_name,...)] &#123;VALUES|VALUE&#125;(&#123;expr|DEFAULT&#125;,...),(...),...;
+
+expr 表达式
+举例：
+1INSERT users VALUES(NULL,'Tom','123',25,1);
+
+自动递增的字段设置成NULL或DEFAULT将自增的值
+
+
+
+
+INSERT SET
+  1INSERT [INTO] tal_na...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar4/">MySQL简单操作(4)-约束以及修改数据表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar4/" class="article-date">
+	  <time datetime="2017-12-08T15:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+约束保障数据的完整性和一致性
+约束分为表级约束和列级约束
+约束类型包括: NOT NULL(非空约束) PRIMARY KEY(主键约束) UNIQUE KEY(唯一约束) DEFAULT(默认约束) FOREIGN KEY(外键约束)
+
+FOREIGN KEY(外键约束)
+保持数据一致性，完整性
+实现一对一或一对多关系
+
+外键约束的要求
+父表和子表必须使用相同的存储引擎，而且禁止使用临时表
+数据表的存储引擎只能为InnoDB
+外键列和参考列必须具有相似的数据类型。其中数字长度或是否符号...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar3/">MySQL简单操作(3)-数据表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar3/" class="article-date">
+	  <time datetime="2017-12-08T14:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+创建数据表
+  1234CREATE TABLE [IF NOT EXISTS] table_name (    column_name data_type [NULL | NOT NULL | [AUTO_INCREMENT] PRIMARY KEY] [UNIQUE KEY] [DEFAULT default_value],    ...);
+  举例：
+  12345CREATE TABLE tb1 (    username VARCHAR(20),    age TINYINT...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar2/">MySQL简单操作(2)-数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar2/" class="article-date">
+	  <time datetime="2017-12-08T13:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          整型
+
+
+数据类型
+存储范围
+字节
+
+
+
+
+TINYINT
+有符号：-128～127；无符号：0～255
+1
+
+
+SMALLINT
+有符号：-32768～32767；无符号：0～65535
+2
+
+
+MEDIUMINT
+有符号：-8388608～8388607；无符号：0～16777215
+3
+
+
+INT
+有符号：-2^31～2^31-1；无符号：0～2^32-1
+4
+
+
+BIGINT
+有符号：-2^63～2^63-1；无符号：0～2^64-1
+8
+
+
+
+浮点型FLOAT[M,D]DOUBL...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar/">MySQL简单操作(1)-数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar/" class="article-date">
+	  <time datetime="2017-12-08T12:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          登陆/退出1mysql -u`username` -p`password` -P`port` -h`host`
+
+MySQL默认端口号 3306
+MySQL超级用户名 root
+
+退出
+
+mysql &gt; exit;
+mysql &gt; quit;
+mysql &gt; \q;
+
+修改提示符1shell&gt;mysql -uroot -proot --prompt 提示符
+或
+1mysql&gt;prompt 提示符
+
+
+
+参数
+描述
+
+
+
+
+\D
+日期
+
+
+\d
+当前数据库
+
+
+...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -516,284 +863,6 @@ SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本
         </p>
         <p class="article-more-link">
           <a href="/2017/11/20/introduction-automated-android-testing-part-5/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-android-testing-part-4"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-android-testing-part-4/">Android 自动化测试 - 第4部分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/introduction-android-testing-part-4/" class="article-date">
-	  <time datetime="2017-11-17T12:28:15.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在这篇博文中，我们正在开发一个名为Github用户搜索的Android应用程序。在之前的博客文章中，我们研究了为测试创建应用程序、创建API调用和编写API转换的第一个基本测试。阅读第1部分、第2部分和第3部分。
-这篇文章将着眼于创建一个与repository通信并向视图传递信息的presenter。这还包括为presenter编写单元测试。这篇博文的示例github repo将会在这里找到。
-
-创建Presenter
-为了开始创建，创建称为MvpView和MvpPresenter的基本...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/introduction-android-testing-part-4/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-android-testing-part3"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-android-testing-part3/">Android 自动化测试 - 第3部分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/introduction-android-testing-part3/" class="article-date">
-	  <time datetime="2017-11-17T11:30:11.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在之前的两篇博文中，我介绍了如何在Android中进行测试，我们创建了一个样本应用，我们将继续在这篇博文中继续开发。如果您错过了这两个帖子，我建议您阅读第1部分和第2部分。
-在本文中，我们将从Github API中获取用户列表，并为其编写单元测试。我们将从这个检查点的下一个repo开始。
-
-创建Web服务调用要使用Github API，我们将使用翻新和RxJava。我不打算在本系列中解释RxJava或Retrofit。如果您不熟悉RxJava，我建议您阅读这些文章。如果你没有使用过Ret...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/introduction-android-testing-part3/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-automated-android-testing-part-2-setup"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/automated-android-testing-part-2-setup/">Android 自动化测试 - 第2部分 安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/automated-android-testing-part-2-setup/" class="article-date">
-	  <time datetime="2017-11-17T10:34:14.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在本系列文章中，我们将介绍自动化的Android测试的介绍。在这个自动化测试系列的第1部分中，我们讨论了为什么要编写测试、测试文件夹所在的位置以及在Android中使用的不同类型的测试。
-在本文中，我们将介绍Android应用程序的典型结构和设置，以便进行测试。我将在本系列中从头开始创建一个简单的应用程序，并逐步完成我的思想过程中的每一步。我们将要创建的应用是一个简单的应用，它可以为用户搜索Github的API。下面是我们将要创建的一个粗略的模型:
-
-
-开始使用一款新应用
-打开Andro...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/automated-android-testing-part-2-setup/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-automated-android-testing"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-automated-android-testing/">Android 自动化测试 - 第1部分 介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/introduction-automated-android-testing/" class="article-date">
-	  <time datetime="2017-11-17T09:29:12.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-很多人对如何在Android中进行测试感到困惑和不确定。在过去，测试Android应用程序是非常困难的，并没有太多的方向。在这个系列中，将尝试让你的测试更容易一些。这第一篇文章只是为了让你开始测试，接下来的几章将深入Android的测试。让我们开始吧！
-
-为什么要测试呢？
-测试迫使你以不同的方式思考，并隐含地使你的代码更清晰。
-如果您的代码有测试，您会对自己的代码更有信心。
-闪亮的绿色状态栏和详细的报告详细，说明编写测试的后果覆盖了你多少的代码。
-回归测试变得容易很多，因为自动化测试会首...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/introduction-automated-android-testing/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-resources-getting-started-android-development"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/14/resources-getting-started-android-development/">现代ANDROID开发入门资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/14/resources-getting-started-android-development/" class="article-date">
-	  <time datetime="2017-11-14T01:54:31.000Z" itemprop="datePublished">2017-11-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-原文地址
-作者：Rebecca
-在为DVT的移动开发者研究生项目汇集了资源之后，我意识到我所引用的内容可以成为现代Android开发入门的重要指导。
-值得注意的是，我们有一个非常实际的方法来培养DVT的毕业生。我们举办工作坊和实际项目，以确保我们的毕业生对Android的发展有一个很好的理解。
-随着网上大量的内容可用，当我开始Android开发时，我不知道在开发应用程序时应该注意哪些地方或什么。有一个简洁的列表，就像这个博客文章中的那个，对我来说是非常宝贵的。我希望你也能找到它的价值。
-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/14/resources-getting-started-android-development/#more">阅读全文</a>
         </p>
       
     </div>
