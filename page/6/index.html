@@ -257,6 +257,62 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-go-micro-tutorial-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-4/">Go微服务教程-第四部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/05/10/go-micro-tutorial-4/" class="article-date">
+	  <time datetime="2018-05-10T13:56:32.000Z" itemprop="datePublished">2018-05-10</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Go微服务/">Go微服务</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+在本系列的前一部分中，我们研究了创建用户服务并开始存储一些用户。现在我们需要考虑使我们的用户服务存储用户密码安全，并创建一些功能来验证用户，并在我们的微服务中发布安全令牌。
+
+注意，我现在已经将我们的服务分离到单独的存储库中。我发现这更容易部署。最初，我打算尝试做一个monorepo，但是我发现用Go的dep管理来设置它太麻烦了，不会有各种冲突。我还将开始演示如何独立运行和测试微服务。
+不幸的是，使用这种方法，我们将会失去docker。但现在还好。
+现在需要手动运行数据库:
+12$ do...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/05/10/go-micro-tutorial-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-go-micro-tutorial-3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -756,60 +812,6 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
         </p>
         <p class="article-more-link">
           <a href="/2018/03/20/micro-api/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-micro-resiliency"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-resiliency/">用Micro构建有弹性和容错的应用程序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/03/18/micro-resiliency/" class="article-date">
-	  <time datetime="2018-03-18T15:44:26.000Z" itemprop="datePublished">2018-03-18</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/go-micro/">go-micro</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-构建分布式系统是很有挑战性的，这已经不是什么秘密了。虽然我们已经解决了很多问题，作为一个行业，我们仍然经历了重建许多建筑街区的周期。是否因为迁移到下一个抽象级别，虚拟机到容器，采用新的语言，利用基于云的服务，甚至是这种向微服务的转变。总有一些东西似乎需要我们重新学习如何为下一波技术构建性能和容错系统。
-这是一次迭代和创新之间的无休止的战斗，但是我们需要做一些事情来帮助减轻很多痛苦，因为向云、容器和微服务的转移仍在继续。
-
-动机我们为什么要这么做?为什么我们要不断地重建构建块，为什么还要继...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/03/18/micro-resiliency/#more">阅读全文</a>
         </p>
       
     </div>

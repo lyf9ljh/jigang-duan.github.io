@@ -257,6 +257,61 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
+	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
+这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
+以下是您将使用的一些常用方法。
+方法this.config.save()
+此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
+该.yo-r...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -730,59 +785,6 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         </p>
         <p class="article-more-link">
           <a href="/2018/08/11/vscode-extensions-3/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-2/">扩展 - Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/vscode-extensions-2/" class="article-date">
-	  <time datetime="2018-08-11T04:16:04.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VSCode插件/">VSCode插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          你的第一个扩展本文档将指导您创建第一个VS Code扩展(“Hello World”)，并解释VS Code可扩展性的基本概念。
-在本演练中，您将向VS Code添加一个新命令，该命令将显示一个简单的“Hello World”消息。在随后的演练中，您将与VS Code编辑器交互，并查询用户当前选择的文本。
-先决条件你需要的节点。在您的$PATH中安装并可用js。Node.js安装包括npm, Node.js包管理器，它将用于安装扩展生成器。
-生成一个新的扩展向VS Code中添加自己的功能...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-2/#more">阅读全文</a>
         </p>
       
     </div>

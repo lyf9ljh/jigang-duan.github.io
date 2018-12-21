@@ -257,6 +257,69 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-RxSwift-Schedulers"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/10/27/RxSwift-Schedulers/">RxSwift 调度器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/10/27/RxSwift-Schedulers/" class="article-date">
+	  <time datetime="2017-10-27T01:56:45.000Z" itemprop="datePublished">2017-10-27</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+调度器
+串行和并行调度器
+定制的调度器
+内置的调度器
+
+
+调度器抽象出执行工作的机制.
+执行工作的不同机制包括当前线程、调度队列、操作队列、新线程、线程池和运行循环.
+有两个主要的操作符与调度器有关，observeOn和subscribeOn.
+如果您想在不同的调度器上执行工作，只需使用observeOn(scheduler)操作符.
+你通常会比subscribeOn更频繁地使用observeOn.
+如果没有显式地指定observeOn，那么将在生成的任何线程/调度器上执行工作.
+使用o...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/10/27/RxSwift-Schedulers/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-RxSwift-MathBehindRx"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -817,71 +880,6 @@ View最主要的是实现组件化，与其它组件和模块保持最大化的�
         </p>
         <p class="article-more-link">
           <a href="/2017/10/19/TCLMOVE-架构设计/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-PlantUML"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/17/PlantUML/">PlantUML</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/17/PlantUML/" class="article-date">
-	  <time datetime="2017-10-17T06:34:26.000Z" itemprop="datePublished">2017-10-17</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-
-
-PlantUML是一个开源项目，支持快速绘制：
-
-时序图 Sequence diagram
-用例图 Usecase diagram
-类图 Class diagram
-活动图 Activity diagram
-组件图 Component diagram
-状态图 State diagram
-部署图 Deployment diagram
-对象图 Object diagram
-线框图形界面 wireframe graphical interface
-时序图 Timing Diagram
-
-
-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/17/PlantUML/#more">阅读全文</a>
         </p>
       
     </div>
