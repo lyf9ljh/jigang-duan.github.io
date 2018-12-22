@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-ory-editor-ui"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
+      <a class="article-title" href="/2018/12/14/ory-editor-ui/">ORY编辑器 (3)UI组件</a>
     </h1>
   
 
@@ -273,27 +273,25 @@
     
     <div class="article-meta">
       
-	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
-	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
+	<a href="/2018/12/14/ory-editor-ui/" class="article-date">
+	  <time datetime="2018-12-14T13:48:41.000Z" itemprop="datePublished">2018-12-14</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/ORY编辑器/">ORY编辑器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
-这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
-以下是您将使用的一些常用方法。
-方法this.config.save()
-此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
-该.yo-r...
+          包编辑器由多个包组成。一个元包在ory-editor可用。
+ory-editor-core这个包是ORY编辑器的核心。它包含创建和修改布局的逻辑，并负责处理插件。
+ory-editor-ui这个存储库包含基于callemall/material-ui的ORY Editor UI React组件。虽然您不需要使用它们，但是它们提供了一种开始使用ORY编辑器的简单方法。
+ory-editor-renderer这个包包含ORY编辑器状态的渲染组件。目前，只支持HTML渲染。HTML渲染组件负责输...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
+          <a href="/2018/12/14/ory-editor-ui/#more">阅读全文</a>
         </p>
       
     </div>
@@ -312,7 +310,7 @@
 
 
   
-    <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-ORY-Editor-2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -320,7 +318,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring6/">编写自己的Yeoman生成器-6.使用文件系统</a>
+      <a class="article-title" href="/2018/12/14/ORY-Editor-2/">ORY编辑器 (2)ory-editor-core</a>
     </h1>
   
 
@@ -328,25 +326,27 @@
     
     <div class="article-meta">
       
-	<a href="/2018/08/30/yeoman-authoring6/" class="article-date">
-	  <time datetime="2018-08-29T16:23:20.000Z" itemprop="datePublished">2018-08-30</time>
+	<a href="/2018/12/14/ORY-Editor-2/" class="article-date">
+	  <time datetime="2018-12-14T13:01:14.000Z" itemprop="datePublished">2018-12-14</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/ORY编辑器/">ORY编辑器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          位置上下文和路径Yeoman文件实用程序基于您在磁盘上始终有两个位置上下文的想法。这些上下文是您的生成器最有可能读取和写入的文件夹。
-目标上下文第一个上下文是目标上下文。目标是Yeoman将脚手架新应用程序的文件夹。它是您的用户项目文件夹，它是您编写大部分脚手架的地方。
-目标上下文定义为当前工作目录或包含.yo-rc.json文件的最近父文件夹。该.yo-rc.json文件定义了Yeoman项目的根。此文件允许您的用户在子目录中运行命令并让它们在项目上工作。这确保了最终用户的一致行为。
-你...
+          Coreory-editor-core
+其核心是ORY编辑器的主系统。它包含创建和修改布局的逻辑，并负责处理插件。
+开始ORY编辑器使用Redux存储来管理内部状态。创建新Editor实例时。
+123import Editor from 'ory-editor-core'const editor = new Editor()
+Redux store也被创建。因此，在应用程序生命周期中只实例化Editor一次非常重要(这称为单例模式)。
+1234import Editor from 'ory...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
+          <a href="/2018/12/14/ORY-Editor-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -365,7 +365,7 @@
 
 
   
-    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-ORY-Editor-1"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -373,7 +373,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
+      <a class="article-title" href="/2018/12/14/ORY-Editor-1/">ORY编辑器 (1)介绍</a>
     </h1>
   
 
@@ -381,27 +381,28 @@
     
     <div class="article-meta">
       
-	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
-	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
+	<a href="/2018/12/14/ORY-Editor-1/" class="article-date">
+	  <time datetime="2018-12-14T12:22:03.000Z" itemprop="datePublished">2018-12-14</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/ORY编辑器/">ORY编辑器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
-由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
+          介绍欢迎来到ORY编辑器指南。请注意，ORY编辑器需要大量的关于ReactJS、构建工具(如webpack)和ES6的知识。如果你缺乏这方面的知识，请在我们的聊天中寻求帮助。
+示范眼见为实，让我们从一个演示开始!
 
-注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
+一个可用的演示在editor.ory.sh，所以去试试它自己!
+为什么它是不同的在创建ORY之前，我们建立了类似维基百科的东西，但只是为了学习。内容是众包的，每个月有超过50万人使用这个平台。我们必须认识到，现有的开源内容编辑解决方案存在以下三个缺陷之一:
 
-NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
+制作的标记非常可怕...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
+          <a href="/2018/12/14/ORY-Editor-1/#more">阅读全文</a>
         </p>
       
     </div>
@@ -420,7 +421,7 @@ NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使�
 
 
   
-    <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-react-jsonschema-form"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -428,7 +429,7 @@ NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring4/">编写自己的Yeoman生成器-4.组合性</a>
+      <a class="article-title" href="/2018/12/12/react-jsonschema-form/">react-jsonschema-form</a>
     </h1>
   
 
@@ -436,12 +437,64 @@ NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring4/" class="article-date">
-	  <time datetime="2018-08-29T15:32:44.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/12/12/react-jsonschema-form/" class="article-date">
+	  <time datetime="2018-12-12T02:38:08.000Z" itemprop="datePublished">2018-12-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          使用JSON Schema构建Web表单的React组件。https://mozilla-services.github.io/react-jsonschema-form
+一个简单的React组件，能够从JSON模式构建HTML表单，默认情况下使用Bootstrap语义。
+一个活动的游乐场在gh-pages上面。
+
+设计哲学response-jsonschema-form旨在基于JSON模式自动生成一个response表单。它是kinto-admin项目中的一个主要组件。如果您想为任何数据...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/12/12/react-jsonschema-form/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mqyqingfeng-blog"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/06/mqyqingfeng-blog/">JavaScript[冴羽的博客]</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/06/mqyqingfeng-blog/" class="article-date">
+	  <time datetime="2018-12-06T05:09:27.000Z" itemprop="datePublished">2018-12-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/GitHub精选/">GitHub精选</a>
 
       
     </div>
@@ -449,16 +502,26 @@ NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使�
       
         <p class="article-excerpt-content">
           
-组合性是一种将较小的部件组合在一起构成一件大事的方法。排序像Voltron®
+原作者发布地址: github
 
-Yeoman为生成器提供了多种方式来建立共同点。重写相同的功能没有任何意义，因此提供了一个API来在其他生成器中使用生成器。
-在Yeoman中，可组合性可以通过两种方式启动：
+专栏
+掘金主页
+segmentfault主页
+新开了 知乎专栏，欢迎关注
 
-生成器可以决定与另一个生成器（例如，generator-backbone使用generator-mocha）组合。
-最终用户也可以发起合成（例如，Simon想要生成具有SASS和Rails的Backbone项目）。注意：最终用户发起的...
+深入系列目录
+JavaScirpt深入之从原型到原型链
+JavaScript深入之词法作用域和动态作用域
+JavaScript深入之执行上下文栈
+JavaScript深入之变量对象
+JavaScript深入之作用域链
+JavaScript深入之从ECMAScript规范解读this
+JavaScript深入之执行上下文
+JavaScript深入之闭包
+JavaScript深入之参...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring4/#more">阅读全文</a>
+          <a href="/2018/12/06/mqyqingfeng-blog/#more">阅读全文</a>
         </p>
       
     </div>
@@ -477,7 +540,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-minio"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -485,7 +548,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring3/">编写自己的Yeoman生成器-3.与用户交互</a>
+      <a class="article-title" href="/2018/12/03/minio/">Minio - 私有云存储</a>
     </h1>
   
 
@@ -493,24 +556,24 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring3/" class="article-date">
-	  <time datetime="2018-08-29T15:00:05.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/12/03/minio/" class="article-date">
+	  <time datetime="2018-12-03T03:01:43.000Z" itemprop="datePublished">2018-12-03</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/GitHub精选/">GitHub精选</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          您的生成器将与最终用户进行大量交互。默认情况下，Yeoman在终端上运行，但它也支持不同工具可以提供的自定义用户界面。例如，没有什么能阻止Yeoman生成器在编辑器或独立应用程序之类的图形工具中运行。
-为了实现这种灵活性，Yeoman提供了一组用户界面元素抽象。作为作者，您有责任在与最终用户交互时仅使用这些抽象。使用其他方法可能会阻止您的生成器在不同的Yeoman工具中正确运行。
-例如，永远不要使用console.log()或process.stdout.write()输出内容很重要。使用...
+          Minio是一款高性能的分布式对象存储服务器，专为其设计大型私有云基础设施。Minio被广泛部署在美国世界上有超过166.1M+的docker拉取。
+Minio是一个开源的对象存储服务器，与Amazon S3 api兼容:https://minio.io/downloads.html#downl…
+Minio是Apache License v2.0下发布的对象存储服务器。它与Amazon S3云存储服务兼容。它最适合存储非结构化数据，如照片、视频、日志文件、备份和容器/ VM映像。对象的大...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring3/#more">阅读全文</a>
+          <a href="/2018/12/03/minio/#more">阅读全文</a>
         </p>
       
     </div>
@@ -529,7 +592,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-data-dichotomy-rethinking-the-way-we-treat-data-and-services"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -537,7 +600,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring2/">编写自己的Yeoman生成器-2.运行时上下文</a>
+      <a class="article-title" href="/2018/11/30/data-dichotomy-rethinking-the-way-we-treat-data-and-services/">数据二分法：重新思考我们对待数据和服务的方式</a>
     </h1>
   
 
@@ -545,27 +608,25 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring2/" class="article-date">
-	  <time datetime="2018-08-29T14:30:47.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/11/30/data-dichotomy-rethinking-the-way-we-treat-data-and-services/" class="article-date">
+	  <time datetime="2018-11-30T13:39:59.000Z" itemprop="datePublished">2018-11-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Kafka微服务/">Kafka微服务</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。
-原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。
-换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。
-辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法或私有方法。有三种不同的方法可以实现这一目标。
-
-方法名称下划线前缀（例如_private_m...
+          
+如果你偶然发现整个微服务的事情，没有任何先前的背景，你会认为它有点奇怪。将应用程序拆分为由网络分隔的片段，不可避免地意味着注入分布式系统的复杂故障模式。
+然而，虽然该方法肯定涉及许多独立服务，但目标比仅仅在不同的机器上运行它们更广泛。它是关于面对一个本身就是固有分布的世界。不是在某种狭隘的技术意义上，而是由许多人，许多团队和许多程序组成的广泛的生态系统，所有这些都需要在某种程度上做自己的事情。
+例如，公司是不同系统的集合，这些系统共同进一步促进了一些共同目标。几十年来，我们在很大程度上忽...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring2/#more">阅读全文</a>
+          <a href="/2018/11/30/data-dichotomy-rethinking-the-way-we-treat-data-and-services/#more">阅读全文</a>
         </p>
       
     </div>
@@ -584,7 +645,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-building-real-time-streaming-etl-pipeline-20-minutes"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -592,7 +653,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring/">编写自己的Yeoman生成器-1.入门</a>
+      <a class="article-title" href="/2018/11/28/building-real-time-streaming-etl-pipeline-20-minutes/">在20分钟内构建实时流ETL管道</a>
     </h1>
   
 
@@ -600,28 +661,24 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring/" class="article-date">
-	  <time datetime="2018-08-29T12:18:35.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/11/28/building-real-time-streaming-etl-pipeline-20-minutes/" class="article-date">
+	  <time datetime="2018-11-28T04:50:29.000Z" itemprop="datePublished">2018-11-28</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Kafka/">Kafka</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          Generators(生成器)是Yeoman生态系统的基石。它们是yo为最终用户生成文件所运行的插件。
-阅读本节，您将学习如何创建和分发自己的内容。
+          最近有很多人说传统的ETL已经死了。在传统的ETL范式中，数据仓库是王者，ETL作业是批处理驱动的，所有内容都与其他内容进行通信，可伸缩性限制非常普遍。当人们咕哝着说由此造成的混乱是“做生意的成本”时，混乱的管道被勉强容忍。“人们学会了忍受这样的一团糟:
 
-注意：我们构建了一个生成器 - Generator，以帮助用户开始使用自己的生成器。一旦理解了以下概念，请随意使用它来引导您自己的生成器。
-
-组织你的生成器设置为Node Module生成器的核心是Node.js模块
-首先，创建一个文件夹，在其中编写您的生成器。文件夹必须命名generator-name（name您的生成器的名称）。这很重要...
+然而，ETL并没有死。开发人员越来越喜欢一种新的ETL范式，它具有分布式系统和事件驱动的应用程序，其中业务可以实时和大规模地处理数据。仍然需要“提取”、“转换”和“加载”，但是现在的区别是将数据作为一等公民对待。企业不再希望将数据降级为...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring/#more">阅读全文</a>
+          <a href="/2018/11/28/building-real-time-streaming-etl-pipeline-20-minutes/#more">阅读全文</a>
         </p>
       
     </div>
@@ -640,7 +697,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-vscode-extensions-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-hello-world-kafka-connect-kafka-streams"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -648,7 +705,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-5/">VSCode Webview API</a>
+      <a class="article-title" href="/2018/11/28/hello-world-kafka-connect-kafka-streams/">Hello World, Kafka连接器 + Kafka流计算</a>
     </h1>
   
 
@@ -656,24 +713,25 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/11/vscode-extensions-5/" class="article-date">
-	  <time datetime="2018-08-11T09:54:45.000Z" itemprop="datePublished">2018-08-11</time>
+	<a href="/2018/11/28/hello-world-kafka-connect-kafka-streams/" class="article-date">
+	  <time datetime="2018-11-28T02:37:23.000Z" itemprop="datePublished">2018-11-28</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/VSCode插件/">VSCode插件</a>
+    <a class="article-category-link" href="/categories/Kafka/">Kafka</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          webview API允许扩展在Visual Studio Code中创建完全可定制的视图。例如，内置的Markdown扩展使用webview来呈现Markdown预览。除了VS Code的原生api支持之外，webview还可以用来构建复杂的用户界面。
-可以将webview看作是您的扩展控制的VS Code中的iframe。一个webview可以呈现这个框架中几乎所有的HTML内容，它通过消息传递与扩展通信。这种自由使webview变得非常强大，并打开了一个全新的扩展范围。
-我应该使用w...
+          
+重要提示:本文中的信息已经过时。通过最近的Kafka版本，Kafka Connect和Kafka流以及KSQL之间的集成变得更加简单和容易。请参阅 在20分钟内构建实时流ETL管道和KSQL实战:从Oracle事务数据中实时流化ETL
+
+本文由客籍博客Michal Haris与Neha Narkhede、Apache Kafka committer、Confluent联合创始人和CTO合作撰写。Michal在数字媒体行业工作，是一名专业从事实时大数据基础设施和流处理应用概念验证实现的技术...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-5/#more">阅读全文</a>
+          <a href="/2018/11/28/hello-world-kafka-connect-kafka-streams/#more">阅读全文</a>
         </p>
       
     </div>
@@ -692,7 +750,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-vscode-extensions-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-things-queue-selection"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -700,7 +758,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-4/">例子——语言服务器</a>
+      <a class="article-title" href="/2018/11/01/things-queue-selection/">CaaS消息队列(IoT MQ)选型</a>
     </h1>
   
 
@@ -708,83 +766,29 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/11/vscode-extensions-4/" class="article-date">
-	  <time datetime="2018-08-11T08:01:10.000Z" itemprop="datePublished">2018-08-11</time>
+	<a href="/2018/11/01/things-queue-selection/" class="article-date">
+	  <time datetime="2018-11-01T02:48:24.000Z" itemprop="datePublished">2018-11-01</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/VSCode插件/">VSCode插件</a>
+    <a class="article-category-link" href="/categories/IoT/">IoT</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          简要概述语言服务器和语言服务器协议语言服务器是一种特殊的扩展，支持VS代码中许多编程语言的编辑体验。使用语言服务器，您可以实现VS代码中支持的自动完成、错误检查(诊断)、快速定义和许多其他语言特性。
-然而，在VS代码中实现对语言特性的支持时，我们发现了三个常见问题:
-首先，语言服务器通常是用它们的本地编程语言实现的，这在将它们与具有节点的VS代码集成方面提出了挑战。js运行时。
-此外，语言特性可能是资源密集型的。例如，要正确地验证一个文件，Language Server需要解析大量文件，为...
+          
+为什么被需要MQ？CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:
+
+解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖
+同构系统中每个结点上的一致性，是各个系统直接可以交流
+灵活地添加组件或适配系统，使其结构灵活，易于扩充
+
+为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统的接入点，解耦了它们之间的相互关联；我们还需要制定一套统一的消息标准，同构各个系统的接入方式；...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-4/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions-3"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-3/">例子——单词计数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/vscode-extensions-3/" class="article-date">
-	  <time datetime="2018-08-11T07:08:46.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VSCode插件/">VSCode插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          本文档假设您已经阅读了第一个扩展，它涵盖了VS Code可扩展性的基础知识。
-单词计数是一个端到端教程，向您展示如何创建一个扩展来帮助Markdown创作。在我们深入了解所有这些工作原理之前，让我们先快速演示一下您将要构建的核心特性，这样您就知道会发生什么了。
-无论何时编辑标记文件，都会添加状态栏消息。该消息包括当前的字数和更新，当您键入和移动到文件:
-
-
-提示:如果您有任何问题，可以从GitHub存储库中获得完成的示例。
-
-概述这个示例有三个部分，将带您了解一系列相关概念:
-更新状态栏-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-3/#more">阅读全文</a>
+          <a href="/2018/11/01/things-queue-selection/#more">阅读全文</a>
         </p>
       
     </div>
@@ -807,7 +811,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
   </nav>
 
 </section>

@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-architecture-viewmodel"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-my-common-grammar3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/09/architecture-viewmodel/">Android 架构组件 - ViewModel</a>
+      <a class="article-title" href="/2017/12/08/my-common-grammar3/">MySQL简单操作(3)-数据表</a>
     </h1>
   
 
@@ -273,8 +273,229 @@
     
     <div class="article-meta">
       
-	<a href="/2017/11/09/architecture-viewmodel/" class="article-date">
-	  <time datetime="2017-11-09T03:26:10.000Z" itemprop="datePublished">2017-11-09</time>
+	<a href="/2017/12/08/my-common-grammar3/" class="article-date">
+	  <time datetime="2017-12-08T14:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+创建数据表
+  1234CREATE TABLE [IF NOT EXISTS] table_name (    column_name data_type [NULL | NOT NULL | [AUTO_INCREMENT] PRIMARY KEY] [UNIQUE KEY] [DEFAULT default_value],    ...);
+  举例：
+  12345CREATE TABLE tb1 (    username VARCHAR(20),    age TINYINT...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar2/">MySQL简单操作(2)-数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar2/" class="article-date">
+	  <time datetime="2017-12-08T13:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          整型
+
+
+数据类型
+存储范围
+字节
+
+
+
+
+TINYINT
+有符号：-128～127；无符号：0～255
+1
+
+
+SMALLINT
+有符号：-32768～32767；无符号：0～65535
+2
+
+
+MEDIUMINT
+有符号：-8388608～8388607；无符号：0～16777215
+3
+
+
+INT
+有符号：-2^31～2^31-1；无符号：0～2^32-1
+4
+
+
+BIGINT
+有符号：-2^63～2^63-1；无符号：0～2^64-1
+8
+
+
+
+浮点型FLOAT[M,D]DOUBL...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar/">MySQL简单操作(1)-数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar/" class="article-date">
+	  <time datetime="2017-12-08T12:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          登陆/退出1mysql -u`username` -p`password` -P`port` -h`host`
+
+MySQL默认端口号 3306
+MySQL超级用户名 root
+
+退出
+
+mysql &gt; exit;
+mysql &gt; quit;
+mysql &gt; \q;
+
+修改提示符1shell&gt;mysql -uroot -proot --prompt 提示符
+或
+1mysql&gt;prompt 提示符
+
+
+
+参数
+描述
+
+
+
+
+\D
+日期
+
+
+\d
+当前数据库
+
+
+...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/04/BrowserPlugin/">SampleBrowserPlugin介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/04/BrowserPlugin/" class="article-date">
+	  <time datetime="2017-12-04T14:56:21.000Z" itemprop="datePublished">2017-12-04</time>
 	</a>
 
       
@@ -286,15 +507,13 @@
       
         <p class="article-excerpt-content">
           
-ViewModel类旨在以生命周期的方式存储和管理与ui相关的数据。ViewModel类允许数据在诸如屏幕旋转之类的配置更改中存活。
+对于Android浏览器插件的开发可以参考源码的实例,development/samples/browseplugin实例。本文对此实例进行介绍。
 
-注意:要将ViewModel导入到您的Android项目中，请参见向您的项目添加组件。
-
-Android框架管理UI控制器的生命周期，比如activities和fragments。该框架可能会决定销毁或重新创建UI控制器，以响应完全超出您控制的某些用户操作或设备事件。
-如果系统破坏或重新创建一个UI控制器，那么存储在其中的任何与UI相关的数据都将丢失。例...
+介绍这个示例插件是为了给插件开发者一个参考点，看看android浏览器插件是如何创建的，以及如何使用可用的APIs。一个插件就像标准的apk一样被打包，可以通过市场或adb安装。示例插件尝试尽可能多地使用APIs，但不幸的是，并不是所有的APIs都被覆盖。
+试图让一个插件演示一个屏幕上所有可能的API交互是不现实的。另一方面，我们也不希望每...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/09/architecture-viewmodel/#more">阅读全文</a>
+          <a href="/2017/12/04/BrowserPlugin/#more">阅读全文</a>
         </p>
       
     </div>
@@ -313,7 +532,7 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
 
 
   
-    <article id="post-architecture-livedata"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-sdkman"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -321,7 +540,7 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/architecture-livedata/">Android 架构组件 - LiveData</a>
+      <a class="article-title" href="/2017/11/30/sdkman/">SDKMAN! 软件开发工具包管理器</a>
     </h1>
   
 
@@ -329,8 +548,116 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
     
     <div class="article-meta">
       
-	<a href="/2017/11/08/architecture-livedata/" class="article-date">
-	  <time datetime="2017-11-08T10:47:44.000Z" itemprop="datePublished">2017-11-08</time>
+	<a href="/2017/11/30/sdkman/" class="article-date">
+	  <time datetime="2017-11-30T05:11:25.000Z" itemprop="datePublished">2017-11-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本的工具。它提供了一个方便的命令行接口(CLI)和用于安装、切换、删除和列出候选对象的API。以前被称为GVM的Groovy环境管理器，它是由非常有用的RVM和rbenv工具所启发的，这些工具在Ruby社区中广泛使用。
+
+安装在类unix平台上安装SDKMAN!，就像以前一样容易。SDKMAN!在Mac OSX、Linux、Cygwin、Solaris和FreeBSD上可以顺利安装。我们还支持Bash和ZSH shell。...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/30/sdkman/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-cocoapods"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/30/cocoapods/">CocoaPods 简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/30/cocoapods/" class="article-date">
+	  <time datetime="2017-11-30T05:03:18.000Z" itemprop="datePublished">2017-11-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          CocoaPods是Swift和Objective-C Cocoa项目的一个依赖关系管理器。它有超过4万个libraries，在超过280万个应用程序中被使用。CocoaPods可以帮助你优雅地扩展你的项目。
+
+安装CocoaPods是用Ruby构建的，在OS X上默认安装有Ruby，我们建议你使用默认的Ruby。
+使用默认的Ruby安装要求您在安装gems时使用sudo。指南中还有进一步的安装说明。
+12# Xcode 8 + 9$ sudo gem install cocoapods
+...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/30/cocoapods/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-introduction-automated-android-testing-part-6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-6/">Android 自动化测试 - 第6部分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/20/introduction-automated-android-testing-part-6/" class="article-date">
+	  <time datetime="2017-11-20T10:31:58.000Z" itemprop="datePublished">2017-11-20</time>
 	</a>
 
       
@@ -342,15 +669,19 @@ Android框架管理UI控制器的生命周期，比如activities和fragments。�
       
         <p class="article-excerpt-content">
           
-LiveData是一个可观察的数据持有者类。与常规的可观察到的不同，LiveData是生命周期感知的，这意味着它尊重其他应用组件的生命周期，比如activities、fragments或services。这一认识确保了LiveData只更新了处于活动生命周期状态的应用程序组件观察者。
+在之前的5篇博客文章中，我们讨论了从头开始构建Android应用的不同方面。我们专注于在过程中包括测试。以下是与前几篇文章的链接:
 
+第1部分 - 为什么我们要写测试?
+第2部分 - 进行测试设置你的应用程序
+第3部分 - 创建API调用
+第4部分 - 创建repositories
+第5部分 - 遵循MVP模式
 
-注意:要将LiveData组件导入到您的Android项目中，请参见向您的项目添加组件。
-
-LiveData考虑一个观察者，它由Observer类表示，如果它的生命周期处于STARTED或RESUMED...
+在本系列的最后一篇文章中，我们将介绍为我们在第5部分中创建的视图创建Espresso测试。这篇文章的Github repo可以在这里找到。
+如果数据是动态的，那么测试一个视图包...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/08/architecture-livedata/#more">阅读全文</a>
+          <a href="/2017/11/20/introduction-automated-android-testing-part-6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -369,7 +700,7 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
 
 
   
-    <article id="post-architecture-lifecycle"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-introduction-automated-android-testing-part-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -377,7 +708,7 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/architecture-lifecycle/">Android 架构组件 - 使用Lifecycle组件来处理生命周期</a>
+      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-5/">Android 自动化测试 - 第5部分</a>
     </h1>
   
 
@@ -385,8 +716,8 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
     
     <div class="article-meta">
       
-	<a href="/2017/11/08/architecture-lifecycle/" class="article-date">
-	  <time datetime="2017-11-08T08:50:06.000Z" itemprop="datePublished">2017-11-08</time>
+	<a href="/2017/11/20/introduction-automated-android-testing-part-5/" class="article-date">
+	  <time datetime="2017-11-20T09:15:26.000Z" itemprop="datePublished">2017-11-20</time>
 	</a>
 
       
@@ -398,12 +729,14 @@ LiveData考虑一个观察者，它由Observer类表示，如果它的生命周�
       
         <p class="article-excerpt-content">
           
-Lifecycle组件执行操作以响应另一个组件的生命周期状态的变化，例如activities和fragments。这些组件可以帮助您生成更有组织的、更轻的代码，这样更容易维护。
-一个常见的模式是在activities和fragments的生命周期方法中实现相关组件的操作。然而，这种模式导致了代码的糟糕组织和错误的扩散。通过使用lifecycle组件，您可以将依赖组件的代码从生命周期方法中转移到本身组件中
-android.arch.lifecycle包提供了类和接口，允许您构建基于生命周期...
+在这一系列的博客文章中，我们正在研究一个叫做Github用户搜索的样本应用。第1-4部分介绍了为什么我们应该进行测试、设置测试、创建API调用并创建一个演示程序。看一下前面的文章，第5部分是这个系列的延续。
+在第5部分中，我们将查看与第4部分中创建的Presenter的交互，我们将创建UI来显示搜索结果的列表。
+
+创建UI对于用户界面，我们需要一个简单的列表来显示列表中的avatar、name和其他用户信息。
+在第4部分中，我们定义了一个Activity应该实现的视图契约。这是Andro...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/08/architecture-lifecycle/#more">阅读全文</a>
+          <a href="/2017/11/20/introduction-automated-android-testing-part-5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -422,7 +755,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
 
 
   
-    <article id="post-adding-components"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-introduction-android-testing-part-4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -430,7 +763,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/adding-components/">Android架构组件 添加到你的项目</a>
+      <a class="article-title" href="/2017/11/17/introduction-android-testing-part-4/">Android 自动化测试 - 第4部分</a>
     </h1>
   
 
@@ -438,8 +771,8 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
     
     <div class="article-meta">
       
-	<a href="/2017/11/08/adding-components/" class="article-date">
-	  <time datetime="2017-11-08T08:24:19.000Z" itemprop="datePublished">2017-11-08</time>
+	<a href="/2017/11/17/introduction-android-testing-part-4/" class="article-date">
+	  <time datetime="2017-11-17T12:28:15.000Z" itemprop="datePublished">2017-11-17</time>
 	</a>
 
       
@@ -451,13 +784,14 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
       
         <p class="article-excerpt-content">
           
-架构组件可以从Google的Maven存储库中获得。要使用这些步骤，请遵循以下步骤:
-添加Google Maven存储库在默认情况下，Android Studio项目不会被配置为访问这个存储库。
-要将它添加到您的项目中，为您的项目打开 build.gradle文件(而不是您的应用程序或模块)，如下所示:
-123456allprojects &#123;    repositories &#123;        jcenter()        maven &#123; url 'htt...
+在这篇博文中，我们正在开发一个名为Github用户搜索的Android应用程序。在之前的博客文章中，我们研究了为测试创建应用程序、创建API调用和编写API转换的第一个基本测试。阅读第1部分、第2部分和第3部分。
+这篇文章将着眼于创建一个与repository通信并向视图传递信息的presenter。这还包括为presenter编写单元测试。这篇博文的示例github repo将会在这里找到。
+
+创建Presenter
+为了开始创建，创建称为MvpView和MvpPresenter的基本...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/08/adding-components/#more">阅读全文</a>
+          <a href="/2017/11/17/introduction-android-testing-part-4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -476,7 +810,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
 
 
   
-    <article id="post-GuidetoAppArchitecture"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-introduction-android-testing-part3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -484,7 +818,7 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/GuidetoAppArchitecture/">Android 架构组件指南</a>
+      <a class="article-title" href="/2017/11/17/introduction-android-testing-part3/">Android 自动化测试 - 第3部分</a>
     </h1>
   
 
@@ -492,8 +826,8 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
     
     <div class="article-meta">
       
-	<a href="/2017/11/08/GuidetoAppArchitecture/" class="article-date">
-	  <time datetime="2017-11-08T03:23:22.000Z" itemprop="datePublished">2017-11-08</time>
+	<a href="/2017/11/17/introduction-android-testing-part3/" class="article-date">
+	  <time datetime="2017-11-17T11:30:11.000Z" itemprop="datePublished">2017-11-17</time>
 	</a>
 
       
@@ -505,311 +839,13 @@ android.arch.lifecycle包提供了类和接口，允许您构建基于生命周�
       
         <p class="article-excerpt-content">
           
-本指南适用于开发app的开发人员，现在希望了解最佳实践和推荐的体系结构，构建健壮、高质量的apps。
+在之前的两篇博文中，我介绍了如何在Android中进行测试，我们创建了一个样本应用，我们将继续在这篇博文中继续开发。如果您错过了这两个帖子，我建议您阅读第1部分和第2部分。
+在本文中，我们将从Github API中获取用户列表，并为其编写单元测试。我们将从这个检查点的下一个repo开始。
 
-注意:本指南假定读者熟悉Android框架。如果你是应用开发的新手，请查看入门培训系列，其中包含了本指南的必备主题。
-
-
-app开发人员面临的常见问题与传统的桌面应用不同，在大多数情况下，它们都有一个单一入口点，并作为一个单一的整体流程运行，而Android应用程序的结构要复杂得多。一个典型的Android应用程序是由多个应用组件组成的，包括activities、fragments、s...
+创建Web服务调用要使用Github API，我们将使用翻新和RxJava。我不打算在本系列中解释RxJava或Retrofit。如果您不熟悉RxJava，我建议您阅读这些文章。如果你没有使用过Ret...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/08/GuidetoAppArchitecture/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-AndroidArchitectectureComponents"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/AndroidArchitectectureComponents/">Android 架构组件简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/08/AndroidArchitectectureComponents/" class="article-date">
-	  <time datetime="2017-11-08T01:35:45.000Z" itemprop="datePublished">2017-11-08</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-一组帮助您设计健壮的、可测试的和可维护的应用程序库。管理UI组件生命周期和处理数据持久性。
-
-应用架构指南
-添加组件到你的项目
-使用Lifecycle组件来处理生命周期
-LiveData
-ViewModel
-保存UI状态
-Room持久性库
-分页库
-
-轻松管理app的生命周期新的lifecycle组件感知生命周期，可以帮助您管理您的活动和片段生命周期。保存配置更改，避免内存泄漏，并使用LiveData、ViewModel、LifecycleObserver和LifecycleOwner，轻...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/08/AndroidArchitectectureComponents/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-GuideUIProgrammingCoroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/06/GuideUIProgrammingCoroutines/">使用协程的UI编程指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/06/GuideUIProgrammingCoroutines/" class="article-date">
-	  <time datetime="2017-11-06T11:08:01.000Z" itemprop="datePublished">2017-11-06</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-本指南假定读者熟悉基本的协程概念，并给出了在UI应用程序中如何使用kotlinx.coroutines的具体示例。
-所有的UI应用程序库都有一个共同点。它们有一个线程，所有UI的状态都被限制，所有的UI更新都必须在这个特定的线程中发生。对于协程，这意味着您需要一个适当的协程分派器上下文，它将协程执行限制在这个UI线程中。
-特别是，kotlinx.coroutines 有三个模块为不同的UI应用程序库提供了协程上下文:
-
-kotlinx-coroutines-android – Andro...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/06/GuideUIProgrammingCoroutines/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
-	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
-介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
-kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-Coroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-Coroutines/">Anko 协程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/03/Anko-Coroutines/" class="article-date">
-	  <time datetime="2017-11-03T05:14:08.000Z" itemprop="datePublished">2017-11-03</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-目录
-在你的项目中使用Anko协程
-Listener助手
-asReference()
-bg()
-
-
-在你的项目中使用Anko协程添加anko-coroutines 到你的build.gradle：
-123dependencies &#123;    compile &quot;org.jetbrains.anko:anko-coroutines:$anko_version&quot;&#125;
-Listener助手asReference()如果您的异步API不支持取消，你的协程可能会被...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/03/Anko-Coroutines/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-SQLite/">Anko SQLite</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/03/Anko-SQLite/" class="article-date">
-	  <time datetime="2017-11-03T03:05:26.000Z" itemprop="datePublished">2017-11-03</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-您是否厌倦了使用Android Cursor解析SQLite查询结果?您必须编写大量的样板代码来解析查询结果行，并将其封装在无数的try..finally块中，以便正确地关闭所有打开的资源。
-Anko提供了许多扩展功能，以简化与SQLite数据库的工作。
-目录
-在项目中使用Anko SQLite
-访问数据库
-创建和删除表
-插入数据
-查询数据
-解析查询结果
-自定义行解析器
-Cursor流
-更新值
-事务
-
-
-在项目中使用Anko SQLite将anko-sqlite的依赖添加到您的build...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/03/Anko-SQLite/#more">阅读全文</a>
+          <a href="/2017/11/17/introduction-android-testing-part3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -832,7 +868,7 @@ Cursor流
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
   </nav>
 
 </section>
