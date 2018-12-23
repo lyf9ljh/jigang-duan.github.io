@@ -257,6 +257,63 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-things-queue-selection"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/11/01/things-queue-selection/">CaaS消息队列(IoT MQ)选型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/11/01/things-queue-selection/" class="article-date">
+	  <time datetime="2018-11-01T02:48:24.000Z" itemprop="datePublished">2018-11-01</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/IoT/">IoT</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+为什么被需要MQ？CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:
+
+解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖
+同构系统中每个结点上的一致性，是各个系统直接可以交流
+灵活地添加组件或适配系统，使其结构灵活，易于扩充
+
+为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统的接入点，解耦了它们之间的相互关联；我们还需要制定一套统一的消息标准，同构各个系统的接入方式；...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/11/01/things-queue-selection/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-github-paas"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -749,61 +806,6 @@ Visual Studio Code是一个用于Linux、macOS和Windows的图形化代码编辑
         </p>
         <p class="article-more-link">
           <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
-	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
-由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
-
-注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
-
-NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
         </p>
       
     </div>
