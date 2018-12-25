@@ -6,20 +6,20 @@
   <title>编写自己的yeoman生成器-2.运行时上下文 | 朝着牛逼的道路一路狂奔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="javascriptYeoman" />
+  <meta name="keywords" content="javascriptyeomannodejs" />
   
   
   
   
   <meta name="description" content="编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。 原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。 换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。 辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法">
-<meta name="keywords" content="javascript,Yeoman">
+<meta name="keywords" content="javascript,yeoman,nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编写自己的Yeoman生成器-2.运行时上下文">
 <meta property="og:url" content="https://jigangduan.github.io/2018/08/29/yeoman-authoring2/index.html">
 <meta property="og:site_name" content="朝着牛逼的道路一路狂奔">
 <meta property="og:description" content="编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。 原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。 换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。 辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-23T04:13:18.506Z">
+<meta property="og:updated_time" content="2018-12-23T06:27:56.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编写自己的Yeoman生成器-2.运行时上下文">
 <meta name="twitter:description" content="编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。 原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。 换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。 辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法">
@@ -183,7 +183,7 @@
 	</a>
 
       
-    <a class="article-category-link" href="/categories/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
 	<a class="article-views">

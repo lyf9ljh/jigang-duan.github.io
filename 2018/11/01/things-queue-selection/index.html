@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8">
   
-  <title>caas消息队列(iot mq)选型 | 朝着牛逼的道路一路狂奔</title>
+  <title>iiot消息队列(iot mq)选型 | 朝着牛逼的道路一路狂奔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="IoTMQ" />
+  <meta name="keywords" content="iotmq" />
   
   
   
   
-  <meta name="description" content="为什么被需要MQ？CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
-<meta name="keywords" content="IoT,MQ">
+  <meta name="description" content="为什么被需要MQ？IIoT作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
+<meta name="keywords" content="iot,mq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CaaS消息队列(IoT MQ)选型">
+<meta property="og:title" content="IIoT消息队列(IoT MQ)选型">
 <meta property="og:url" content="https://jigangduan.github.io/2018/11/01/things-queue-selection/index.html">
 <meta property="og:site_name" content="朝着牛逼的道路一路狂奔">
-<meta property="og:description" content="为什么被需要MQ？CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
+<meta property="og:description" content="为什么被需要MQ？IIoT作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541071679715&di=50aab83e6c74021f1953d0597eef308e&imgtype=0&src=http%3A%2F%2Fimg.mukewang.com%2F594b40910001a47e06000338-590-330.jpg">
 <meta property="og:image" content="http://oxwfu3w0v.bkt.clouddn.com/18-11-2/66533308.jpg">
 <meta property="og:image" content="http://oxwfu3w0v.bkt.clouddn.com/18-11-2/22560586.jpg">
 <meta property="og:image" content="http://dataguild.org/wp-content/uploads/2015/12/iot-mqtt-tutorial-01.png">
 <meta property="og:image" content="http://emqtt.com/static/img/overview.png">
-<meta property="og:updated_time" content="2018-11-05T01:37:25.740Z">
+<meta property="og:updated_time" content="2018-12-23T06:23:53.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CaaS消息队列(IoT MQ)选型">
-<meta name="twitter:description" content="为什么被需要MQ？CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
+<meta name="twitter:title" content="IIoT消息队列(IoT MQ)选型">
+<meta name="twitter:description" content="为什么被需要MQ？IIoT作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:  解耦上下各个不同系统的之间的关联性，使它们之间可以不直接依赖 同构系统中每个结点上的一致性，是各个系统直接可以交流 灵活地添加组件或适配系统，使其结构灵活，易于扩充  为了达到这三个功能，门面模式+适配器+观察者模式 的设计模式非常适合，那么消息队列就是最佳选择了。消息队列作为门面，作为各个系统">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541071679715&di=50aab83e6c74021f1953d0597eef308e&imgtype=0&src=http%3A%2F%2Fimg.mukewang.com%2F594b40910001a47e06000338-590-330.jpg">
   
     <link rel="alternate" href="/atom.xml" title="朝着牛逼的道路一路狂奔" type="application/atom+xml">
@@ -176,7 +176,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      CaaS消息队列(IoT MQ)选型
+      IIoT消息队列(IoT MQ)选型
     </h1>
   
 
@@ -189,7 +189,7 @@
 	</a>
 
       
-    <a class="article-category-link" href="/categories/IoT/">IoT</a>
+    <a class="article-category-link" href="/categories/IoT/">IoT</a><a class="article-category-link" href="/categories/IoT/消息队列/">消息队列</a>
 
       
 	<a class="article-views">
@@ -202,7 +202,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1541071679715&amp;di=50aab83e6c74021f1953d0597eef308e&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mukewang.com%2F594b40910001a47e06000338-590-330.jpg" alt="mq"></p>
-<h2 id="为什么被需要MQ？"><a href="#为什么被需要MQ？" class="headerlink" title="为什么被需要MQ？"></a>为什么被需要MQ？</h2><p>CaaS作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:</p>
+<h2 id="为什么被需要MQ？"><a href="#为什么被需要MQ？" class="headerlink" title="为什么被需要MQ？"></a>为什么被需要MQ？</h2><p>IIoT作为设备接入和业务层承上启下的作用，其最重要的职能在于提供一个统一接口:</p>
 <ul>
 <li><code>解耦</code>上下各个不同系统的之间的关联性，使它们之间可以不直接依赖</li>
 <li><code>同构</code>系统中每个结点上的一致性，是各个系统直接可以交流</li>
@@ -259,7 +259,7 @@ var a = new Donate({
           </li>
           <li class="post-copyright-link">
           <strong>本文链接:  </strong>
-          <a href="/2018/11/01/things-queue-selection/" target="_blank" title="CaaS消息队列(IoT MQ)选型">https://jigangduan.github.io/2018/11/01/things-queue-selection/</a>
+          <a href="/2018/11/01/things-queue-selection/" target="_blank" title="IIoT消息队列(IoT MQ)选型">https://jigangduan.github.io/2018/11/01/things-queue-selection/</a>
           </li>
           <li class="post-copyright-license">
             <strong>版权声明:   </strong>

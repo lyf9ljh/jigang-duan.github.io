@@ -257,6 +257,402 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-GuideUIProgrammingCoroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/06/GuideUIProgrammingCoroutines/">使用协程的UI编程指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/06/GuideUIProgrammingCoroutines/" class="article-date">
+	  <time datetime="2017-11-06T11:08:01.000Z" itemprop="datePublished">2017-11-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+本指南假定读者熟悉基本的协程概念，并给出了在UI应用程序中如何使用kotlinx.coroutines的具体示例。
+所有的UI应用程序库都有一个共同点。它们有一个线程，所有UI的状态都被限制，所有的UI更新都必须在这个特定的线程中发生。对于协程，这意味着您需要一个适当的协程分派器上下文，它将协程执行限制在这个UI线程中。
+特别是，kotlinx.coroutines 有三个模块为不同的UI应用程序库提供了协程上下文:
+
+kotlinx-coroutines-android – Andro...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/06/GuideUIProgrammingCoroutines/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
+	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
+介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
+kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Anko-Coroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/03/Anko-Coroutines/">Anko 协程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/03/Anko-Coroutines/" class="article-date">
+	  <time datetime="2017-11-03T05:14:08.000Z" itemprop="datePublished">2017-11-03</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+目录
+在你的项目中使用Anko协程
+Listener助手
+asReference()
+bg()
+
+
+在你的项目中使用Anko协程添加anko-coroutines 到你的build.gradle：
+123dependencies &#123;    compile &quot;org.jetbrains.anko:anko-coroutines:$anko_version&quot;&#125;
+Listener助手asReference()如果您的异步API不支持取消，你的协程可能会被...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/03/Anko-Coroutines/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/03/Anko-SQLite/">Anko SQLite</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/03/Anko-SQLite/" class="article-date">
+	  <time datetime="2017-11-03T03:05:26.000Z" itemprop="datePublished">2017-11-03</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+您是否厌倦了使用Android Cursor解析SQLite查询结果?您必须编写大量的样板代码来解析查询结果行，并将其封装在无数的try..finally块中，以便正确地关闭所有打开的资源。
+Anko提供了许多扩展功能，以简化与SQLite数据库的工作。
+目录
+在项目中使用Anko SQLite
+访问数据库
+创建和删除表
+插入数据
+查询数据
+解析查询结果
+自定义行解析器
+Cursor流
+更新值
+事务
+
+
+在项目中使用Anko SQLite将anko-sqlite的依赖添加到您的build...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/03/Anko-SQLite/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Anko-Layouts"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/02/Anko-Layouts/">Anko 布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/02/Anko-Layouts/" class="article-date">
+	  <time datetime="2017-11-02T10:56:23.000Z" itemprop="datePublished">2017-11-02</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+
+为什么Anko布局?
+DSL的原因?
+支持现有的代码
+它是如何工作的
+它是可扩展的吗?
+
+
+在你的项目中使用Anko Layouts
+理解Anko
+基础知识
+AnkoComponent
+辅助块
+主题块
+布局和LayoutParams
+Listeners
+定制的协程上下文
+使用资源标识符
+实例简化符号
+UI包装
+Include标签
+
+
+Anko支持插件
+安装Anko支持插件
+使用插件
+XML DSL转换器
+
+
+
+
+为什么Anko布局?DSL的原因?默认情况下，Android中的UI是用X...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/02/Anko-Layouts/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Anko-Commons"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/02/Anko-Commons/">Anko 通用模块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/02/Anko-Commons/" class="article-date">
+	  <time datetime="2017-11-02T09:24:52.000Z" itemprop="datePublished">2017-11-02</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+目录
+在您的项目中使用anko-commons助手
+Intents
+Intent构建器函数
+有用Intent调用
+
+
+Dialogs
+Toasts
+SnackBars
+Alerts
+Selectors
+进度dialogs
+
+
+日志
+强风格
+日志记录器对象风格
+
+
+Misc
+颜色
+维度值
+applyRecursively()
+
+
+
+
+在您的项目中使用anko-commons助手添加anko-commons到对您的build.gradle的依赖:
+1234dependencies &#123...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/02/Anko-Commons/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-anko"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -278,7 +674,7 @@
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Anko/">Anko</a>
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
 
       
     </div>
@@ -341,7 +737,7 @@ A...
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/ADB/">ADB</a>
 
       
     </div>
@@ -408,7 +804,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/NDK/">NDK</a>
 
       
     </div>
@@ -461,7 +857,7 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/NDK/">NDK</a>
 
       
     </div>
@@ -494,395 +890,11 @@ ADB调试adb devices打印所有附加的模拟器/设备的列表
 
 
   
-    <article id="post-AndroidNDKNativeProgramLauncher"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/AndroidNDKNativeProgramLauncher/">Android原生程序启动工具</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/AndroidNDKNativeProgramLauncher/" class="article-date">
-	  <time datetime="2017-11-01T08:38:27.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]Android原生程序启动工具
-
-介绍
-主要功能
-入门指南
-下载地址
-提供了什么?
-使用说明
-一些细节
-
-
-示例
-示例1
-示例2
-
-
-
-
-介绍在使用原生代码开发Android应用程序时，我们通常需要使用纯原生模式来调试它(使用NDK编译代码，生成可执行文件，并通过adb shell执行它)。有时，我们甚至不想花时间开发Android应用，因为我们只是想测试一些原生函数。
-以处理OpenCL和GPU为例。编写的程序中超过80%将是性能和基准代码。由于它们直接操作系统驱动程序或硬件，所...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/AndroidNDKNativeProgramLauncher/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-App研发录-笔记-二"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/App研发录-笔记-二/">App研发录 笔记二: App开发中的高级技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/App研发录-笔记-二/" class="article-date">
-	  <time datetime="2017-10-27T09:50:58.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-第二部分 App开发中的高级技巧
-Crash 异常收集与统计异常收集UncaughtExceptionHandler - 用于处理未捕获的异常 (App级别)
- 1 
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/App研发录-笔记-二/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-RxSwift-Warnings"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Warnings/">RxSwift 警告</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Warnings/" class="article-date">
-	  <time datetime="2017-10-27T06:02:45.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-警告
-未使用 disposable
-未使用 observable 序列
-
-
-未使用 disposable (unused-disposable)下面的内容对于subscribe*、bind*和drive*家族函数 返回Disposable。
-你会收到这样的警告:
-1234567891011let xs: Observable&lt;E&gt; ....xs  .filter &#123; ... &#125;  .map &#123; ... &#125;  .switchLatest(...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Warnings/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-RxSwift-Traits"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Traits/">RxSwift 特征</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Traits/" class="article-date">
-	  <time datetime="2017-10-27T03:26:51.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-特征(以前的单位)本文将尝试描述什么是特征，为什么它们是一个有用的概念，以及如何使用和创建它们。
-
-概括
-为什么
-它们是如何工作的
-
-
-RxSwift 特征
-Single
-创建Single
-
-
-Completable
-创建Completable
-
-
-Maybe
-创建Maybe
-
-
-
-
-RxCocoa 特征
-Driver
-为什么它被命名为 Driver
-实际使用的例子
-
-
-ControlProperty / ControlEvent
-
-
-
-
-概括为什么Swift有一个强大的类型系统，可以用...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Traits/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-RxSwift-Schedulers"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Schedulers/">RxSwift 调度器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Schedulers/" class="article-date">
-	  <time datetime="2017-10-27T01:56:45.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-调度器
-串行和并行调度器
-定制的调度器
-内置的调度器
-
-
-调度器抽象出执行工作的机制.
-执行工作的不同机制包括当前线程、调度队列、操作队列、新线程、线程池和运行循环.
-有两个主要的操作符与调度器有关，observeOn和subscribeOn.
-如果您想在不同的调度器上执行工作，只需使用observeOn(scheduler)操作符.
-你通常会比subscribeOn更频繁地使用observeOn.
-如果没有显式地指定observeOn，那么将在生成的任何线程/调度器上执行工作.
-使用o...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Schedulers/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-RxSwift-MathBehindRx"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-MathBehindRx/">RxSwift 背后的数学</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-MathBehindRx/" class="article-date">
-	  <time datetime="2017-10-27T01:39:57.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/rxswift/">rxswift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-Rx背后的数学观察者和迭代器/迭代器/生成器/序列之间的二元性
-在观察者和生成器模式之间有一个对偶性。这使我们能够从异步回调世界过渡到序列转换的同步世界.
-简而言之，迭代器和观察者模式都描述了序列。为什么迭代器定义一个序列是很明显的，但是观察者稍微复杂一点.
-然而，有一个非常简单的例子，不需要太多的数学知识。假设在给定的时间，您正在观察鼠标光标在屏幕上的位置。随着时间的推移，这些鼠标位置形成了一个序列。这是一个可观察的序列.
-可以访问一个序列的两种基本方法:
-
-推(Push)接口 - 观...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-MathBehindRx/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/13/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/13/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/15/">下一页 &raquo;</a>
   </nav>
 
 </section>

@@ -257,6 +257,418 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-my-common-grammar10"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar10/">MySQL简单操作(10)-存储引擎</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar10/" class="article-date">
+	  <time datetime="2017-12-09T07:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          查看数据表的创建命令：
+1SHOW CREATE table tal_name
+MySQL可以将数据以不同的技术存储在文件（内存）中，这种技术就称为存储引擎
+每一种存储引擎使用不同的存储机制，索引技巧，锁定水平，最终提供广泛且不同的功能
+MySQL支持类型：
+
+MyISAM
+InnoDB
+Memory
+CSV
+Archive
+
+并发控制当多个连接对记录进行修改时保证数据的一致性和完整性
+
+锁
+
+共享锁（读锁）：在同一时间段内，多个用户可以读取同一个资源，读取过程中数据不会发生任何变化
+排他...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar10/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar9"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar9/">MySQL简单操作(9)-MySQL存储过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar9/" class="article-date">
+	  <time datetime="2017-12-09T06:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          SQL命令 –&gt; MySQL引擎 -分析-&gt; 语法正确 –&gt; 可识别命令 -执行-&gt; 执行结果 -返回-&gt; 客户端
+存储过程是SQL语句和控制语句的预编译集合，以一个名称存储并作为一个单元处理
+优点：
+
+增强SQL语句的功能和灵活性
+实现较快的执行速度
+减少网络流量
+
+存储过程语法结构解析1234567CREATE[DEFINER = &#123; user | CURRENT_USER&#125;]PROCEDURE sp_name([proc_parame...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar9/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar8"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar8/">MySQL简单操作(8)-自定义函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar8/" class="article-date">
+	  <time datetime="2017-12-09T05:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          用户自定义函数(user-defined function, UDF)是一种对MySQL扩展的途径，其用法与内置函数相同
+创建自定义函数
+1234CREATE FUNCTION function_nameRETURNS&#123;STRING|INTEGER|REAL|DECIMAL&#125;routine_body
+函数体
+
+由合法的SQL语句构成
+可以是简单的SELECT或INSERT语句
+如果为复合结构则使用BEGIN…END语句
+复合结构可以包含声明，循环，控制结构
+
+创建不带参...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar8/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar7"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar7/">MySQL简单操作(7)-运算符和函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar7/" class="article-date">
+	  <time datetime="2017-12-09T04:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          字符函数
+
+
+函数名
+描述
+
+
+
+
+CONCAT()
+字符连接
+
+
+CONCAT_WS()
+使用指定的分隔符进行字符连接
+
+
+FORMAT()
+数字格式化
+
+
+LOWER()
+转换成小写字母
+
+
+UPPER()
+转换成大写字母
+
+
+LEFT()
+获取左侧字符
+
+
+RIGHT()
+获取右侧字符
+
+
+LENGTH()
+获取字符串长度
+
+
+LTRIM()
+删除前导空格
+
+
+RTRIM()
+删除后导空格
+
+
+TRIM()
+删除前导空格和后导空格
+
+
+SUBSTRING()
+字符串截取
+
+
+[NOT...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar7/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar6/">MySQL简单操作(6)-子查询与连接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar6/" class="article-date">
+	  <time datetime="2017-12-09T03:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          子查询子查询（Subquery）是指出现在其他SQL语句内的SELECT子句
+例如：
+1SELECT * FROM t1 WHERE col1 = (SELECT col2 FROM t2);
+其中 SELECT * FROM t1 称为Outer Query/Outer Statement；SELECT col2 FROM t2 称为Subquery
+
+子查询指嵌套在查询内部，且必须始终出现在圆括号內
+子查询可以包括多个关键字或条件，如 DISTINCT,GROUP BY,ORDER B...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar5/">MySQL简单操作(5)-操作数据表中的记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar5/" class="article-date">
+	  <time datetime="2017-12-09T02:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          插入记录
+INSERT
+  1INSERT [INTO] tal_name [(col_name,...)] &#123;VALUES|VALUE&#125;(&#123;expr|DEFAULT&#125;,...),(...),...;
+
+expr 表达式
+举例：
+1INSERT users VALUES(NULL,'Tom','123',25,1);
+
+自动递增的字段设置成NULL或DEFAULT将自增的值
+
+
+
+
+INSERT SET
+  1INSERT [INTO] tal_na...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-my-common-grammar4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -278,7 +690,7 @@
 	</a>
 
       
-    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -340,7 +752,7 @@ FOREIGN KEY(外键约束)
 	</a>
 
       
-    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -394,7 +806,7 @@ FOREIGN KEY(外键约束)
 	</a>
 
       
-    <a class="article-category-link" href="/categories/MySQL简单操作/">MySQL简单操作</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -480,7 +892,7 @@ BIGINT
 	</a>
 
       
-    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -540,343 +952,11 @@ mysql &gt; \q;
 
 
   
-    <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/12/04/BrowserPlugin/">SampleBrowserPlugin介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/12/04/BrowserPlugin/" class="article-date">
-	  <time datetime="2017-12-04T14:56:21.000Z" itemprop="datePublished">2017-12-04</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-对于Android浏览器插件的开发可以参考源码的实例,development/samples/browseplugin实例。本文对此实例进行介绍。
-
-介绍这个示例插件是为了给插件开发者一个参考点，看看android浏览器插件是如何创建的，以及如何使用可用的APIs。一个插件就像标准的apk一样被打包，可以通过市场或adb安装。示例插件尝试尽可能多地使用APIs，但不幸的是，并不是所有的APIs都被覆盖。
-试图让一个插件演示一个屏幕上所有可能的API交互是不现实的。另一方面，我们也不希望每...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/12/04/BrowserPlugin/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-sdkman"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/30/sdkman/">SDKMAN! 软件开发工具包管理器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/30/sdkman/" class="article-date">
-	  <time datetime="2017-11-30T05:11:25.000Z" itemprop="datePublished">2017-11-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本的工具。它提供了一个方便的命令行接口(CLI)和用于安装、切换、删除和列出候选对象的API。以前被称为GVM的Groovy环境管理器，它是由非常有用的RVM和rbenv工具所启发的，这些工具在Ruby社区中广泛使用。
-
-安装在类unix平台上安装SDKMAN!，就像以前一样容易。SDKMAN!在Mac OSX、Linux、Cygwin、Solaris和FreeBSD上可以顺利安装。我们还支持Bash和ZSH shell。...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/30/sdkman/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cocoapods"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/30/cocoapods/">CocoaPods 简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/30/cocoapods/" class="article-date">
-	  <time datetime="2017-11-30T05:03:18.000Z" itemprop="datePublished">2017-11-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          CocoaPods是Swift和Objective-C Cocoa项目的一个依赖关系管理器。它有超过4万个libraries，在超过280万个应用程序中被使用。CocoaPods可以帮助你优雅地扩展你的项目。
-
-安装CocoaPods是用Ruby构建的，在OS X上默认安装有Ruby，我们建议你使用默认的Ruby。
-使用默认的Ruby安装要求您在安装gems时使用sudo。指南中还有进一步的安装说明。
-12# Xcode 8 + 9$ sudo gem install cocoapods
-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/30/cocoapods/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-automated-android-testing-part-6"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-6/">Android 自动化测试 - 第6部分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/20/introduction-automated-android-testing-part-6/" class="article-date">
-	  <time datetime="2017-11-20T10:31:58.000Z" itemprop="datePublished">2017-11-20</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在之前的5篇博客文章中，我们讨论了从头开始构建Android应用的不同方面。我们专注于在过程中包括测试。以下是与前几篇文章的链接:
-
-第1部分 - 为什么我们要写测试?
-第2部分 - 进行测试设置你的应用程序
-第3部分 - 创建API调用
-第4部分 - 创建repositories
-第5部分 - 遵循MVP模式
-
-在本系列的最后一篇文章中，我们将介绍为我们在第5部分中创建的视图创建Espresso测试。这篇文章的Github repo可以在这里找到。
-如果数据是动态的，那么测试一个视图包...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/20/introduction-automated-android-testing-part-6/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-automated-android-testing-part-5"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/20/introduction-automated-android-testing-part-5/">Android 自动化测试 - 第5部分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/20/introduction-automated-android-testing-part-5/" class="article-date">
-	  <time datetime="2017-11-20T09:15:26.000Z" itemprop="datePublished">2017-11-20</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在这一系列的博客文章中，我们正在研究一个叫做Github用户搜索的样本应用。第1-4部分介绍了为什么我们应该进行测试、设置测试、创建API调用并创建一个演示程序。看一下前面的文章，第5部分是这个系列的延续。
-在第5部分中，我们将查看与第4部分中创建的Presenter的交互，我们将创建UI来显示搜索结果的列表。
-
-创建UI对于用户界面，我们需要一个简单的列表来显示列表中的avatar、name和其他用户信息。
-在第4部分中，我们定义了一个Activity应该实现的视图契约。这是Andro...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/20/introduction-automated-android-testing-part-5/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-introduction-android-testing-part-4"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/17/introduction-android-testing-part-4/">Android 自动化测试 - 第4部分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/17/introduction-android-testing-part-4/" class="article-date">
-	  <time datetime="2017-11-17T12:28:15.000Z" itemprop="datePublished">2017-11-17</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在这篇博文中，我们正在开发一个名为Github用户搜索的Android应用程序。在之前的博客文章中，我们研究了为测试创建应用程序、创建API调用和编写API转换的第一个基本测试。阅读第1部分、第2部分和第3部分。
-这篇文章将着眼于创建一个与repository通信并向视图传递信息的presenter。这还包括为presenter编写单元测试。这篇博文的示例github repo将会在这里找到。
-
-创建Presenter
-为了开始创建，创建称为MvpView和MvpPresenter的基本...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/17/introduction-android-testing-part-4/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
   </nav>
 
 </section>
