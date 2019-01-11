@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-micro-heartbeat"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/24/micro-heartbeat/">micro-heartbeat</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-8/">Go微服务教程-第八部分</a>
     </h1>
   
 
@@ -273,12 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2018/03/24/micro-heartbeat/" class="article-date">
-	  <time datetime="2018-03-24T13:36:35.000Z" itemprop="datePublished">2018-03-24</time>
+	<a href="/2018/05/10/go-micro-tutorial-8/" class="article-date">
+	  <time datetime="2018-05-10T13:57:01.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -286,15 +286,12 @@
       
         <p class="article-excerpt-content">
           
-演示服务发现使用心跳。
-
-依据服务发现在启动和注销时提供服务发现。有时，这些服务可能会意外地死亡或被强行杀死或面临暂时的网络问题。在这些情况下，将在服务发现中保留陈旧的节点。如果自动删除服务，那将是理想的。
-解决方案Micro支持一个注册器TTL的选项，并为这个确切的原因注册间隔。TTL指定一个注册在发现之后应该存在多长时间，它会过期并被删除。间隔是服务重新注册以保存其在服务发现中的注册的时间。
-这些选项都可以在go-micro和micro Toolkit中使用。
-Toolkit使用像这...
+在之前的文章中，我们研究了用Terraform创建一个容器引擎集群。在本文中，我们将使用容器引擎和Kubernetes来研究如何将容器部署到我们的集群中。
+Kubernetes首先,Kubernetes是什么?Kubernetes是一个开源的容器管理框架。它是平台无关的，这意味着您可以在本地机器、AWS、谷歌云或其他任何地方运行它。它允许您使用解密配置控制容器组和它们的网络规则。
+您只需编写描述哪些容器应该运行的yaml/json文件，以及在何处运行。您可以定义您的网络规则，例如任何端口...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/24/micro-heartbeat/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -313,7 +310,7 @@ Toolkit使用像这...
 
 
   
-    <article id="post-micro-new"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -321,7 +318,7 @@ Toolkit使用像这...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/23/micro-new/">micro new [service]</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-7/">Go微服务教程-第七部分</a>
     </h1>
   
 
@@ -329,12 +326,12 @@ Toolkit使用像这...
     
     <div class="article-meta">
       
-	<a href="/2018/03/23/micro-new/" class="article-date">
-	  <time datetime="2018-03-23T13:21:14.000Z" itemprop="datePublished">2018-03-23</time>
+	<a href="/2018/05/10/go-micro-tutorial-7/" class="article-date">
+	  <time datetime="2018-05-10T13:56:56.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -342,15 +339,13 @@ Toolkit使用像这...
       
         <p class="article-excerpt-content">
           
-micro new命令是为micro服务生成样板模板的快捷方式。
+在前一篇文章中，我们简要介绍了用户界面和web客户端，以及如何使用微工具包rpc代理与新创建的rpc服务进行交互。
+这篇文章，我们将讨论如何创建一个云环境来承载我们的服务。我们将使用Terraform来架构我们的云集群在谷歌云平台上。这应该是一篇相当短的文章，但它很重要。
 
-使用通过指定相对于$GOPATH的目录路径来创建新服务。
-1micro new github.com/micro/foo
-将运行：
-1234567891011121314151617181920212223micro new github.com/micro/foocreating service go.micro.srv.foocreating /Users/asim/checkouts/src/github.com/...
+为什么Terraform
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/23/micro-new/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -369,7 +364,7 @@ micro new命令是为micro服务生成样板模板的快捷方式。
 
 
   
-    <article id="post-micro-web"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -377,7 +372,7 @@ micro new命令是为micro服务生成样板模板的快捷方式。
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/22/micro-web/">micro web</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-6/">Go微服务教程-第六部分</a>
     </h1>
   
 
@@ -385,12 +380,12 @@ micro new命令是为micro服务生成样板模板的快捷方式。
     
     <div class="article-meta">
       
-	<a href="/2018/03/22/micro-web/" class="article-date">
-	  <time datetime="2018-03-21T23:09:09.000Z" itemprop="datePublished">2018-03-22</time>
+	<a href="/2018/05/10/go-micro-tutorial-6/" class="article-date">
+	  <time datetime="2018-05-10T13:56:52.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -398,18 +393,15 @@ micro new命令是为micro服务生成样板模板的快捷方式。
       
         <p class="article-excerpt-content">
           
-micro web提供了查看和查询服务的仪表板。
+在上一篇文章中，我们讨论了一些在go-micro和go中事件驱动架构的各种方法。这一部分，我们将深入到客户端，看看如何创建与我们的平台交互的web客户端。
+我们将研究微型工具包，使您能够将内部rpc方法从外部代理到web客户端。
+我们将为我们的平台创建一个用户界面，一个登录界面，以及一个创建委托界面。这将把以前的一些帖子联系在一起。
+所以让我们开始吧!
 
-入门指南安装1go get -u github.com/micro/micro
-运行1micro web
-ACME默认使用ACME安全服务
-1MICRO_ENABLE_ACME=true micro web
-可以选择指定一个主机白名单
-123MICRO_ENABLE_ACME=true \MICRO_ACME_HOSTS=example.com,api.example.com \micro web
-TLS证书API支持安全地使用TLS证...
+RPC复兴REST已经在web上运行多年了，它已经迅速成为管理客户端和服务器之间资源的goto方式。REST的出现，取代了RPC和SO...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/22/micro-web/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -428,7 +420,7 @@ TLS证书API支持安全地使用TLS证...
 
 
   
-    <article id="post-micro-api"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -436,7 +428,7 @@ TLS证书API支持安全地使用TLS证...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/20/micro-api/">micro api</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-5/">Go微服务教程-第五部分</a>
     </h1>
   
 
@@ -444,12 +436,12 @@ TLS证书API支持安全地使用TLS证...
     
     <div class="article-meta">
       
-	<a href="/2018/03/20/micro-api/" class="article-date">
-	  <time datetime="2018-03-20T12:57:18.000Z" itemprop="datePublished">2018-03-20</time>
+	<a href="/2018/05/10/go-micro-tutorial-5/" class="article-date">
+	  <time datetime="2018-05-10T13:56:48.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -457,14 +449,14 @@ TLS证书API支持安全地使用TLS证...
       
         <p class="article-excerpt-content">
           
-micro api是微服务的api网关。使用API网关模式为您的服务提供一个单一入口点。micro api使用服务发现服务HTTP和动态路由到适当的后端。
+在本系列的前一部分中，我们讨论了用户身份验证和JWT。在这节课中，我们将快速浏览一下go-micro的代理功能，甚至是代理。
+正如前文所提到的，go-micro是一个可插拔的框架，它接口许多不同的常用技术。如果您查看一下plugins repo，您会看到它支持了多少个插件。
+在我们的例子中，我们将使用NATS代理插件。
 
-
-概述micro api是一个HTTP api。对API的请求通过HTTP提供，并通过RPC在内部路由。它建立在go-micro的基础上，利用它进行服务发现、负载平衡、编码和基于RPC的通信。
-因为micro api在内部使用了micro，这也使得它成为可插拔的。参见go-plugins支持gRPC、kubernetes、etcd、...
+事件驱动架构事件驱动的体系结构是一个非常简单的概念。我们通常认为好的体系结构是可以解耦的;这些服务不应该与其他服务相耦合。当我们使用gRPC这样的协议时，这在某些情况下...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/20/micro-api/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -483,7 +475,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
 
 
   
-    <article id="post-micro-resiliency"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -491,7 +483,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-resiliency/">用Micro构建有弹性和容错的应用程序</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-4/">Go微服务教程-第四部分</a>
     </h1>
   
 
@@ -499,12 +491,12 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro-resiliency/" class="article-date">
-	  <time datetime="2018-03-18T15:44:26.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-4/" class="article-date">
+	  <time datetime="2018-05-10T13:56:32.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -512,13 +504,15 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
       
         <p class="article-excerpt-content">
           
-构建分布式系统是很有挑战性的，这已经不是什么秘密了。虽然我们已经解决了很多问题，作为一个行业，我们仍然经历了重建许多建筑街区的周期。是否因为迁移到下一个抽象级别，虚拟机到容器，采用新的语言，利用基于云的服务，甚至是这种向微服务的转变。总有一些东西似乎需要我们重新学习如何为下一波技术构建性能和容错系统。
-这是一次迭代和创新之间的无休止的战斗，但是我们需要做一些事情来帮助减轻很多痛苦，因为向云、容器和微服务的转移仍在继续。
+在本系列的前一部分中，我们研究了创建用户服务并开始存储一些用户。现在我们需要考虑使我们的用户服务存储用户密码安全，并创建一些功能来验证用户，并在我们的微服务中发布安全令牌。
 
-动机我们为什么要这么做?为什么我们要不断地重建构建块，为什么还要继...
+注意，我现在已经将我们的服务分离到单独的存储库中。我发现这更容易部署。最初，我打算尝试做一个monorepo，但是我发现用Go的dep管理来设置它太麻烦了，不会有各种冲突。我还将开始演示如何独立运行和测试微服务。
+不幸的是，使用这种方法，我们将会失去docker。但现在还好。
+现在需要手动运行数据库:
+12$ do...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro-resiliency/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -537,7 +531,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
 
 
   
-    <article id="post-the-micro-bot"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -545,7 +539,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/the-micro-bot/">Micro Bot - 微服务聊天工具</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-3/">Go微服务教程-第三部分</a>
     </h1>
   
 
@@ -553,12 +547,12 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/the-micro-bot/" class="article-date">
-	  <time datetime="2018-03-18T15:27:02.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-3/" class="article-date">
+	  <time datetime="2018-05-10T13:56:27.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -566,13 +560,14 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
       
         <p class="article-excerpt-content">
           
-今天我想和你们谈谈机器人。
+在之前的文章中，我们介绍了go-micro和Docker的一些基础知识。我们还介绍了第二种服务。在这篇文章中，我们将讨论docker-compose，以及如何在本地更轻松地运行我们的服务。我们将介绍一些不同的数据库，最后我们将介绍第三种服务。
 
-机器人吗?真的…现在我知道你在想什么了。现在有很多关于机器人的炒作。如果你对聊天机器人很熟悉，你就会知道这不是一个新的概念，事实上，它可以追溯到伊丽莎时代。对机器人的重新迷恋真的出现了，因为我们发现了更多有用的功能，而不仅仅是娱乐。他们还对可能成为下一个超越应用的交互界面，即会话用户界面进行了研究。
-在工程领域，机器人不仅是用于会话目的，它们对于操作任务来说也非常有用。所以，我们大多数的技术人员都已经熟悉了“ChatOps”这个词。GitHub从这个词的起源...
+先决条件安装docker-compose:https://docs.docker.com/compose/install/
+但是首先，让我们看看数据库。
+选择数据库到目前为止，我们的数据实际上并没有存储在任何地方，而是存储在我们的服务中，当我们的...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/the-micro-bot/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -591,7 +586,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
 
 
   
-    <article id="post-micro-architecture"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -599,7 +594,7 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-architecture/">Micro架构和微服务的设计模式</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-2/">Go微服务教程-第二部分(Docker和go-micro)</a>
     </h1>
   
 
@@ -607,12 +602,12 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro-architecture/" class="article-date">
-	  <time datetime="2018-03-18T13:58:35.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-2/" class="article-date">
+	  <time datetime="2018-05-10T13:56:23.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -620,15 +615,13 @@ micro api是微服务的api网关。使用API网关模式为您的服务提供�
       
         <p class="article-excerpt-content">
           
-在过去的几个月里，我们对微服务的micro架构和设计模式有很多疑问。所以今天我们将尝试把两者都包括进去。
+介绍在之前的文章中，我们介绍了编写基于gRPC的微服务的基础知识。在这一部分;我们将介绍dockeringa服务的基本内容，我们还将更新我们的服务以使用go-micro，最后，引入第二个服务。
 
-关于MicroMicro是一个微型服务工具包。它被构建为在它的特性和接口上的观点，同时提供一个强大的可插入架构，允许将底层的依赖项交换出去。
-Micro专注于满足构建微服务的基本需求，并通过采用深思熟虑和慎重的方法来实现它的设计。
-如果你想在microtoolkit上阅读，看看之前的博客文章，或者你想了解更多关于微服务的概念。
-在深入讨论进一步的架构讨论之前，我们将快速回顾一下Mi...
+介绍 Docker随着云计算的出现和微服务的诞生。部署更多、但更小的代码块的压力导致了一些有趣的新想法和技术。其中之一是容器的概念。
+传统上，团队会将一个整体系统部署到静态服务器上，运行一个操作系统，并使用预定义的依赖集来跟踪。或者可能是由Chef或Puppet提供的虚拟机。扩大规模是很昂贵的，...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro-architecture/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -647,7 +640,7 @@ Micro专注于满足构建微服务的基本需求，并通过采用深思熟虑
 
 
   
-    <article id="post-micro-on-nats"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-1"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -655,7 +648,7 @@ Micro专注于满足构建微服务的基本需求，并通过采用深思熟虑
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro-on-nats/">Micro在NATS - 微服务与消息</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-1/">Go微服务教程-第一部分</a>
     </h1>
   
 
@@ -663,12 +656,12 @@ Micro专注于满足构建微服务的基本需求，并通过采用深思熟虑
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro-on-nats/" class="article-date">
-	  <time datetime="2018-03-18T12:41:09.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-1/" class="article-date">
+	  <time datetime="2018-05-10T13:56:15.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -676,15 +669,22 @@ Micro专注于满足构建微服务的基本需求，并通过采用深思熟虑
       
         <p class="article-excerpt-content">
           
-在这篇文章中，我们将讨论在NATS上使用Micro。它包括关于服务发现的讨论、对微服务的同步和异步通信。
-让我们开始谈正事吧。
+介绍这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
+在本教程中，我们将介绍一些基本概念、术语，并以最原始的形式创建我们的第一个微服务。
 
-NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的消息总线。NATS是由Apcera的创始人Derek Collison创立的。它起源于VMWare，并开始以ruby为基础的系统。它早就被重写了，并且在那些寻找高度可伸缩和高性能的消息传递系统的用户中稳步获得采用。
-如果你想更多地了解NATS本身，请访问nats.io或加入这里的社区。
-为什么NA...
+我们将在整个系列中创建以下服务:
+
+货物
+库存
+用户
+身份验证
+角色
+船只
+
+我们最终将会用到:golang, mongodb, grpc, d...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro-on-nats/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-1/#more">阅读全文</a>
         </p>
       
     </div>
@@ -703,7 +703,7 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
 
 
   
-    <article id="post-go-micro"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-go-micro-tutorial-readme"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -711,7 +711,7 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/go-micro/">用Go Micro编写微服务</a>
+      <a class="article-title" href="/2018/05/10/go-micro-tutorial-readme/">Go微服务教程</a>
     </h1>
   
 
@@ -719,12 +719,12 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/go-micro/" class="article-date">
-	  <time datetime="2018-03-18T11:30:53.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/05/10/go-micro-tutorial-readme/" class="article-date">
+	  <time datetime="2018-05-10T13:33:53.000Z" itemprop="datePublished">2018-05-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
 
       
     </div>
@@ -732,19 +732,12 @@ NATS是什么?NATS是一个开源的云本地消息传递系统或更简单的�
       
         <p class="article-excerpt-content">
           
-这是一个高水平的指导，用go-micro来编写微服务。
-如果你想了解更多有关微服务的内容，请点击这里的入门博客文章，如果你想了解更多关于Micro的信息，请点击这里。
-让我们开始吧。
+这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
+目录第一部分第二部分第三部分第四部分第五部分第六部分第七部分第八部分
 
-Go Micro是什么?Go Micro是一个可插入的RPC库，它提供了用于编写微服务的基本构件。微哲学是用可插拔的体系结构设计的“电池”。从这个框中，它实现了使用代理的服务发现，通过http和使用proto-rpc或json-rpc进行编码
-Go Micro是:
-
-Go写的库
-一组可插入的接口
-基于RP...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/go-micro/#more">阅读全文</a>
+          <a href="/2018/05/10/go-micro-tutorial-readme/#more">阅读全文</a>
         </p>
       
     </div>
@@ -763,7 +756,7 @@ Go写的库
 
 
   
-    <article id="post-micro"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-webapp-update-ios"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -771,7 +764,7 @@ Go写的库
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/18/micro/">Micro - 微服务工具包</a>
+      <a class="article-title" href="/2018/04/19/webapp-update-ios/">WebAPP升级方案(iOS版)</a>
     </h1>
   
 
@@ -779,12 +772,12 @@ Go写的库
     
     <div class="article-meta">
       
-	<a href="/2018/03/18/micro/" class="article-date">
-	  <time datetime="2018-03-18T10:15:47.000Z" itemprop="datePublished">2018-03-18</time>
+	<a href="/2018/04/19/webapp-update-ios/" class="article-date">
+	  <time datetime="2018-04-19T03:33:51.000Z" itemprop="datePublished">2018-04-19</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/WebAPP/">WebAPP</a>
 
       
     </div>
@@ -792,14 +785,27 @@ Go写的库
       
         <p class="article-excerpt-content">
           
-到现在为止，你可能已经听说过这种新的现象，微服务。如果你还不熟悉，而且对学习感兴趣，请在查看这里。
-在这篇博文中，我们将讨论Micro，一个开源的微服务工具包。Micro提供了构建和管理微服务的核心需求。它由一系列的库和工具组成，这些库和工具主要面向Go语言的编程开发，但是通过使用Sidecar来解决其他语言的问题。
-在我们了解微观的细节之前，让我们来谈谈为什么我们决定把时间花在这上面。
 
-开发或部署从我们过去的经验和我们在业界所看到的情况来看，我们需要关注开发而不是部署。PaaS解决方...
+服务器部分服务端提供:
+
+版本检测接口e.g. http://192.168.11.1:3000/version
+H5+包下载地址e.g. http://192.168.11.1:3000/download/HelloH5.wgtu
+
+H5+包命名： Supervisor.wgtu格式： package_name.wgtu
+
+H5+包使用zip压缩
+
+JS部分执行步骤:
+
+版本检测
+下载wgtu包
+安装wgtu包
+重启
+
+版本检测1234567891011121314151617181...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/18/micro/#more">阅读全文</a>
+          <a href="/2018/04/19/webapp-update-ios/#more">阅读全文</a>
         </p>
       
     </div>
@@ -822,7 +828,7 @@ Go写的库
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/8/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/10/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/8/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/10/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -837,7 +843,7 @@ Go写的库
   <div class="container">
       	<div class="row">
 	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
-	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 朝着牛逼的道路一路狂奔 All Rights Reserved.</p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2019 朝着牛逼的道路一路狂奔 All Rights Reserved.</p>
 	      
 	      
     		<p class="busuanzi_uv">
@@ -991,7 +997,7 @@ Go写的库
             朝着牛逼的道路一路狂奔
           </div>
           <div class="panel-body">
-            Copyright © 2018 段纪刚 All Rights Reserved.
+            Copyright © 2019 段纪刚 All Rights Reserved.
           </div>
         </div>
       </div>

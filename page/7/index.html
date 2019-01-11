@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-Spring-5-Recipes-1"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/29/Spring-5-Recipes-1/">Spring 5 开发工具</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring/">编写自己的Yeoman生成器-1.入门</a>
     </h1>
   
 
@@ -273,8 +273,447 @@
     
     <div class="article-meta">
       
-	<a href="/2018/07/29/Spring-5-Recipes-1/" class="article-date">
-	  <time datetime="2018-07-29T07:42:17.000Z" itemprop="datePublished">2018-07-29</time>
+	<a href="/2018/08/29/yeoman-authoring/" class="article-date">
+	  <time datetime="2018-08-29T12:18:35.000Z" itemprop="datePublished">2018-08-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          Generators(生成器)是Yeoman生态系统的基石。它们是yo为最终用户生成文件所运行的插件。
+阅读本节，您将学习如何创建和分发自己的内容。
+
+注意：我们构建了一个生成器 - Generator，以帮助用户开始使用自己的生成器。一旦理解了以下概念，请随意使用它来引导您自己的生成器。
+
+组织你的生成器设置为Node Module生成器的核心是Node.js模块
+首先，创建一个文件夹，在其中编写您的生成器。文件夹必须命名generator-name（name您的生成器的名称）。这很重要...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/29/yeoman-authoring/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/vscode-extensions-5/">VSCode Webview API</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/vscode-extensions-5/" class="article-date">
+	  <time datetime="2018-08-11T09:54:45.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          webview API允许扩展在Visual Studio Code中创建完全可定制的视图。例如，内置的Markdown扩展使用webview来呈现Markdown预览。除了VS Code的原生api支持之外，webview还可以用来构建复杂的用户界面。
+可以将webview看作是您的扩展控制的VS Code中的iframe。一个webview可以呈现这个框架中几乎所有的HTML内容，它通过消息传递与扩展通信。这种自由使webview变得非常强大，并打开了一个全新的扩展范围。
+我应该使用w...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/vscode-extensions-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/vscode-extensions-4/">例子——语言服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/vscode-extensions-4/" class="article-date">
+	  <time datetime="2018-08-11T08:01:10.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          简要概述语言服务器和语言服务器协议语言服务器是一种特殊的扩展，支持VS代码中许多编程语言的编辑体验。使用语言服务器，您可以实现VS代码中支持的自动完成、错误检查(诊断)、快速定义和许多其他语言特性。
+然而，在VS代码中实现对语言特性的支持时，我们发现了三个常见问题:
+首先，语言服务器通常是用它们的本地编程语言实现的，这在将它们与具有节点的VS代码集成方面提出了挑战。js运行时。
+此外，语言特性可能是资源密集型的。例如，要正确地验证一个文件，Language Server需要解析大量文件，为...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/vscode-extensions-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/vscode-extensions-3/">例子——单词计数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/vscode-extensions-3/" class="article-date">
+	  <time datetime="2018-08-11T07:08:46.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          本文档假设您已经阅读了第一个扩展，它涵盖了VS Code可扩展性的基础知识。
+单词计数是一个端到端教程，向您展示如何创建一个扩展来帮助Markdown创作。在我们深入了解所有这些工作原理之前，让我们先快速演示一下您将要构建的核心特性，这样您就知道会发生什么了。
+无论何时编辑标记文件，都会添加状态栏消息。该消息包括当前的字数和更新，当您键入和移动到文件:
+
+
+提示:如果您有任何问题，可以从GitHub存储库中获得完成的示例。
+
+概述这个示例有三个部分，将带您了解一系列相关概念:
+更新状态栏-...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/vscode-extensions-3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/vscode-extensions-2/">扩展 - Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/vscode-extensions-2/" class="article-date">
+	  <time datetime="2018-08-11T04:16:04.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          你的第一个扩展本文档将指导您创建第一个VS Code扩展(“Hello World”)，并解释VS Code可扩展性的基本概念。
+在本演练中，您将向VS Code添加一个新命令，该命令将显示一个简单的“Hello World”消息。在随后的演练中，您将与VS Code编辑器交互，并查询用户当前选择的文本。
+先决条件你需要的节点。在您的$PATH中安装并可用js。Node.js安装包括npm, Node.js包管理器，它将用于安装扩展生成器。
+生成一个新的扩展向VS Code中添加自己的功能...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/vscode-extensions-2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions-1"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/vscode-extensions-1/">Yo Code - 扩展生成器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/vscode-extensions-1/" class="article-date">
+	  <time datetime="2018-08-11T02:32:19.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          我们编写了一个Yeoman 生成器来帮助您开始。
+先决条件你需要的节点。在您的$PATH中安装并可用js。Node.js安装包括npm, Node.js包管理器，它将用于安装扩展生成器。
+安装生成器从命令提示符安装Yeoman和VS Code扩展生成器:
+1npm install -g yo generator-code
+运行你代码Yeoman生成器将指导您完成创建自定义或扩展所需的步骤，并提示您输入所需的信息。
+要启动生成器，在命令提示符中输入以下命令:
+1yo code
+
+生成器的选择...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/vscode-extensions-1/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Sentry"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/11/Sentry/">Sentry服务搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/11/Sentry/" class="article-date">
+	  <time datetime="2018-08-11T01:08:32.000Z" itemprop="datePublished">2018-08-11</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          官方引导运行您自己的 Sentry 使用 Docker.
+需求
+Docker 1.10.0+
+Compose 1.6.0+ (可选)
+
+启动和运行假设您刚刚克隆了这个存储库，下面的步骤将立即启动并运行!
+可能需要对包含的docker-compose.yml文件进行修改，以适应您的需要或环境。这些指导方针是你应该做的事情。
+
+mkdir -p data/{sentry,postgres} - 使我们的本地数据库和哨兵配置目录。这个目录是用postgres绑定安装的，所以不会丢失状态!
+doc...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/11/Sentry/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-vscode-extensions"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/10/vscode-extensions/">扩展 VS Code</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/10/vscode-extensions/" class="article-date">
+	  <time datetime="2018-08-10T13:33:34.000Z" itemprop="datePublished">2018-08-10</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          如果您对扩展VS Code感兴趣，那么您的位置就对了。在这里，我们将概述VS代码可扩展性文档，以及如何快速构建您的第一个VS代码扩展。如果您对VS代码的可扩展性的设计方法感到好奇，您可以在这里阅读。
+如果您只想使用现有的扩展，请参阅扩展市场主题，在该主题中，我们将向您展示如何从VSCode市场中查找和安装扩展。
+所有VS Code扩展都共享一个公共的贡献(注册)、激活(加载)和访问VS Code可扩展性API的模型。但是VS Code扩展有两种特殊的风格，语言服务器和调试器，它们有自己的附...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/10/vscode-extensions/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Spring-5-Recipes-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/01/Spring-5-Recipes-3/">Spring MVC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/01/Spring-5-Recipes-3/" class="article-date">
+	  <time datetime="2018-08-01T13:19:03.000Z" itemprop="datePublished">2018-08-01</time>
 	</a>
 
       
@@ -286,15 +725,11 @@
       
         <p class="article-excerpt-content">
           
-在本章中，您将学习如何设置和使用最流行的开发工具来创建Spring应用程序。与许多其他软件框架一样，Spring也有大量的开发工具可供选择，从简单的命令行工具到复杂的图形化工具，称为集成开发环境(IDE)。
-无论您是已经使用了某些Java开发工具，还是第一次使用Java开发工具，以下食谱将指导您如何设置不同的工具箱，以便在接下来的章节中进行练习，以及开发任何Spring应用程序。
-以下是启动Spring应用程序所需的三个工具箱和相应的章节:
-
-Spring工具套件: 章节1-1
-Inte...
+MVC是Spring框架中最重要的模块之一。它构建在强大的Spring IoC容器上，并广泛使用容器特性来简化其配置。
+模型-视图-控制器(MVC)是UI设计中常见的设计模式。它将模型、视图和控制器的角色分离到应用程序中，从而将业务逻辑与ui分离开来。模型负责为要显示的视图封装应用程序数据。视图应该只显示此数据，而不包含任何业务逻辑。控制器负责接收用户的请求并调用后端服务进行业务处理。处理后，后端服务可以返回一些数据以供视图显示。控制器收集这些数据并为视图准备模型。MVC模式的核心思想是...
         </p>
         <p class="article-more-link">
-          <a href="/2018/07/29/Spring-5-Recipes-1/#more">阅读全文</a>
+          <a href="/2018/08/01/Spring-5-Recipes-3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -313,7 +748,7 @@ Inte...
 
 
   
-    <article id="post-Spring-5-Recipes"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-Spring-5-Recipes-2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -321,7 +756,7 @@ Inte...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/29/Spring-5-Recipes/">Spring 5 开发范例代码大全</a>
+      <a class="article-title" href="/2018/07/29/Spring-5-Recipes-2/">Spring 核心任务</a>
     </h1>
   
 
@@ -329,8 +764,8 @@ Inte...
     
     <div class="article-meta">
       
-	<a href="/2018/07/29/Spring-5-Recipes/" class="article-date">
-	  <time datetime="2018-07-29T07:16:04.000Z" itemprop="datePublished">2018-07-29</time>
+	<a href="/2018/07/29/Spring-5-Recipes-2/" class="article-date">
+	  <time datetime="2018-07-29T10:05:28.000Z" itemprop="datePublished">2018-07-29</time>
 	</a>
 
       
@@ -342,446 +777,11 @@ Inte...
       
         <p class="article-excerpt-content">
           
-介绍Spring框架正在增长。关于选择。Java EE专注于一些技术，主要是为了损害替代的、更好的解决方案。当Spring框架初次亮相时，很少有人会认为Java EE代表了当今最好的体系结构。Spring首次大张旗鼓地亮相，是因为它寻求简化Java EE。此后的每一个版本都标记了新特性的引入，这些新特性既简化了解决方案，又简化了解决方案。
-随着版本2.0和更新，Spring框架开始针对多个平台。框架一如既往地在现有平台之上提供服务，但尽可能地与底层平台分离。Java EE仍然是一个主要的...
+在本章中，您将了解与Spring相关的核心任务。Spring框架的核心是Spring控制反转(Io0043)容器。IoC容器用于管理和配置普通的旧Java对象(POJOs)。因为Spring框架的主要诉求之一是使用pojo构建Java应用程序，Spring的许多核心任务都涉及到在IoC容器中管理和配置POJOs。
+因此，无论您打算在web应用程序、企业集成或其他类型的项目中使用Spring框架，使用pojo和IoC容器是您需要采取的第一步。本章的大部分食谱涵盖了您将在本书中使用的任务，并...
         </p>
         <p class="article-more-link">
-          <a href="/2018/07/29/Spring-5-Recipes/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cas-Maven-Overlay-Installation"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/13/cas-Maven-Overlay-Installation/">CAS企业单点登录-安装(Maven)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/13/cas-Maven-Overlay-Installation/" class="article-date">
-	  <time datetime="2018-07-13T02:03:13.000Z" itemprop="datePublished">2018-07-13</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/CAS企业单点登录/">CAS企业单点登录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          CAS安装基本上是一个面向源的过程，我们推荐一个WAR overlay(1)项目来组织定制，比如组件配置和UI设计。WAR覆盖构建的输出是cas。可以部署到servlet容器(如Apache Tomcat)的war文件。
-需求参见本指南了解更多信息。
-什么是WAR覆盖覆盖是一种对抗重复代码和/或资源的策略。覆盖允许您下载由项目本身提供的预构建的普通CAS web应用服务器，并覆盖/插入特定的行为，而不是从源代码下载CAS代码库和构建。在构建时，Maven/Gradle安装过程将首先尝试下载...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/13/cas-Maven-Overlay-Installation/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cas-Installation-Requirements"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/13/cas-Installation-Requirements/">CAS企业单点登录-安装要求</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/13/cas-Installation-Requirements/" class="article-date">
-	  <time datetime="2018-07-13T01:21:07.000Z" itemprop="datePublished">2018-07-13</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/CAS企业单点登录/">CAS企业单点登录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          根据配置组件的选择，可能会有其他需求，如LDAP目录、数据库和缓存基础设施。然而，在大多数情况下，对于选择具有明确硬件和软件依赖关系的组件的部署人员来说，需求应该是不言而喻的。在任何其他需求不明显的情况下，组件配置的讨论都应该提到系统、软件、硬件和其他需求。
-JavaCAS的核心是一个基于java的web应用程序。在部署之前，需要安装JDK v1.8
-Servlet容器没有官方支持的CAS的servlet容器，但是Apache Tomcat是最常用的。对特定servlet容器的支持取决于社...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/13/cas-Installation-Requirements/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cas-Getting-Started"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/12/cas-Getting-Started/">CAS企业单点登录-入门指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/12/cas-Getting-Started/" class="article-date">
-	  <time datetime="2018-07-12T14:33:48.000Z" itemprop="datePublished">2018-07-12</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/CAS企业单点登录/">CAS企业单点登录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          本文档提供了关于如何开始使用CAS服务器部署的高级指南。该指南的唯一重点是描述CAS部署人员必须遵循和采用的过程，以便获得成功和可持续的体系结构和部署。
-收集用例在部署之前，记录、编目和分析所需的用例和需求是非常重要的。一旦您有了一些想法，请与CAS社区讨论并分享那些可能已经解决了您今天面临的相同问题的共同趋势、实践和模式。
-学习架构了解什么是CAS，可以做什么。这将帮助您开发一个基础，以实现您的哪些用例和需求在CAS中可能已经是可能的。看一下CAS架构的基本原理，看看部署和应用程序集成可...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/12/cas-Getting-Started/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cas-architecture"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/12/cas-architecture/">CAS企业单点登录-架构</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/12/cas-architecture/" class="article-date">
-	  <time datetime="2018-07-12T14:00:17.000Z" itemprop="datePublished">2018-07-12</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/CAS企业单点登录/">CAS企业单点登录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-系统组件CAS服务器和客户端包含CAS系统体系结构的两个物理组件，通过各种协议进行通信。
-CAS服务器CAS服务器是构建在Spring框架上的Java servlet，其主要职责是通过发出和验证票据，对用户进行身份验证并授予对启用了casas的服务(通常称为CAS客户机)的访问权。当服务器在成功登录时向用户发出通知票(TGT)时，将创建SSO会话。服务票证(ST)是通过浏览器重定向使用TGT作为令牌来发送给服务的。ST随后通过后通道通信在CAS服务器上进行验证。在CAS协议文档中详细描述...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/12/cas-architecture/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-cas"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/12/cas/">CAS企业单点登录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/12/cas/" class="article-date">
-	  <time datetime="2018-07-12T12:37:09.000Z" itemprop="datePublished">2018-07-12</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/CAS企业单点登录/">CAS企业单点登录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-介绍
-Spring Webflow/Spring Boot Java服务器组件。
-可插认证支持(LDAP、数据库、X.509、SPNEGO、JAAS、JWT、RADIUS、MongoDb等)
-支持多种协议(CAS、SAML、WS-Federation、OAuth2、OpenID、OpenID连接、REST)
-通过各种提供者支持多因素身份验证(Duo Security、FIDO U2F、YubiKey、谷歌身份验证器、Microsoft Azure、Authy等)
-支持将身份验证委托给外部...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/12/cas/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Hexi"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/04/Hexi/">Hexi</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/04/Hexi/" class="article-date">
-	  <time datetime="2018-07-04T12:11:28.000Z" itemprop="datePublished">2018-07-04</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><a class="article-category-link" href="/categories/JavaScript/Pixi-js/">Pixi.js</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-Hexi是一种有趣而简单的方法，可以用纯JavaScript代码制作HTML5游戏或任何其他类型的交互媒体。看看开始的特性列表和示例文件夹。继续滚动，你会找到一个完整的快速入门指南和初学者指南。如果你以前从来没有做过游戏，教程是最好的开始。
-Hexi有什么?您可以使用streamlined API获得WebGL呈现的所有功能，该API允许您以极简的、声明性的方式编写代码。它使得编写一款游戏像写诗或画一样简单有趣。试一试!如果您需要任何帮助或有任何问题，请在此存储库的问题中发布一些内容。问...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/04/Hexi/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-WebApp或HybridApp和ReactNative"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/06/06/WebApp或HybridApp和ReactNative/">WebApp(或HybridApp)和React-Native比较</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/06/06/WebApp或HybridApp和ReactNative/" class="article-date">
-	  <time datetime="2018-06-06T08:37:38.000Z" itemprop="datePublished">2018-06-06</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/WebAPP/">WebAPP</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          web App(或Hybrid App)开发移动APP的弊端
-用户体验，差强人意，流畅度差
-需要原生接口，但调试原生时非常的不方便，没有工具的支持
-各个机型内置的webview的差异性，带来的适配问题
-难以支撑体量大的业务，只能做轻应用
-没有优秀的技术框架支撑，单页面难以适应移动端的场景；多页面增加业务复杂度，技术落后
-Dcloud等项目陈旧，没有开源，内部出现问题无法跟踪
-
-选择React Native的优势和缺点
-UI 原生渲染，对比H5体验更为高效
-替代传统的WebView，打开效率...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/06/06/WebApp或HybridApp和ReactNative/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-前端框架选型"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/22/前端框架选型/">前端框架选型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/05/22/前端框架选型/" class="article-date">
-	  <time datetime="2018-05-22T08:48:41.000Z" itemprop="datePublished">2018-05-22</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-前端框架选型是件困难的事情，困难的原因是各个方面的权衡，包括 项目业务的适应性，前端开发人员的自身技术偏向，各个框架主张的思想，入门和后续的难易程度,性能情况,背后支持及生态系统是否丰富…..综合的考虑，但又没有一定的正确答案。
-
-框架需求
-整合多项功能项目的能力，支撑业务的扩展
-尽量兼容桌面端和移动端
-具有技术先进性可持续发展
-
-三大框架目前主流的前端框架是 Angular, React,Vue
-AngularAngular由Google进行维护，并用于Google 的Adwords ...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/05/22/前端框架选型/#more">阅读全文</a>
+          <a href="/2018/07/29/Spring-5-Recipes-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -804,7 +804,7 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -819,7 +819,7 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
   <div class="container">
       	<div class="row">
 	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
-	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 朝着牛逼的道路一路狂奔 All Rights Reserved.</p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2019 朝着牛逼的道路一路狂奔 All Rights Reserved.</p>
 	      
 	      
     		<p class="busuanzi_uv">
@@ -973,7 +973,7 @@ AngularAngular由Google进行维护，并用于Google 的Adwords ...
             朝着牛逼的道路一路狂奔
           </div>
           <div class="panel-body">
-            Copyright © 2018 段纪刚 All Rights Reserved.
+            Copyright © 2019 段纪刚 All Rights Reserved.
           </div>
         </div>
       </div>
