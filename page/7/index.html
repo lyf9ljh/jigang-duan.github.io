@@ -257,6 +257,388 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-yeoman-authoring8"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring8/">编写自己的Yeoman生成器-8.测试生成器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring8/" class="article-date">
+	  <time datetime="2018-08-29T16:40:40.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          继续阅读以了解有关Yeoman添加的测试助手的更多信息，以减轻单元测试生成器的痛苦。
+以下示例假设您在BDD模式下使用Mocha。全局概念应该很容易应用于您选择的单元测试框架
+组织你的测试保持测试简单易于编辑非常重要。
+通常，组织测试的最佳方法是将每个生成器和子生成器分隔为自己的describe块。然后，describe为您的生成器接受的每个选项添加一个块。然后，it为每个断言（或相关断言）使用一个块。
+在代码中，您应该得到类似于此的结构：
+12345678describe('backbo...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring8/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
+	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
+这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
+以下是您将使用的一些常用方法。
+方法this.config.save()
+此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
+该.yo-r...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring6/">编写自己的Yeoman生成器-6.使用文件系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring6/" class="article-date">
+	  <time datetime="2018-08-29T16:23:20.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          位置上下文和路径Yeoman文件实用程序基于您在磁盘上始终有两个位置上下文的想法。这些上下文是您的生成器最有可能读取和写入的文件夹。
+目标上下文第一个上下文是目标上下文。目标是Yeoman将脚手架新应用程序的文件夹。它是您的用户项目文件夹，它是您编写大部分脚手架的地方。
+目标上下文定义为当前工作目录或包含.yo-rc.json文件的最近父文件夹。该.yo-rc.json文件定义了Yeoman项目的根。此文件允许您的用户在子目录中运行命令并让它们在项目上工作。这确保了最终用户的一致行为。
+你...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
+	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
+由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
+
+注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
+
+NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/29/yeoman-authoring4/">编写自己的Yeoman生成器-4.组合性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/29/yeoman-authoring4/" class="article-date">
+	  <time datetime="2018-08-29T15:32:44.000Z" itemprop="datePublished">2018-08-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+组合性是一种将较小的部件组合在一起构成一件大事的方法。排序像Voltron®
+
+Yeoman为生成器提供了多种方式来建立共同点。重写相同的功能没有任何意义，因此提供了一个API来在其他生成器中使用生成器。
+在Yeoman中，可组合性可以通过两种方式启动：
+
+生成器可以决定与另一个生成器（例如，generator-backbone使用generator-mocha）组合。
+最终用户也可以发起合成（例如，Simon想要生成具有SASS和Rails的Backbone项目）。注意：最终用户发起的...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/29/yeoman-authoring4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/29/yeoman-authoring3/">编写自己的Yeoman生成器-3.与用户交互</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/29/yeoman-authoring3/" class="article-date">
+	  <time datetime="2018-08-29T15:00:05.000Z" itemprop="datePublished">2018-08-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          您的生成器将与最终用户进行大量交互。默认情况下，Yeoman在终端上运行，但它也支持不同工具可以提供的自定义用户界面。例如，没有什么能阻止Yeoman生成器在编辑器或独立应用程序之类的图形工具中运行。
+为了实现这种灵活性，Yeoman提供了一组用户界面元素抽象。作为作者，您有责任在与最终用户交互时仅使用这些抽象。使用其他方法可能会阻止您的生成器在不同的Yeoman工具中正确运行。
+例如，永远不要使用console.log()或process.stdout.write()输出内容很重要。使用...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/29/yeoman-authoring3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-yeoman-authoring2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/08/29/yeoman-authoring2/">编写自己的Yeoman生成器-2.运行时上下文</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/08/29/yeoman-authoring2/" class="article-date">
+	  <time datetime="2018-08-29T14:30:47.000Z" itemprop="datePublished">2018-08-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。
+原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。
+换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。
+辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法或私有方法。有三种不同的方法可以实现这一目标。
+
+方法名称下划线前缀（例如_private_m...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/08/29/yeoman-authoring2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -400,388 +782,6 @@
         </p>
         <p class="article-more-link">
           <a href="/2018/08/11/vscode-extensions-4/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions-3"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-3/">例子——单词计数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/vscode-extensions-3/" class="article-date">
-	  <time datetime="2018-08-11T07:08:46.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          本文档假设您已经阅读了第一个扩展，它涵盖了VS Code可扩展性的基础知识。
-单词计数是一个端到端教程，向您展示如何创建一个扩展来帮助Markdown创作。在我们深入了解所有这些工作原理之前，让我们先快速演示一下您将要构建的核心特性，这样您就知道会发生什么了。
-无论何时编辑标记文件，都会添加状态栏消息。该消息包括当前的字数和更新，当您键入和移动到文件:
-
-
-提示:如果您有任何问题，可以从GitHub存储库中获得完成的示例。
-
-概述这个示例有三个部分，将带您了解一系列相关概念:
-更新状态栏-...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-3/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-2/">扩展 - Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/vscode-extensions-2/" class="article-date">
-	  <time datetime="2018-08-11T04:16:04.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          你的第一个扩展本文档将指导您创建第一个VS Code扩展(“Hello World”)，并解释VS Code可扩展性的基本概念。
-在本演练中，您将向VS Code添加一个新命令，该命令将显示一个简单的“Hello World”消息。在随后的演练中，您将与VS Code编辑器交互，并查询用户当前选择的文本。
-先决条件你需要的节点。在您的$PATH中安装并可用js。Node.js安装包括npm, Node.js包管理器，它将用于安装扩展生成器。
-生成一个新的扩展向VS Code中添加自己的功能...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions-1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-1/">Yo Code - 扩展生成器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/vscode-extensions-1/" class="article-date">
-	  <time datetime="2018-08-11T02:32:19.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          我们编写了一个Yeoman 生成器来帮助您开始。
-先决条件你需要的节点。在您的$PATH中安装并可用js。Node.js安装包括npm, Node.js包管理器，它将用于安装扩展生成器。
-安装生成器从命令提示符安装Yeoman和VS Code扩展生成器:
-1npm install -g yo generator-code
-运行你代码Yeoman生成器将指导您完成创建自定义或扩展所需的步骤，并提示您输入所需的信息。
-要启动生成器，在命令提示符中输入以下命令:
-1yo code
-
-生成器的选择...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Sentry"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/Sentry/">Sentry服务搭建</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/11/Sentry/" class="article-date">
-	  <time datetime="2018-08-11T01:08:32.000Z" itemprop="datePublished">2018-08-11</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          官方引导运行您自己的 Sentry 使用 Docker.
-需求
-Docker 1.10.0+
-Compose 1.6.0+ (可选)
-
-启动和运行假设您刚刚克隆了这个存储库，下面的步骤将立即启动并运行!
-可能需要对包含的docker-compose.yml文件进行修改，以适应您的需要或环境。这些指导方针是你应该做的事情。
-
-mkdir -p data/{sentry,postgres} - 使我们的本地数据库和哨兵配置目录。这个目录是用postgres绑定安装的，所以不会丢失状态!
-doc...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/11/Sentry/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-vscode-extensions"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/10/vscode-extensions/">扩展 VS Code</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/10/vscode-extensions/" class="article-date">
-	  <time datetime="2018-08-10T13:33:34.000Z" itemprop="datePublished">2018-08-10</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          如果您对扩展VS Code感兴趣，那么您的位置就对了。在这里，我们将概述VS代码可扩展性文档，以及如何快速构建您的第一个VS代码扩展。如果您对VS代码的可扩展性的设计方法感到好奇，您可以在这里阅读。
-如果您只想使用现有的扩展，请参阅扩展市场主题，在该主题中，我们将向您展示如何从VSCode市场中查找和安装扩展。
-所有VS Code扩展都共享一个公共的贡献(注册)、激活(加载)和访问VS Code可扩展性API的模型。但是VS Code扩展有两种特殊的风格，语言服务器和调试器，它们有自己的附...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/10/vscode-extensions/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Spring-5-Recipes-3"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/01/Spring-5-Recipes-3/">Spring MVC</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/01/Spring-5-Recipes-3/" class="article-date">
-	  <time datetime="2018-08-01T13:19:03.000Z" itemprop="datePublished">2018-08-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/开发范例代码大全/">开发范例代码大全</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-MVC是Spring框架中最重要的模块之一。它构建在强大的Spring IoC容器上，并广泛使用容器特性来简化其配置。
-模型-视图-控制器(MVC)是UI设计中常见的设计模式。它将模型、视图和控制器的角色分离到应用程序中，从而将业务逻辑与ui分离开来。模型负责为要显示的视图封装应用程序数据。视图应该只显示此数据，而不包含任何业务逻辑。控制器负责接收用户的请求并调用后端服务进行业务处理。处理后，后端服务可以返回一些数据以供视图显示。控制器收集这些数据并为视图准备模型。MVC模式的核心思想是...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/01/Spring-5-Recipes-3/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-Spring-5-Recipes-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/07/29/Spring-5-Recipes-2/">Spring 核心任务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/07/29/Spring-5-Recipes-2/" class="article-date">
-	  <time datetime="2018-07-29T10:05:28.000Z" itemprop="datePublished">2018-07-29</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/开发范例代码大全/">开发范例代码大全</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-在本章中，您将了解与Spring相关的核心任务。Spring框架的核心是Spring控制反转(Io0043)容器。IoC容器用于管理和配置普通的旧Java对象(POJOs)。因为Spring框架的主要诉求之一是使用pojo构建Java应用程序，Spring的许多核心任务都涉及到在IoC容器中管理和配置POJOs。
-因此，无论您打算在web应用程序、企业集成或其他类型的项目中使用Spring框架，使用pojo和IoC容器是您需要采取的第一步。本章的大部分食谱涵盖了您将在本书中使用的任务，并...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/07/29/Spring-5-Recipes-2/#more">阅读全文</a>
         </p>
       
     </div>
