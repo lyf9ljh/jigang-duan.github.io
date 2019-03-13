@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-go-micro-tutorial-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-5/">Go微服务教程-第五部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring8/">编写自己的Yeoman生成器-8.测试生成器</a>
     </h1>
   
 
@@ -273,27 +273,27 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-5/" class="article-date">
-	  <time datetime="2018-05-10T13:56:48.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring8/" class="article-date">
+	  <time datetime="2018-08-29T16:40:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在本系列的前一部分中，我们讨论了用户身份验证和JWT。在这节课中，我们将快速浏览一下go-micro的代理功能，甚至是代理。
-正如前文所提到的，go-micro是一个可插拔的框架，它接口许多不同的常用技术。如果您查看一下plugins repo，您会看到它支持了多少个插件。
-在我们的例子中，我们将使用NATS代理插件。
-
-事件驱动架构事件驱动的体系结构是一个非常简单的概念。我们通常认为好的体系结构是可以解耦的;这些服务不应该与其他服务相耦合。当我们使用gRPC这样的协议时，这在某些情况下...
+          继续阅读以了解有关Yeoman添加的测试助手的更多信息，以减轻单元测试生成器的痛苦。
+以下示例假设您在BDD模式下使用Mocha。全局概念应该很容易应用于您选择的单元测试框架
+组织你的测试保持测试简单易于编辑非常重要。
+通常，组织测试的最佳方法是将每个生成器和子生成器分隔为自己的describe块。然后，describe为您的生成器接受的每个选项添加一个块。然后，it为每个断言（或相关断言）使用一个块。
+在代码中，您应该得到类似于此的结构：
+12345678describe('backbo...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-5/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -312,7 +312,7 @@
 
 
   
-    <article id="post-go-micro-tutorial-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -320,7 +320,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-4/">Go微服务教程-第四部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
     </h1>
   
 
@@ -328,28 +328,27 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-4/" class="article-date">
-	  <time datetime="2018-05-10T13:56:32.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
+	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在本系列的前一部分中，我们研究了创建用户服务并开始存储一些用户。现在我们需要考虑使我们的用户服务存储用户密码安全，并创建一些功能来验证用户，并在我们的微服务中发布安全令牌。
-
-注意，我现在已经将我们的服务分离到单独的存储库中。我发现这更容易部署。最初，我打算尝试做一个monorepo，但是我发现用Go的dep管理来设置它太麻烦了，不会有各种冲突。我还将开始演示如何独立运行和测试微服务。
-不幸的是，使用这种方法，我们将会失去docker。但现在还好。
-现在需要手动运行数据库:
-12$ do...
+          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
+这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
+以下是您将使用的一些常用方法。
+方法this.config.save()
+此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
+该.yo-r...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-4/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -368,7 +367,7 @@
 
 
   
-    <article id="post-go-micro-tutorial-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -376,7 +375,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-3/">Go微服务教程-第三部分</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring6/">编写自己的Yeoman生成器-6.使用文件系统</a>
     </h1>
   
 
@@ -384,27 +383,25 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-3/" class="article-date">
-	  <time datetime="2018-05-10T13:56:27.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring6/" class="article-date">
+	  <time datetime="2018-08-29T16:23:20.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-在之前的文章中，我们介绍了go-micro和Docker的一些基础知识。我们还介绍了第二种服务。在这篇文章中，我们将讨论docker-compose，以及如何在本地更轻松地运行我们的服务。我们将介绍一些不同的数据库，最后我们将介绍第三种服务。
-
-先决条件安装docker-compose:https://docs.docker.com/compose/install/
-但是首先，让我们看看数据库。
-选择数据库到目前为止，我们的数据实际上并没有存储在任何地方，而是存储在我们的服务中，当我们的...
+          位置上下文和路径Yeoman文件实用程序基于您在磁盘上始终有两个位置上下文的想法。这些上下文是您的生成器最有可能读取和写入的文件夹。
+目标上下文第一个上下文是目标上下文。目标是Yeoman将脚手架新应用程序的文件夹。它是您的用户项目文件夹，它是您编写大部分脚手架的地方。
+目标上下文定义为当前工作目录或包含.yo-rc.json文件的最近父文件夹。该.yo-rc.json文件定义了Yeoman项目的根。此文件允许您的用户在子目录中运行命令并让它们在项目上工作。这确保了最终用户的一致行为。
+你...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-3/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -423,7 +420,7 @@
 
 
   
-    <article id="post-go-micro-tutorial-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -431,7 +428,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-2/">Go微服务教程-第二部分(Docker和go-micro)</a>
+      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
     </h1>
   
 
@@ -439,26 +436,27 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-2/" class="article-date">
-	  <time datetime="2018-05-10T13:56:23.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
+	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-介绍在之前的文章中，我们介绍了编写基于gRPC的微服务的基础知识。在这一部分;我们将介绍dockeringa服务的基本内容，我们还将更新我们的服务以使用go-micro，最后，引入第二个服务。
+          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
+由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
 
-介绍 Docker随着云计算的出现和微服务的诞生。部署更多、但更小的代码块的压力导致了一些有趣的新想法和技术。其中之一是容器的概念。
-传统上，团队会将一个整体系统部署到静态服务器上，运行一个操作系统，并使用预定义的依赖集来跟踪。或者可能是由Chef或Puppet提供的虚拟机。扩大规模是很昂贵的，...
+注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
+
+NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-2/#more">阅读全文</a>
+          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -477,7 +475,7 @@
 
 
   
-    <article id="post-go-micro-tutorial-1"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -485,7 +483,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-1/">Go微服务教程-第一部分</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring4/">编写自己的Yeoman生成器-4.组合性</a>
     </h1>
   
 
@@ -493,12 +491,12 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-1/" class="article-date">
-	  <time datetime="2018-05-10T13:56:15.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring4/" class="article-date">
+	  <time datetime="2018-08-29T15:32:44.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
@@ -506,22 +504,16 @@
       
         <p class="article-excerpt-content">
           
-介绍这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
-在本教程中，我们将介绍一些基本概念、术语，并以最原始的形式创建我们的第一个微服务。
+组合性是一种将较小的部件组合在一起构成一件大事的方法。排序像Voltron®
 
-我们将在整个系列中创建以下服务:
+Yeoman为生成器提供了多种方式来建立共同点。重写相同的功能没有任何意义，因此提供了一个API来在其他生成器中使用生成器。
+在Yeoman中，可组合性可以通过两种方式启动：
 
-货物
-库存
-用户
-身份验证
-角色
-船只
-
-我们最终将会用到:golang, mongodb, grpc, d...
+生成器可以决定与另一个生成器（例如，generator-backbone使用generator-mocha）组合。
+最终用户也可以发起合成（例如，Simon想要生成具有SASS和Rails的Backbone项目）。注意：最终用户发起的...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-1/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -540,7 +532,7 @@
 
 
   
-    <article id="post-go-micro-tutorial-readme"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -548,7 +540,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/05/10/go-micro-tutorial-readme/">Go微服务教程</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring3/">编写自己的Yeoman生成器-3.与用户交互</a>
     </h1>
   
 
@@ -556,25 +548,24 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/10/go-micro-tutorial-readme/" class="article-date">
-	  <time datetime="2018-05-10T13:33:53.000Z" itemprop="datePublished">2018-05-10</time>
+	<a href="/2018/08/29/yeoman-authoring3/" class="article-date">
+	  <time datetime="2018-08-29T15:00:05.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/Go微服务/">Go微服务</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-这是一个十节Golang的微服务的系列。利用protobuf和gRPC作为底层传输协议。为什么?因为我花了很长时间才弄明白并解决了一个清晰而简洁的解决方案，我想要分享我在创建、测试和部署微服务的过程中所了解到的东西，这些服务是与其他新出现的用户端到一起的。
-目录第一部分第二部分第三部分第四部分第五部分第六部分第七部分第八部分
-
+          您的生成器将与最终用户进行大量交互。默认情况下，Yeoman在终端上运行，但它也支持不同工具可以提供的自定义用户界面。例如，没有什么能阻止Yeoman生成器在编辑器或独立应用程序之类的图形工具中运行。
+为了实现这种灵活性，Yeoman提供了一组用户界面元素抽象。作为作者，您有责任在与最终用户交互时仅使用这些抽象。使用其他方法可能会阻止您的生成器在不同的Yeoman工具中正确运行。
+例如，永远不要使用console.log()或process.stdout.write()输出内容很重要。使用...
         </p>
         <p class="article-more-link">
-          <a href="/2018/05/10/go-micro-tutorial-readme/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -593,7 +584,7 @@
 
 
   
-    <article id="post-webapp-update-ios"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -601,7 +592,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/04/19/webapp-update-ios/">WebAPP升级方案(iOS版)</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring2/">编写自己的Yeoman生成器-2.运行时上下文</a>
     </h1>
   
 
@@ -609,40 +600,27 @@
     
     <div class="article-meta">
       
-	<a href="/2018/04/19/webapp-update-ios/" class="article-date">
-	  <time datetime="2018-04-19T03:33:51.000Z" itemprop="datePublished">2018-04-19</time>
+	<a href="/2018/08/29/yeoman-authoring2/" class="article-date">
+	  <time datetime="2018-08-29T14:30:47.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/WebAPP/">WebAPP</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
+          编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。
+原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。
+换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。
+辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法或私有方法。有三种不同的方法可以实现这一目标。
 
-服务器部分服务端提供:
-
-版本检测接口e.g. http://192.168.11.1:3000/version
-H5+包下载地址e.g. http://192.168.11.1:3000/download/HelloH5.wgtu
-
-H5+包命名： Supervisor.wgtu格式： package_name.wgtu
-
-H5+包使用zip压缩
-
-JS部分执行步骤:
-
-版本检测
-下载wgtu包
-安装wgtu包
-重启
-
-版本检测1234567891011121314151617181...
+方法名称下划线前缀（例如_private_m...
         </p>
         <p class="article-more-link">
-          <a href="/2018/04/19/webapp-update-ios/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -661,7 +639,7 @@ JS部分执行步骤:
 
 
   
-    <article id="post-micro-heartbeat"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -669,7 +647,7 @@ JS部分执行步骤:
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/24/micro-heartbeat/">micro-heartbeat</a>
+      <a class="article-title" href="/2018/08/29/yeoman-authoring/">编写自己的Yeoman生成器-1.入门</a>
     </h1>
   
 
@@ -677,28 +655,28 @@ JS部分执行步骤:
     
     <div class="article-meta">
       
-	<a href="/2018/03/24/micro-heartbeat/" class="article-date">
-	  <time datetime="2018-03-24T13:36:35.000Z" itemprop="datePublished">2018-03-24</time>
+	<a href="/2018/08/29/yeoman-authoring/" class="article-date">
+	  <time datetime="2018-08-29T12:18:35.000Z" itemprop="datePublished">2018-08-29</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-演示服务发现使用心跳。
+          Generators(生成器)是Yeoman生态系统的基石。它们是yo为最终用户生成文件所运行的插件。
+阅读本节，您将学习如何创建和分发自己的内容。
 
-依据服务发现在启动和注销时提供服务发现。有时，这些服务可能会意外地死亡或被强行杀死或面临暂时的网络问题。在这些情况下，将在服务发现中保留陈旧的节点。如果自动删除服务，那将是理想的。
-解决方案Micro支持一个注册器TTL的选项，并为这个确切的原因注册间隔。TTL指定一个注册在发现之后应该存在多长时间，它会过期并被删除。间隔是服务重新注册以保存其在服务发现中的注册的时间。
-这些选项都可以在go-micro和micro Toolkit中使用。
-Toolkit使用像这...
+注意：我们构建了一个生成器 - Generator，以帮助用户开始使用自己的生成器。一旦理解了以下概念，请随意使用它来引导您自己的生成器。
+
+组织你的生成器设置为Node Module生成器的核心是Node.js模块
+首先，创建一个文件夹，在其中编写您的生成器。文件夹必须命名generator-name（name您的生成器的名称）。这很重要...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/24/micro-heartbeat/#more">阅读全文</a>
+          <a href="/2018/08/29/yeoman-authoring/#more">阅读全文</a>
         </p>
       
     </div>
@@ -717,7 +695,7 @@ Toolkit使用像这...
 
 
   
-    <article id="post-micro-new"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-vscode-extensions-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -725,7 +703,7 @@ Toolkit使用像这...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/23/micro-new/">micro new [service]</a>
+      <a class="article-title" href="/2018/08/11/vscode-extensions-5/">VSCode Webview API</a>
     </h1>
   
 
@@ -733,28 +711,24 @@ Toolkit使用像这...
     
     <div class="article-meta">
       
-	<a href="/2018/03/23/micro-new/" class="article-date">
-	  <time datetime="2018-03-23T13:21:14.000Z" itemprop="datePublished">2018-03-23</time>
+	<a href="/2018/08/11/vscode-extensions-5/" class="article-date">
+	  <time datetime="2018-08-11T09:54:45.000Z" itemprop="datePublished">2018-08-11</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-micro new命令是为micro服务生成样板模板的快捷方式。
-
-使用通过指定相对于$GOPATH的目录路径来创建新服务。
-1micro new github.com/micro/foo
-将运行：
-1234567891011121314151617181920212223micro new github.com/micro/foocreating service go.micro.srv.foocreating /Users/asim/checkouts/src/github.com/...
+          webview API允许扩展在Visual Studio Code中创建完全可定制的视图。例如，内置的Markdown扩展使用webview来呈现Markdown预览。除了VS Code的原生api支持之外，webview还可以用来构建复杂的用户界面。
+可以将webview看作是您的扩展控制的VS Code中的iframe。一个webview可以呈现这个框架中几乎所有的HTML内容，它通过消息传递与扩展通信。这种自由使webview变得非常强大，并打开了一个全新的扩展范围。
+我应该使用w...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/23/micro-new/#more">阅读全文</a>
+          <a href="/2018/08/11/vscode-extensions-5/#more">阅读全文</a>
         </p>
       
     </div>
@@ -773,7 +747,7 @@ micro new命令是为micro服务生成样板模板的快捷方式。
 
 
   
-    <article id="post-micro-web"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-vscode-extensions-4"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -781,7 +755,7 @@ micro new命令是为micro服务生成样板模板的快捷方式。
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/03/22/micro-web/">micro web</a>
+      <a class="article-title" href="/2018/08/11/vscode-extensions-4/">例子——语言服务器</a>
     </h1>
   
 
@@ -789,31 +763,25 @@ micro new命令是为micro服务生成样板模板的快捷方式。
     
     <div class="article-meta">
       
-	<a href="/2018/03/22/micro-web/" class="article-date">
-	  <time datetime="2018-03-21T23:09:09.000Z" itemprop="datePublished">2018-03-22</time>
+	<a href="/2018/08/11/vscode-extensions-4/" class="article-date">
+	  <time datetime="2018-08-11T08:01:10.000Z" itemprop="datePublished">2018-08-11</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/golang/">golang</a><a class="article-category-link" href="/categories/golang/go-micro/">go-micro</a>
+    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-micro web提供了查看和查询服务的仪表板。
-
-入门指南安装1go get -u github.com/micro/micro
-运行1micro web
-ACME默认使用ACME安全服务
-1MICRO_ENABLE_ACME=true micro web
-可以选择指定一个主机白名单
-123MICRO_ENABLE_ACME=true \MICRO_ACME_HOSTS=example.com,api.example.com \micro web
-TLS证书API支持安全地使用TLS证...
+          简要概述语言服务器和语言服务器协议语言服务器是一种特殊的扩展，支持VS代码中许多编程语言的编辑体验。使用语言服务器，您可以实现VS代码中支持的自动完成、错误检查(诊断)、快速定义和许多其他语言特性。
+然而，在VS代码中实现对语言特性的支持时，我们发现了三个常见问题:
+首先，语言服务器通常是用它们的本地编程语言实现的，这在将它们与具有节点的VS代码集成方面提出了挑战。js运行时。
+此外，语言特性可能是资源密集型的。例如，要正确地验证一个文件，Language Server需要解析大量文件，为...
         </p>
         <p class="article-more-link">
-          <a href="/2018/03/22/micro-web/#more">阅读全文</a>
+          <a href="/2018/08/11/vscode-extensions-4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -836,7 +804,7 @@ TLS证书API支持安全地使用TLS证...
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
   </nav>
 
 </section>

@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-kafka-easy-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-1"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/kafka-easy-3/">Kafka并不难学 (3) 基本操作</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-1/">MySQL 笔记 (1) MySQL服务</a>
     </h1>
   
 
@@ -273,36 +273,54 @@
     
     <div class="article-meta">
       
-	<a href="/2018/12/23/kafka-easy-3/" class="article-date">
-	  <time datetime="2018-12-23T07:42:49.000Z" itemprop="datePublished">2018-12-23</time>
+	<a href="/2019/03/12/mysql-notes-1/" class="article-date">
+	  <time datetime="2019-03-12T04:31:53.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kafka/">Kafka</a><a class="article-category-link" href="/categories/Kafka/Kafka并不难学/">Kafka并不难学</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          Zookeeper的作用及背景
-管理代码中的变量的配置
-设置命名服务
-提升系统的可用性和安全性
-管理Kafka集群
+          MySQL 基本的知识点
+启动/关闭/重启
+Windows下
 
-Zookeeper单机模式和分布式模式单机模式
+启动服务
+1mysqld --console
+或
+1net start mysql
 
-zkServer.sh start
-zkServer.sh status
-zkServer.sh stop
+关闭服务
+1mysqladmin -uroot shudown
+或　　
+1net stop mysql
 
-分布式模式
-Kafka单机模式和分布式模式如何操作主题？创建：
-1kafka-topics.sh --create --zookeeper dn1:2181 --replication-factor 1 --part...
+
+
+Linux下
+
+启动服务
+1service mysql start
+
+关闭服务
+1service mysql stop
+
+重启服务
+1service restart stop
+
+
+
+Mac下
+
+启动MySQL服务
+1sudo /usr...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/23/kafka-easy-3/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-1/#more">阅读全文</a>
         </p>
       
     </div>
@@ -321,7 +339,7 @@ Kafka单机模式和分布式模式如何操作主题？创建：
 
 
   
-    <article id="post-kafka-easy-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-10"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -329,7 +347,7 @@ Kafka单机模式和分布式模式如何操作主题？创建：
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/kafka-easy-2/">Kafka并不难学 (2) 安装和配置Kafka</a>
+      <a class="article-title" href="/2019/03/10/CSS讲解-10/">CSS讲解(10) 三大框架中的CSS</a>
     </h1>
   
 
@@ -337,209 +355,12 @@ Kafka单机模式和分布式模式如何操作主题？创建：
     
     <div class="article-meta">
       
-	<a href="/2018/12/23/kafka-easy-2/" class="article-date">
-	  <time datetime="2018-12-23T07:01:52.000Z" itemprop="datePublished">2018-12-23</time>
+	<a href="/2019/03/10/CSS讲解-10/" class="article-date">
+	  <time datetime="2019-03-10T10:18:56.000Z" itemprop="datePublished">2019-03-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kafka/">Kafka</a><a class="article-category-link" href="/categories/Kafka/Kafka并不难学/">Kafka并不难学</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          安装JDKJDK
-Kafka为什么需要JDKKafka的源码是基于Scala语言编写的，运行在Java虚拟机上
-配置Linux操作系统免密码登陆Linux免密码SSH - 专为远程登陆会话和其它网络服务提供安全性的协议
-Kafka集群在启动的时候，需要保证各个主机之间实现免密码。这样在启动时就可以避免去输入密码，减少了不必要的麻烦
-如何配置：
-
-创建密钥
-认证授权
-文件赋权
-在其它主机上创建钥并同步认证文件
-
-Kafka单机模式和分布式模式的安装步骤及注意事项单机模式
-Zookeeper以...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/23/kafka-easy-2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-kafka-easy-1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/kafka-easy-1/">Kafka并不难学 (1) 了解消息队列和Kafka</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/23/kafka-easy-1/" class="article-date">
-	  <time datetime="2018-12-23T06:40:49.000Z" itemprop="datePublished">2018-12-23</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Kafka/">Kafka</a><a class="article-category-link" href="/categories/Kafka/Kafka并不难学/">Kafka并不难学</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          什么事消息队列？如何理解消息队列的概念？
-MQ，拥有先进先出(FIFO)的特性
-
-异步通信机制，包含详细的数据说明
-
-
-作用:
-
-应用解耦
-异步处理
-数据限流
-消息通信
-
-Kafka的基本概念
-代理 Broker
-生产者 Producer
-消费者 Consumer
-消费者组 Consumer Group
-
-Topic 主题
-
-Partition 分区
-Replication 副本
-Record 记录
-
-kafka 使用范围设计初衷
-高吞吐量
-高可用队列
-低延时
-分布式机制
-
-特性
-异步生产...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/23/kafka-easy-1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-leafletjs"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/leafletjs/">Leaflet(交互式地图JS库)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/23/leafletjs/" class="article-date">
-	  <time datetime="2018-12-23T03:43:32.000Z" itemprop="datePublished">2018-12-23</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/GitHub精选/">GitHub精选</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          用于移动友好交互式地图的JavaScript库. https://leafletjs.com
-
-Leaflet是领先的开源JavaScript库，可用于移动友好的交互式地图。它仅重约37kb的gzipped代码，具有大多数开发人员所需要的所有映射特性。
-传单的设计具有简单性、性能和可用性。它可以在所有主要的桌面和移动平台上高效地工作，充分利用HTML5和CSS3在现代浏览器上的优势，同时也可以在旧的浏览器上访问。它可以通过大量插件进行扩展，具有漂亮的、易于使用的、文档丰富的API和简单的、...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/23/leafletjs/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-SpringBoot2-H"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-H/">Spring Boot 2精髓 - (17) 监控 Spring Boot应用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/22/SpringBoot2-H/" class="article-date">
-	  <time datetime="2018-12-22T15:22:04.000Z" itemprop="datePublished">2018-12-22</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -547,25 +368,42 @@ Leaflet是领先的开源JavaScript库，可用于移动友好的交互式地图
       
         <p class="article-excerpt-content">
           
-SpringBoot也提供了Actuator功能来的监控, 查看 Spring Boot 应用的配置、各种指标、健康程度等
-查看和监控以下信息:
 
-Spring Boot 的配置信息
-Spring Boot 配置的 Bean 信息
-最近请求的 HTTP 信息
-数据源，NoSQL 等数据状态
-在线查看日志内容，在线日志配置修改
-所有@RequestMapping注解的URL路径
-自动装配信息汇总
-打印虚拟机的线程栈
-Dump 内存
-应用的各种指标、汇总
-自定义监控指标
+Angular Vue React 三大框架
+Angular Vue 内置样式集成
+React 一些业界实践
 
-安装 Acutat...
+Angular
+Angular.js (1.x)
+没有样式集成能力
+
+
+Angular (2+)
+提供了样式封装能力
+与组件深度集成
+
+
+
+几个概念知识：
+
+ShadowDOM
+
+逻辑上一个DOM
+结构上存在子集结构
+
+
+Scoped CSS
+
+限定了范围的CSS
+无法影响外部元素
+外部样式一般不影响内部
+可以通过/deep/或&gt;&gt;&gt;穿透
+
+
+模拟Scope...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-H/#more">阅读全文</a>
+          <a href="/2019/03/10/CSS讲解-10/#more">阅读全文</a>
         </p>
       
     </div>
@@ -584,7 +422,7 @@ Dump 内存
 
 
   
-    <article id="post-SpringBoot2-G"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-9"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -592,7 +430,7 @@ Dump 内存
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-G/">Spring Boot 2精髓 - (16) ZooKeeper</a>
+      <a class="article-title" href="/2019/03/10/CSS讲解-9/">CSS讲解(9) 工程化</a>
     </h1>
   
 
@@ -600,12 +438,12 @@ Dump 内存
     
     <div class="article-meta">
       
-	<a href="/2018/12/22/SpringBoot2-G/" class="article-date">
-	  <time datetime="2018-12-22T14:01:54.000Z" itemprop="datePublished">2018-12-22</time>
+	<a href="/2019/03/10/CSS讲解-9/" class="article-date">
+	  <time datetime="2019-03-10T08:46:32.000Z" itemprop="datePublished">2019-03-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -613,14 +451,38 @@ Dump 内存
       
         <p class="article-excerpt-content">
           
-SpringBoot水平扩展后，我们还面临一些挑战:
+工程化关注:
 
-一个时刻，只能有一个应用来处理某个业务，而不能发生同时处理的情况。这就需要提供一个分布式锁，只有获得锁的SpringBoot应用才能执行操作。执行完毕后，释放锁。比如定时调度某个任务执行，同一个时刻只能有一个SpringBoot应用能执行
-应用系统之间通过 REST 接口来相互调用，如何让 REST 客户端知道服务在哪里?SpringBoot应用可以水平扩展，不可能通过 application.properties来配置服务器地址
-...
+组织
+优化
+构建
+维护
+
+PostCSSCSS –&gt; PostCSS(解析转换) –&gt; CSS
+可以作:
+
+模块化
+加前缀
+兼容性
+…
+
+PostCSS本身只有解析能力
+各种神奇的特性全靠插件
+目前至少有200多个插件
+常用的插件：
+
+import模块合并
+autoperfixier 自动加前缀
+cssnnao 压缩代码
+cssnext 使用CSS新特性
+precss 变量, mixin, 循环等
+
+安装：
+1npm install postcss-cli
+使...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-G/#more">阅读全文</a>
+          <a href="/2019/03/10/CSS讲解-9/#more">阅读全文</a>
         </p>
       
     </div>
@@ -639,7 +501,7 @@ SpringBoot水平扩展后，我们还面临一些挑战:
 
 
   
-    <article id="post-SpringBoot2-F"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -647,7 +509,7 @@ SpringBoot水平扩展后，我们还面临一些挑战:
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-F/">Spring Boot 2精髓 - (15) Session</a>
+      <a class="article-title" href="/2019/03/10/CSS讲解-8/">CSS讲解(8) Bootstrap</a>
     </h1>
   
 
@@ -655,12 +517,12 @@ SpringBoot水平扩展后，我们还面临一些挑战:
     
     <div class="article-meta">
       
-	<a href="/2018/12/22/SpringBoot2-F/" class="article-date">
-	  <time datetime="2018-12-22T12:58:24.000Z" itemprop="datePublished">2018-12-22</time>
+	<a href="/2019/03/10/CSS讲解-8/" class="article-date">
+	  <time datetime="2019-03-10T07:52:49.000Z" itemprop="datePublished">2019-03-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -668,21 +530,41 @@ SpringBoot水平扩展后，我们还面临一些挑战:
       
         <p class="article-excerpt-content">
           
-水平扩展实现 Spring Boot 应用水平扩展有两个问题需要解决:
+介绍
+CSS框架
+twitter 出品
+提供通用基础样式
 
-将用户的请求派发到水平部署的任意一台SpringBoot应用，通常用一个反向代理服务器来实现
+Bootstrap 4
 
-会话管理共享会话信息, 有两种方式可以实现
+兼容IE10+
+使用flexbox布局
+抛弃Nomalize.css
+提供布局和reboot版本
 
-复制会话: Web服务器通常都支持Session复制，一台应用的会话信息改变将立刻复制到其他集群的Web服务器上
-集中式会话: 所有Web服务器都共享一个会话，会话信息通常存放在一台服务器上，本章使用Redis服务器来存放会话
+提供：
+
+基础样式
+常用组件
+JS插件
+
+基本用法  See the Pen KEqEWz by jigang.duan  (@jigang-duan) on CodePen.
+
+JS组件
+用于组件交互
+
+dropdown(下拉)
+modal(弹窗)
+…
 
 
+jQuery
 
-Spring Session介绍Sprin...
+Popper.js
+boots...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-F/#more">阅读全文</a>
+          <a href="/2019/03/10/CSS讲解-8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -701,7 +583,7 @@ Spring Session介绍Sprin...
 
 
   
-    <article id="post-SpringBoot2-E"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -709,7 +591,7 @@ Spring Session介绍Sprin...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-E/">Spring Boot 2精髓 - (14) Cache</a>
+      <a class="article-title" href="/2019/03/10/CSS讲解-7/">CSS讲解(7)-预处理</a>
     </h1>
   
 
@@ -717,12 +599,12 @@ Spring Session介绍Sprin...
     
     <div class="article-meta">
       
-	<a href="/2018/12/22/SpringBoot2-E/" class="article-date">
-	  <time datetime="2018-12-22T11:47:19.000Z" itemprop="datePublished">2018-12-22</time>
+	<a href="/2019/03/10/CSS讲解-7/" class="article-date">
+	  <time datetime="2019-03-10T00:57:21.000Z" itemprop="datePublished">2019-03-10</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -730,17 +612,37 @@ Spring Session介绍Sprin...
       
         <p class="article-excerpt-content">
           
-Spring Cache对Cache进行了抽象，提供了@Cacheable、@CachePut、@CacheEvict等注解。SpringBoot应用基于SpringCache，既提供了基于内存实现的缓存管理器，可以用于单体应用系统，也集成了Redis、EhCache等缓存服务器，可用于大型系统或者分布式系统。
-Cache应用系统缓存通常有以下作用:
+介绍CSS预处理器：
 
-缓存Web系统的输出，如伪静态页面
-缓存系统中不经常改变的业务数据，如用户权限、字典数据、配置信息等
+基于CSS的另一种语言
+通过工具编译成CSS
+添加了很多CSS不具备的特性
+能提升CSS文件的组织
 
-Cache的组件和概念
-Cach...
+方案：
+
+less
+node.js 写的
+安装： npm install less
+
+
+sass
+ruby 写的
+
+
+
+功能：
+
+嵌套 放映层级和约束
+变量和计算 减少重复代码
+Extend和Mixin 代码片段
+循环 适用于复杂有规律的样式
+import CSS文件模块化
+
+less嵌套123456789101112131415161718body&#123; ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-E/#more">阅读全文</a>
+          <a href="/2019/03/10/CSS讲解-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -759,7 +661,7 @@ Cach...
 
 
   
-    <article id="post-SpringBoot2-D"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -767,7 +669,7 @@ Cach...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-D/">Spring Boot 2精髓 - (13) Elasticsearch</a>
+      <a class="article-title" href="/2019/03/09/CSS讲解-6/">CSS讲解(6) 动画</a>
     </h1>
   
 
@@ -775,12 +677,12 @@ Cach...
     
     <div class="article-meta">
       
-	<a href="/2018/12/22/SpringBoot2-D/" class="article-date">
-	  <time datetime="2018-12-22T10:33:39.000Z" itemprop="datePublished">2018-12-22</time>
+	<a href="/2019/03/09/CSS讲解-6/" class="article-date">
+	  <time datetime="2019-03-09T13:41:24.000Z" itemprop="datePublished">2019-03-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -788,15 +690,35 @@ Cach...
       
         <p class="article-excerpt-content">
           
-Elasticsearch 介绍Elasticsearch，简称ES。是一个全文搜索服务器，也可以作为 NoSQL数据库，存储任意格式的文档和数据，同时，也可以做大数据的分析，是一个跨界开源产品。
-ES有如下特点:
+介绍动画的原理：
 
-全文搜索引擎， ES是建立在 Lucene 上的开源搜索引擎，可以用来进行 全文搜索、地理信息搜索。Wikipedia, GitHub、 StackOverFlow 等网站均使用 ES。
-文档存储和查询，可以像NoSQL那样存储任意格式文档，井能根据条件查询文档
-大数据分析...
+视觉暂留作用
+画面逐渐变化
+
+动画的作用：
+
+愉悦感
+引起注意
+反馈
+掩饰
+
+CSS中的动画类型：
+
+transition补间动画
+keyframe关键帧动画
+逐帧动画
+
+补间动画
+位置 - 平移(left/right/margin/transform)
+方位 - 旋转 (transform)
+大小 - 缩放 (transform)
+透明度(opacity)
+其它 - 线性变换 (transform)
+
+  See the Pen eXEROJ by jigang.d...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-D/#more">阅读全文</a>
+          <a href="/2019/03/09/CSS讲解-6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -815,7 +737,7 @@ ES有如下特点:
 
 
   
-    <article id="post-SpringBoot2-C"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-CSS讲解-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -823,7 +745,7 @@ ES有如下特点:
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/22/SpringBoot2-C/">Spring Boot 2精髓 - (12) Redis</a>
+      <a class="article-title" href="/2019/03/09/CSS讲解-5/">CSS讲解(5) 效果</a>
     </h1>
   
 
@@ -831,12 +753,12 @@ ES有如下特点:
     
     <div class="article-meta">
       
-	<a href="/2018/12/22/SpringBoot2-C/" class="article-date">
-	  <time datetime="2018-12-22T09:29:50.000Z" itemprop="datePublished">2018-12-22</time>
+	<a href="/2019/03/09/CSS讲解-5/" class="article-date">
+	  <time datetime="2019-03-09T10:27:38.000Z" itemprop="datePublished">2019-03-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
 
       
     </div>
@@ -844,15 +766,231 @@ ES有如下特点:
       
         <p class="article-excerpt-content">
           
-Redis(REmote Dictionary Server)是一个开源 (BSD许可)、内存存储的数据结构服务器，可用作数据库来存储Key-Value数据，它支持字符串、哈希表、列表、集合、有序集合、位图、地理空间信息等数据类型，同时也可以作为高速缓存和消息队列代理。
-安装 Redis官网下载, 解压后，进入src目录，运行make进行编译
-Redis安装完毕，在src目录下有以下两个常用命令:
+效果属性**这个效果怎么实现？
+CSS最出彩等一部分
+box-shadowbox-shadow 属性向框添加一个或多个阴影
 
-redis-server, 启动 Redis服务器，默认会监听6379端口
-redis-...
+营造层次感(立体感)
+充当没有宽度的边框
+特殊效果
+
+  See the Pen OqjgpG by jigang.duan  (@jigang-duan) on CodePen.
+
+  See the Pen qvXjmp by jigang.duan  (@jigang-duan) on CodePen.
+
+  See the Pen WmEOON by ji...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/22/SpringBoot2-C/#more">阅读全文</a>
+          <a href="/2019/03/09/CSS讲解-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-CSS讲解-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/08/CSS讲解-4/">CSS讲解(4) 布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/08/CSS讲解-4/" class="article-date">
+	  <time datetime="2019-03-07T22:25:25.000Z" itemprop="datePublished">2019-03-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+简介
+CSS知识体系的重中之重
+早期以table为主(简单)
+后来以技巧性布局为主(难)
+现代有flexbox/griod(偏简单)
+响应式布局
+
+常见布局方法
+table 表格布局
+float 浮动 + margin
+inline-block 布局
+flexbox布局
+
+表格布局布局简单
+  See the Pen MxmYvx by jigang.duan  (@jigang-duan) on CodePen.
+
+table中内容水平居中
+模拟table:
+123display: t...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/08/CSS讲解-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-CSS讲解-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/06/CSS讲解-3/">CSS讲解(3) CSS基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/06/CSS讲解-3/" class="article-date">
+	  <time datetime="2019-03-06T15:45:44.000Z" itemprop="datePublished">2019-03-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+CSS
+
+Cascading Style Sheet
+层叠样式表
+
+举例：
+  See the Pen MxJELO by jigang.duan  (@jigang-duan) on CodePen.
+
+权重高选择器的样式覆盖权重低的，进行叠加
+基本规则1234选择器 &#123;    属性: 值;    属性: 值;&#125;
+选择器
+用于匹配HTML元素
+
+有不同的匹配规则
+多个选择是可以叠加的
+
+
+分类和权重
+
+解析方式和性能
+
+解析方式 浏览器是从右往左，先找最右边的选择器...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/06/CSS讲解-3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-CSS讲解-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/05/CSS讲解-2/">CSS讲解(2) HTML</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/05/CSS讲解-2/" class="article-date">
+	  <time datetime="2019-03-05T15:36:29.000Z" itemprop="datePublished">2019-03-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/CSS/">CSS</a><a class="article-category-link" href="/categories/前端/CSS/CSS讲解/">CSS讲解</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+前端三大件：
+
+HTML 结构
+CSS 样式
+JavaScript 行为
+
+常见元素和理解常见元素head不直接出现在页面上,描述或引用资源
+
+meta
+title
+style
+link
+script
+base
+
+1&lt;meta charset="utf-8"&gt;
+字符集 utf-8
+1&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scal...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/05/CSS讲解-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -875,7 +1013,7 @@ redis-...
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
   </nav>
 
 </section>

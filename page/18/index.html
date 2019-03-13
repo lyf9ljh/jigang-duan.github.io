@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-TCLMOVE-架构设计"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-saving-states"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/19/TCLMOVE-架构设计/">TCLMOVE 架构设计</a>
+      <a class="article-title" href="/2017/11/09/architecture-saving-states/">Android 架构组件 - 保存界面状态</a>
     </h1>
   
 
@@ -273,12 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2017/10/19/TCLMOVE-架构设计/" class="article-date">
-	  <time datetime="2017-10-19T11:49:52.000Z" itemprop="datePublished">2017-10-19</time>
+	<a href="/2017/11/09/architecture-saving-states/" class="article-date">
+	  <time datetime="2017-11-09T05:12:41.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/iOS/">iOS</a><a class="article-category-link" href="/categories/iOS/架构设计/">架构设计</a><a class="article-category-link" href="/categories/iOS/架构设计/TCLMOVE/">TCLMOVE</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -286,24 +286,17 @@
       
         <p class="article-excerpt-content">
           
-架构，就是对软件复杂度的管理。
+您所做的或者不做的，保持UI状态是用户体验的一个关键部分。无论用户是旋转设备，用户重新启动应用，还是系统关闭应用，重要的是你的activity保持了用户所期望的状态
 
-层次划分
-三层结构框架
+如果要保存的UI数据是简单而轻量级的，那么您可以单独使用onSaveInstanceState()来保存您的状态数据。
+如果要保存的是复杂数据，可以使用ViewModel对象、onSaveInstanceState()方法和持久化本地存储的组合。
 
-UI Layer
-Logic Layer
-Persistence Layer
+本页讨论了这些方法中的每一个。
 
-
-UI Layer 展现层UI Layer 采用MVVM框架。
-View
-V对应View，责任只负责显示，不保存任何状态，保证View的无状态性，states 只能来源于外部，同样的states设置，View 显示显示内容一样。
-View最主要的是实现组件化，与其它组件和模块保持最大化的隔离，对内的接口只有states,对外的接口只有events.
-...
+管理简单的情况: onSaveInsta...
         </p>
         <p class="article-more-link">
-          <a href="/2017/10/19/TCLMOVE-架构设计/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-saving-states/#more">阅读全文</a>
         </p>
       
     </div>
@@ -322,7 +315,7 @@ View最主要的是实现组件化，与其它组件和模块保持最大化的�
 
 
   
-    <article id="post-PlantUML"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-viewmodel"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -330,7 +323,7 @@ View最主要的是实现组件化，与其它组件和模块保持最大化的�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/17/PlantUML/">PlantUML</a>
+      <a class="article-title" href="/2017/11/09/architecture-viewmodel/">Android 架构组件 - ViewModel</a>
     </h1>
   
 
@@ -338,12 +331,12 @@ View最主要的是实现组件化，与其它组件和模块保持最大化的�
     
     <div class="article-meta">
       
-	<a href="/2017/10/17/PlantUML/" class="article-date">
-	  <time datetime="2017-10-17T06:34:26.000Z" itemprop="datePublished">2017-10-17</time>
+	<a href="/2017/11/09/architecture-viewmodel/" class="article-date">
+	  <time datetime="2017-11-09T03:26:10.000Z" itemprop="datePublished">2017-11-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/工具/">工具</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -351,26 +344,15 @@ View最主要的是实现组件化，与其它组件和模块保持最大化的�
       
         <p class="article-excerpt-content">
           
+ViewModel类旨在以生命周期的方式存储和管理与ui相关的数据。ViewModel类允许数据在诸如屏幕旋转之类的配置更改中存活。
 
+注意:要将ViewModel导入到您的Android项目中，请参见向您的项目添加组件。
 
-PlantUML是一个开源项目，支持快速绘制：
-
-时序图 Sequence diagram
-用例图 Usecase diagram
-类图 Class diagram
-活动图 Activity diagram
-组件图 Component diagram
-状态图 State diagram
-部署图 Deployment diagram
-对象图 Object diagram
-线框图形界面 wireframe graphical interface
-时序图 Timing Diagram
-
-
-...
+Android框架管理UI控制器的生命周期，比如activities和fragments。该框架可能会决定销毁或重新创建UI控制器，以响应完全超出您控制的某些用户操作或设备事件。
+如果系统破坏或重新创建一个UI控制器，那么存储在其中的任何与UI相关的数据都将丢失。例...
         </p>
         <p class="article-more-link">
-          <a href="/2017/10/17/PlantUML/#more">阅读全文</a>
+          <a href="/2017/11/09/architecture-viewmodel/#more">阅读全文</a>
         </p>
       
     </div>
@@ -389,7 +371,7 @@ PlantUML是一个开源项目，支持快速绘制：
 
 
   
-    <article id="post-ImportJs"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-livedata"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -397,7 +379,7 @@ PlantUML是一个开源项目，支持快速绘制：
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/11/ImportJs/">impress.js</a>
+      <a class="article-title" href="/2017/11/08/architecture-livedata/">Android 架构组件 - LiveData</a>
     </h1>
   
 
@@ -405,71 +387,12 @@ PlantUML是一个开源项目，支持快速绘制：
     
     <div class="article-meta">
       
-	<a href="/2017/10/11/ImportJs/" class="article-date">
-	  <time datetime="2017-10-11T03:18:41.000Z" itemprop="datePublished">2017-10-11</time>
+	<a href="/2017/11/08/architecture-livedata/" class="article-date">
+	  <time datetime="2017-11-08T10:47:44.000Z" itemprop="datePublished">2017-11-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/幻灯片/">幻灯片</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          impress.js 是一个Javascript程序包，它的功能是让你制作出令人眩目的内容展示效果，主要里利用了CSS 3D Transforms 里的旋转，扭曲，缩放等特性。简言之，代替ppt。
-
-
-
-
-文档:
-impress.js——用HTML“写”幻灯片
-impress.js初体验 - 前端装X利器
-impress.js 中文版 学习
-
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/11/ImportJs/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-android-code-lint"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/10/android-code-lint/">android 代码优化 - 注解检查</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/10/android-code-lint/" class="article-date">
-	  <time datetime="2017-10-10T06:16:32.000Z" itemprop="datePublished">2017-10-10</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android优化/">Android优化</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -477,59 +400,15 @@ impress.js 中文版 学习
       
         <p class="article-excerpt-content">
           
-
-使用 Lint 改进您的代码
-
-使用注解改进代码检查
+LiveData是一个可观察的数据持有者类。与常规的可观察到的不同，LiveData是生命周期感知的，这意味着它尊重其他应用组件的生命周期，比如activities、fragments或services。这一认识确保了LiveData只更新了处于活动生命周期状态的应用程序组件观察者。
 
 
-android.support.annotation
-资源类注解:
+注意:要将LiveData组件导入到您的Android项目中，请参见向您的项目添加组件。
 
-
-
-注释
-参数
-字段
-方法返回值
-方法
-类
-描述
-e.g.
-
-
-
-
-AnimatorRes
-👌
-👌
-👌
-❌
-❌
-动画资源引用
-android.R.animator.fade_in
-
-
-AnimRes
-👌
-👌
-👌
-❌
-❌
-anim资源引用
-android.R.animator.fade_in
-
-
-AnyRes
-👌
-👌
-👌
-❌
-❌
-任何类型的资源...
+LiveData考虑一个观察者，它由Observer类表示，如果它的生命周期处于STARTED或RESUMED...
         </p>
         <p class="article-more-link">
-          <a href="/2017/10/10/android-code-lint/#more">阅读全文</a>
+          <a href="/2017/11/08/architecture-livedata/#more">阅读全文</a>
         </p>
       
     </div>
@@ -548,7 +427,7 @@ AnyRes
 
 
   
-    <article id="post-android-theme-style"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-architecture-lifecycle"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -556,7 +435,7 @@ AnyRes
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/09/android-theme-style/">Android Theme 和 Style</a>
+      <a class="article-title" href="/2017/11/08/architecture-lifecycle/">Android 架构组件 - 使用Lifecycle组件来处理生命周期</a>
     </h1>
   
 
@@ -564,12 +443,12 @@ AnyRes
     
     <div class="article-meta">
       
-	<a href="/2017/10/09/android-theme-style/" class="article-date">
-	  <time datetime="2017-10-09T09:02:11.000Z" itemprop="datePublished">2017-10-09</time>
+	<a href="/2017/11/08/architecture-lifecycle/" class="article-date">
+	  <time datetime="2017-11-08T08:50:06.000Z" itemprop="datePublished">2017-11-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -577,15 +456,12 @@ AnyRes
       
         <p class="article-excerpt-content">
           
-Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定一个覆盖主题。下面介绍如何使用它以及为什么要使用它。
-
-为什么?您可能已经在不知道的情况下使用了这个功能:Theme.Holo.Light.DarkActionBar。
-考虑一下Light.DarkActionBar主题。内容是亮系的主题(背景是亮的，前景是暗的)，但是动作条使用了一个暗的主题(暗背景和亮前景色)。
-如果不能提供一个单独的主题，您需要手动将文本颜色和其他前景颜色设置为某种相反色。
-这里就是旧的acti...
+Lifecycle组件执行操作以响应另一个组件的生命周期状态的变化，例如activities和fragments。这些组件可以帮助您生成更有组织的、更轻的代码，这样更容易维护。
+一个常见的模式是在activities和fragments的生命周期方法中实现相关组件的操作。然而，这种模式导致了代码的糟糕组织和错误的扩散。通过使用lifecycle组件，您可以将依赖组件的代码从生命周期方法中转移到本身组件中
+android.arch.lifecycle包提供了类和接口，允许您构建基于生命周期...
         </p>
         <p class="article-more-link">
-          <a href="/2017/10/09/android-theme-style/#more">阅读全文</a>
+          <a href="/2017/11/08/architecture-lifecycle/#more">阅读全文</a>
         </p>
       
     </div>
@@ -604,7 +480,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
 
 
   
-    <article id="post-Java界的神器-使用Lombok来消除你的冗余代码量"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-adding-components"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -612,7 +488,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/09/Java界的神器-使用Lombok来消除你的冗余代码量/">Java界的神器-使用Lombok来消除你的冗余代码量</a>
+      <a class="article-title" href="/2017/11/08/adding-components/">Android架构组件 添加到你的项目</a>
     </h1>
   
 
@@ -620,65 +496,12 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
     
     <div class="article-meta">
       
-	<a href="/2017/10/09/Java界的神器-使用Lombok来消除你的冗余代码量/" class="article-date">
-	  <time datetime="2017-10-09T03:23:46.000Z" itemprop="datePublished">2017-10-09</time>
+	<a href="/2017/11/08/adding-components/" class="article-date">
+	  <time datetime="2017-11-08T08:24:19.000Z" itemprop="datePublished">2017-11-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Java/">Java</a><a class="article-category-link" href="/categories/Java/第三方库/">第三方库</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          简介他是一个通过注解方式来减少你的POJO类的getter和setter等方法的一个工具，我这里演示的在Android Studio中的使用方式，当然如果你使用的是idea那么这方法也通用，如果你用的是eclipse，那么官网也有视频教程，我这里就不演示了
-
-安装依赖众所周知在在Android Studio中添加依赖有直接下载jar包和使用cradle的dependencies方法，我们这里直接使用dependencies方法
-添加gradle依赖在你的项目的build.grade文件中添...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/09/Java界的神器-使用Lombok来消除你的冗余代码量/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-custom-views-optimizing-view"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/13/custom-views-optimizing-view/">自定义视图(4) —— 优化视图</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/08/13/custom-views-optimizing-view/" class="article-date">
-	  <time datetime="2017-08-13T06:50:46.000Z" itemprop="datePublished">2017-08-13</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-用户界面的最佳实践/">Android 用户界面的最佳实践</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -686,13 +509,13 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
       
         <p class="article-excerpt-content">
           
-现在，您已经有了一个设计良好的视图，可以响应状态之间的手势和转换，确保视图运行得很快。为了避免在回放期间感觉迟钝或停滞的UI，确保动画始终以每秒60帧的速度运行。
-
-少做事，频率少为了加快视图的速度，从经常调用的例程中删除不必要的代码。先从onDraw()开始，这将给你最大的回报。特别是您应该消除onDraw()中的分配，因为分配可能会导致垃圾收集，从而导致口吃。在初始化期间或在动画之间分配对象。当动画运行时，不要进行分配。
-除了使onDraw()更精简，也要确保它被尽可能少地调用。大多...
+架构组件可以从Google的Maven存储库中获得。要使用这些步骤，请遵循以下步骤:
+添加Google Maven存储库在默认情况下，Android Studio项目不会被配置为访问这个存储库。
+要将它添加到您的项目中，为您的项目打开 build.gradle文件(而不是您的应用程序或模块)，如下所示:
+123456allprojects &#123;    repositories &#123;        jcenter()        maven &#123; url 'htt...
         </p>
         <p class="article-more-link">
-          <a href="/2017/08/13/custom-views-optimizing-view/#more">阅读全文</a>
+          <a href="/2017/11/08/adding-components/#more">阅读全文</a>
         </p>
       
     </div>
@@ -711,7 +534,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
 
 
   
-    <article id="post-custom-views-making-interactive"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-GuidetoAppArchitecture"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -719,7 +542,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/13/custom-views-making-interactive/">自定义视图(3) —— 视图交互</a>
+      <a class="article-title" href="/2017/11/08/GuidetoAppArchitecture/">Android 架构组件指南</a>
     </h1>
   
 
@@ -727,12 +550,12 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
     
     <div class="article-meta">
       
-	<a href="/2017/08/13/custom-views-making-interactive/" class="article-date">
-	  <time datetime="2017-08-13T05:28:45.000Z" itemprop="datePublished">2017-08-13</time>
+	<a href="/2017/11/08/GuidetoAppArchitecture/" class="article-date">
+	  <time datetime="2017-11-08T03:23:22.000Z" itemprop="datePublished">2017-11-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-用户界面的最佳实践/">Android 用户界面的最佳实践</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -740,11 +563,15 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
       
         <p class="article-excerpt-content">
           
-绘制UI只是创建自定义视图的一部分。您还需要让您的视图以一种与您模拟的实际操作非常相似的方式对用户输入作出响应。对象应该以与实际对象相同的方式操作。例如，图像不应该立即跳出存在并重新出现在其他地方，因为现实世界中的物体不这样做。相反，图像应该从一个地方移动到另一个地方。
-用户还可以在界面中感知微妙的行为或感觉，并对模仿真实世界的细微差别做出最好的反应。例如，当用户fling一个UI对象时，他们应该在开始时感觉到摩擦力，从而延迟了这个动作，然后在结束时感觉的动量，使这个动作超越了fling...
+本指南适用于开发app的开发人员，现在希望了解最佳实践和推荐的体系结构，构建健壮、高质量的apps。
+
+注意:本指南假定读者熟悉Android框架。如果你是应用开发的新手，请查看入门培训系列，其中包含了本指南的必备主题。
+
+
+app开发人员面临的常见问题与传统的桌面应用不同，在大多数情况下，它们都有一个单一入口点，并作为一个单一的整体流程运行，而Android应用程序的结构要复杂得多。一个典型的Android应用程序是由多个应用组件组成的，包括activities、fragments、s...
         </p>
         <p class="article-more-link">
-          <a href="/2017/08/13/custom-views-making-interactive/#more">阅读全文</a>
+          <a href="/2017/11/08/GuidetoAppArchitecture/#more">阅读全文</a>
         </p>
       
     </div>
@@ -763,7 +590,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
 
 
   
-    <article id="post-custom-views-custom-drawing"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-AndroidArchitectectureComponents"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -771,7 +598,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/13/custom-views-custom-drawing/">自定义视图(2) —— 自定义绘制</a>
+      <a class="article-title" href="/2017/11/08/AndroidArchitectectureComponents/">Android 架构组件简介</a>
     </h1>
   
 
@@ -779,12 +606,12 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
     
     <div class="article-meta">
       
-	<a href="/2017/08/13/custom-views-custom-drawing/" class="article-date">
-	  <time datetime="2017-08-13T04:40:03.000Z" itemprop="datePublished">2017-08-13</time>
+	<a href="/2017/11/08/AndroidArchitectectureComponents/" class="article-date">
+	  <time datetime="2017-11-08T01:35:45.000Z" itemprop="datePublished">2017-11-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-用户界面的最佳实践/">Android 用户界面的最佳实践</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android架构组件/">Android架构组件</a>
 
       
     </div>
@@ -792,14 +619,21 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
       
         <p class="article-excerpt-content">
           
-自定义视图最重要的部分是它的外观。根据您的应用程序的需要，自定义绘制可以很简单或复杂。这一课涵盖了一些最常见的操作。
+一组帮助您设计健壮的、可测试的和可维护的应用程序库。管理UI组件生命周期和处理数据持久性。
 
-覆写onDraw()绘制自定义视图最重要的步骤是覆盖onDraw())方法。onDraw()的参数是一个画布对象，视图可以使用它来绘制自己。Canvas类定义了用于绘制文本、行、位图和许多其他图形原语的方法。您可以在onDraw()中使用这些方法来创建定制的用户界面(UI)。
-不过，在您调用任何绘图方法之前，需要创建一个Paint对象。下一节将更详细地讨论Paint
-创...
+应用架构指南
+添加组件到你的项目
+使用Lifecycle组件来处理生命周期
+LiveData
+ViewModel
+保存UI状态
+Room持久性库
+分页库
+
+轻松管理app的生命周期新的lifecycle组件感知生命周期，可以帮助您管理您的活动和片段生命周期。保存配置更改，避免内存泄漏，并使用LiveData、ViewModel、LifecycleObserver和LifecycleOwner，轻...
         </p>
         <p class="article-more-link">
-          <a href="/2017/08/13/custom-views-custom-drawing/#more">阅读全文</a>
+          <a href="/2017/11/08/AndroidArchitectectureComponents/#more">阅读全文</a>
         </p>
       
     </div>
@@ -818,7 +652,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
 
 
   
-    <article id="post-custom-views"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-GuideUIProgrammingCoroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -826,7 +660,7 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/10/custom-views/">自定义视图(1) —— 创建自定义视图类</a>
+      <a class="article-title" href="/2017/11/06/GuideUIProgrammingCoroutines/">使用协程的UI编程指南</a>
     </h1>
   
 
@@ -834,12 +668,12 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
     
     <div class="article-meta">
       
-	<a href="/2017/08/10/custom-views/" class="article-date">
-	  <time datetime="2017-08-10T12:02:30.000Z" itemprop="datePublished">2017-08-10</time>
+	<a href="/2017/11/06/GuideUIProgrammingCoroutines/" class="article-date">
+	  <time datetime="2017-11-06T11:08:01.000Z" itemprop="datePublished">2017-11-06</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-用户界面的最佳实践/">Android 用户界面的最佳实践</a>
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
 
       
     </div>
@@ -847,19 +681,127 @@ Android 5.0 带来了新的功能，允许你为视图(以及任何后代)指定
       
         <p class="article-excerpt-content">
           
-一个设计良好的自定义视图与其他设计良好的类非常相似。它封装了一个特定的功能集，它使用了一个简单的接口，它有效地使用CPU和内存，等等。除了是一个设计良好的类之外，自定义视图应该是:
+本指南假定读者熟悉基本的协程概念，并给出了在UI应用程序中如何使用kotlinx.coroutines的具体示例。
+所有的UI应用程序库都有一个共同点。它们有一个线程，所有UI的状态都被限制，所有的UI更新都必须在这个特定的线程中发生。对于协程，这意味着您需要一个适当的协程分派器上下文，它将协程执行限制在这个UI线程中。
+特别是，kotlinx.coroutines 有三个模块为不同的UI应用程序库提供了协程上下文:
 
-符合Android标准
-提供与Android XML布局兼容的定制样式属性
-发送访问事件
-与多个Android平台兼容
-
-Android框架提供了一组基类和XML标记，以帮助您创建满足所有这些需求的视图。本课程将讨论如何使用Android框架来创建视图类的核心功能。
-
-子类化View在Android框架中定...
+kotlinx-coroutines-android – Andro...
         </p>
         <p class="article-more-link">
-          <a href="/2017/08/10/custom-views/#more">阅读全文</a>
+          <a href="/2017/11/06/GuideUIProgrammingCoroutines/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-GuideToKotlinxCoroutinesByExample"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/06/GuideToKotlinxCoroutinesByExample/">kotlinx.coroutines入门指南示例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/" class="article-date">
+	  <time datetime="2017-11-06T11:01:27.000Z" itemprop="datePublished">2017-11-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+这是一个关于kotlinx.coroutines核心特性的简短指南，有一系列的例子。
+介绍和设置作为一种语言，Kotlin在其标准库中只提供了最低限度的低级api，以使各种其他库能够利用这些库。与其他具有类似功能的语言不同，async和await在Kotlin中不是关键字，甚至都不是它的标准库的一部分。
+kotlinx.coroutines是一个如此丰富的库。它包含了许多高级的可支持内核的原语，包括async和await。您需要添加对kotlinx-coroutines-core模块的依...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/06/GuideToKotlinxCoroutinesByExample/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Anko-Coroutines"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/03/Anko-Coroutines/">Anko 协程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/11/03/Anko-Coroutines/" class="article-date">
+	  <time datetime="2017-11-03T05:14:08.000Z" itemprop="datePublished">2017-11-03</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+目录
+在你的项目中使用Anko协程
+Listener助手
+asReference()
+bg()
+
+
+在你的项目中使用Anko协程添加anko-coroutines 到你的build.gradle：
+123dependencies &#123;    compile &quot;org.jetbrains.anko:anko-coroutines:$anko_version&quot;&#125;
+Listener助手asReference()如果您的异步API不支持取消，你的协程可能会被...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/11/03/Anko-Coroutines/#more">阅读全文</a>
         </p>
       
     </div>
@@ -882,7 +824,7 @@ Android框架提供了一组基类和XML标记，以帮助您创建满足所有�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/17/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/19/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/17/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/19/">下一页 &raquo;</a>
   </nav>
 
 </section>

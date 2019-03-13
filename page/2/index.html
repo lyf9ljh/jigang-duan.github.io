@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-django-start-guide-7"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-11"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-7/">Django入门与实践-第7章：模板引擎设置</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-11/">MySQL 笔记 (11) 导入导出</a>
     </h1>
   
 
@@ -273,25 +273,26 @@
     
     <div class="article-meta">
       
-	<a href="/2019/01/09/django-start-guide-7/" class="article-date">
-	  <time datetime="2019-01-09T15:18:36.000Z" itemprop="datePublished">2019-01-09</time>
+	<a href="/2019/03/12/mysql-notes-11/" class="article-date">
+	  <time datetime="2019-03-12T13:27:53.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          在manage.py所在的目录创建一个名为 templates的新文件夹：
-1234567myproject/ |-- myproject/ |    |-- boards/ |    |-- myproject/ |    |-- templates/   &lt;-- 这里 |    +-- manage.py +-- venv/
-templates/home.html
-123456789101112131415&lt;!DOCTYPE html&gt;&lt;html&gt;  &l...
+          导出表数据1select * into outfile 文件地址 [控制格式] from 表名;
+导入数据1load data [local] infile 文件地址 [replace|ignore] into table 表名 [控制格式];
+生成的数据默认的分隔符是制表符local未指定，则数据文件必须在服务器上replace 和 ignore 关键词控制对现有的唯一键记录的重复的处理
+控制格式fields  控制字段格式
+默认：fields terminated by ‘\t’ en...
         </p>
         <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-7/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-11/#more">阅读全文</a>
         </p>
       
     </div>
@@ -310,7 +311,7 @@ templates/home.html
 
 
   
-    <article id="post-django-start-guide-6"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-10"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -318,7 +319,7 @@ templates/home.html
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-6/">Django入门与实践-第6章：第一个视图函数</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-10/">MySQL 笔记 (10) 连接查询(join)</a>
     </h1>
   
 
@@ -326,23 +327,32 @@ templates/home.html
     
     <div class="article-meta">
       
-	<a href="/2019/01/09/django-start-guide-6/" class="article-date">
-	  <time datetime="2019-01-09T15:12:57.000Z" itemprop="datePublished">2019-01-09</time>
+	<a href="/2019/03/12/mysql-notes-10/" class="article-date">
+	  <time datetime="2019-03-12T13:09:05.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          boards/views.py
-12345678910111213from django.http import HttpResponsefrom .models import Boarddef home(request):    boards = Board.objects.all()    boards_names = list()    for board in boards:        boards_names.append(board.name)    response_ht...
+          将多个表的字段进行连接，可以指定连接条件。
+内连接(inner join)
+默认就是内连接，可省略inner。
+只有数据存在时才能发送连接。即连接结果不能出现空行。
+
+on 表示连接条件。其条件表达式与where类似。也可以省略条件（表示条件永远为真）也可用where表示连接条件。还有 using, 但需字段名相同。 using(字段名)
+
+交叉连接 cross join即，没有条件的内连接。
+
+1select * from tb1 cross join tb2;
+外连接(outer jo...
         </p>
         <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-6/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-10/#more">阅读全文</a>
         </p>
       
     </div>
@@ -361,7 +371,7 @@ templates/home.html
 
 
   
-    <article id="post-django-start-guide-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-9"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -369,7 +379,7 @@ templates/home.html
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-5/">Django入门与实践-第5章：模型设计</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-9/">MySQL 笔记 (9) 子查询</a>
     </h1>
   
 
@@ -377,30 +387,35 @@ templates/home.html
     
     <div class="article-meta">
       
-	<a href="/2019/01/09/django-start-guide-5/" class="article-date">
-	  <time datetime="2019-01-09T14:23:52.000Z" itemprop="datePublished">2019-01-09</time>
+	<a href="/2019/03/12/mysql-notes-9/" class="article-date">
+	  <time datetime="2019-03-12T12:52:45.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          模型这些模型基本上代表了应用程序的数据库设计。
+          子查询需用括号包裹。
+from型from后要求是一个表，必须给子查询结果取个别名。
 
-Board
-Topic
-Post
+简化每个查询内的条件。
+from型需将结果生成一个临时表格，可用以原表的锁定的释放。
+子查询返回一个表，表型子查询。
 
-User 模型被命名为内置应用叫 auth，它以命名空间 django.contrib.auth 的形式出现在 INSTALLED_APPS 配置中。
-boards/models.py:
-1234567891011121314151617181920from django.db import modelsfrom django.contrib.auth.models import Userclass Bo...
+1select * from (select * from tb where id&gt;0) as subfrom where id&gt;1;
+where型
+子查询返回一个值，标量子查询。
+不需要给子查询取别名。
+where子查询内的表，不能直接用以更新。
+
+1select * fr...
         </p>
         <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-5/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-9/#more">阅读全文</a>
         </p>
       
     </div>
@@ -419,7 +434,7 @@ boards/models.py:
 
 
   
-    <article id="post-django-start-guide-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -427,7 +442,7 @@ boards/models.py:
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-4/">Django入门与实践-第4章：系统设计</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-8/">MySQL 笔记 (8) SELECT</a>
     </h1>
   
 
@@ -435,46 +450,26 @@ boards/models.py:
     
     <div class="article-meta">
       
-	<a href="/2019/01/09/django-start-guide-4/" class="article-date">
-	  <time datetime="2019-01-09T13:58:10.000Z" itemprop="datePublished">2019-01-09</time>
+	<a href="/2019/03/12/mysql-notes-8/" class="article-date">
+	  <time datetime="2019-03-12T11:48:11.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          论坛项目用例图
-几个论坛版块（boards），每个版块像一个分类一样
-指定的版块里面，用户可以通过创建新主题（Topic）开始讨论
-其他用户可以参与讨论回复
-
-
-类图
-
-Board：版块
-Topic：主题
-Post：帖子（译注：其实就是主题的回复或评论）
-
-这是模型最基本的内容：
-
-
-Board 模型
-
-name字段必须是唯一的，为了避免有重复的名称。
-description 用于说明这个版块是做什么用的。
-
-
-Topic 模型
-
-subject 表示主题内容，
-last_update 用...
+          语法1SELECT [ALL|DISTINCT] select_expr FROM -&gt; WHERE -&gt; GROUP BY [合计函数] -&gt; HAVING -&gt; ORDER BY -&gt; LIMIT
+select_expr
+可以用  表示所有字段。  `select  from tb;`
+可以使用表达式（计算公式、函数调用、字段也是个表达式）  select stu, 29+25, now() from tb;
+可以为每个列使用别名。适用于简化列标识，避免多...
         </p>
         <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-4/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -493,7 +488,7 @@ last_update 用...
 
 
   
-    <article id="post-django-start-guide-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -501,7 +496,7 @@ last_update 用...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-3/">Django入门与实践-第3章：Hello World</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-7/">MySQL 笔记 (7) 建表规范</a>
     </h1>
   
 
@@ -509,255 +504,12 @@ last_update 用...
     
     <div class="article-meta">
       
-	<a href="/2019/01/09/django-start-guide-3/" class="article-date">
-	  <time datetime="2019-01-09T13:33:36.000Z" itemprop="datePublished">2019-01-09</time>
+	<a href="/2019/03/12/mysql-notes-7/" class="article-date">
+	  <time datetime="2019-03-12T11:38:57.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          现在来写我们的第一个视图(view)
-boards应用程序中的views.py文件
-views.py
-1234from django.http import HttpResponsedef home(request):    return HttpResponse('Hello, World!')
-urls.py
-123456789from django.conf.urls import urlfrom django.contrib import adminfrom boards impo...
-        </p>
-        <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-3/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-django-start-guide-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-2/">Django入门与实践-第2章：创建项目</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/01/09/django-start-guide-2/" class="article-date">
-	  <time datetime="2019-01-09T13:14:48.000Z" itemprop="datePublished">2019-01-09</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          启动一个新项目创建一个新的 Django 项目：
-1django-admin startproject myproject
-myproject目录结构:
-123456789myproject/                  &lt;-- 高级别的文件夹 |-- myproject/             &lt;-- Django项目文件夹 |    |-- myproject/ |    |    |-- __init__.py |    |    |-- settings.py ...
-        </p>
-        <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-django-start-guide-1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-1/">Django入门与实践-第1章：环境搭建</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/01/09/django-start-guide-1/" class="article-date">
-	  <time datetime="2019-01-09T12:33:52.000Z" itemprop="datePublished">2019-01-09</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          为什么要学习Django?Django是一个用python编写的Web框架。
-Web框架, 提供了一系列工具和功能:
-
-安全功能
-数据库访问
-会话
-模板处理
-URL路由
-国际化
-本地化
-等等
-
-
-python软件包资料库（pypi）拥有超过11.6万个软件包
-
-Django是用python编写的最流行的web框架之一。提供了各种各样的开箱即用的功能:
-
-用于开发和测试的独立Web服务器
-缓存
-中间件系统
-ORM
-模板引擎
-表单处理
-基于Python单元测试的工具接口
-
-Django还自带内...
-        </p>
-        <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-You-need-to-know-css"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/You-need-to-know-css/">Web开发者应该掌握的CSS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/23/You-need-to-know-css/" class="article-date">
-	  <time datetime="2018-12-23T15:30:04.000Z" itemprop="datePublished">2018-12-23</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/GitHub精选/">GitHub精选</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-                          
-
-
-原作者发布地址: github
-
-在线查看🌏 你需要了解css
-快速开始一些可以帮助你快速启动本项目的操作：
-
-clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
-用yarn 或者 npm全局安装 docsify-cli: npm install docsify-cli -g (or yarn global add docsify-cli)
-在终端运行命令 docsify ...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/23/You-need-to-know-css/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-frontend-tech-list"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/frontend-tech-list/">前端技术清单</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/23/frontend-tech-list/" class="article-date">
-	  <time datetime="2018-12-23T14:37:09.000Z" itemprop="datePublished">2018-12-23</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/前端/">前端</a><a class="article-category-link" href="/categories/前端/GitHub精选/">GitHub精选</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
@@ -765,15 +517,29 @@ clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
       
         <p class="article-excerpt-content">
           
-原作者发布地址: github
+Normal Format, NF
+每个表保存一个实体信息
+每个表具有一个ID字段作为主键
+ID主键 + 原子表
 
 
-有同学反馈说清单内容较多，一次无法读完，过了一段时间回来就记不清阅读进度了。为了便于大家分次阅读，我制作了一个页面，在每篇文章前加上选择框（选中checkbox表示已读）用于记录你已经读过的文章，便于下次回来时继续阅读。页面链接：Frontend Tech List
+1NF, 第一范式字段不能再分，就满足第一范式。
+2NF, 第二范式
+满足第一范式的前提下，不能出现部分依赖。
+消除符合主键就可以避免部分依赖。增加单列关键字。
 
-前端技术清单学习文章的知识往往是碎片化的。而前端涉及到的面很广，这些知识如果不进行有效梳理，则无法相互串联、形成体系。因此，我结合工作体会将抽象出了一些前端基础能力，并将看过、写过的一些...
+
+3NF, 第三范式
+满足第二范式的前提下，不能出现传递依赖。
+某个字段依赖于主键，而有其他字段依赖于该字段。这就是传递依赖。
+将一个实体信息的数据放在一个表内实现。
+
+
+
+
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/23/frontend-tech-list/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -792,7 +558,7 @@ clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
 
 
   
-    <article id="post-android-sunflower"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-mysql-notes-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -800,7 +566,7 @@ clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/23/android-sunflower/">Android 向日葵</a>
+      <a class="article-title" href="/2019/03/12/mysql-notes-6/">MySQL 笔记 (6) 列属性（列约束）</a>
     </h1>
   
 
@@ -808,24 +574,296 @@ clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
     
     <div class="article-meta">
       
-	<a href="/2018/12/23/android-sunflower/" class="article-date">
-	  <time datetime="2018-12-23T13:22:33.000Z" itemprop="datePublished">2018-12-23</time>
+	<a href="/2019/03/12/mysql-notes-6/" class="article-date">
+	  <time datetime="2019-03-12T11:15:03.000Z" itemprop="datePublished">2019-03-12</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-Jetpack/">Android Jetpack</a><a class="article-category-link" href="/categories/Android/Android-Jetpack/GitHub-精选/">GitHub 精选</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          一个园艺应用程序说明Android开发最佳实践与Android Jetpack.
-Android 向日葵 (alpha)Android向日葵目前是作为一个alpha版本发布的，正在进行大量的开发。要查看最新的更改，请访问版本页面.请注意，一些更改(如数据库模式修改)在此alpha期间不向后兼容，可能会导致应用程序崩溃。在这种情况下，请卸载并重新安装应用程序.
-介绍Android Jetpack是一套组件、工具和指南，用来制作优秀的Android应用程序。它们将现有的支持库和体系结构组件组合...
+          PRIMARY 主键
+能唯一标识记录的字段，可以作为主键。
+一个表只能有一个主键。
+主键具有唯一性。
+声明字段时，用 primary key 标识。  也可以在字段列表之后声明例：create table tab ( id int, stu varchar(10), primary key (id));
+
+主键字段的值不能为null。
+主键可以由多个字段共同组成。此时需要在字段列表后声明的方法。  例：create table tab ( id int, stu varchar(10), ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/23/android-sunflower/#more">阅读全文</a>
+          <a href="/2019/03/12/mysql-notes-6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql-notes-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/12/mysql-notes-5/">MySQL 笔记 (5) 数据类型（列类型）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/12/mysql-notes-5/" class="article-date">
+	  <time datetime="2019-03-12T05:43:56.000Z" itemprop="datePublished">2019-03-12</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          数值类型整型
+
+
+类型
+字节
+范围（有符号位）
+
+
+
+
+tinyint
+1字节
+-128 ~ 127      无符号位：0 ~ 255
+
+
+smallint
+2字节
+-32768 ~ 32767
+
+
+mediumint
+3字节
+-8388608 ~ 8388607
+
+
+int
+4字节
+
+
+bigint
+8字节
+
+
+int(M)
+M表示总位数
+
+
+
+
+默认存在符号位，unsigned 属性修改
+显示宽度，如果某个数不够定义字段时设置的位数，则前面以0补填，zerofill 属性修改  例：...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/12/mysql-notes-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql-notes-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/12/mysql-notes-4/">MySQL 笔记 (4) 数据操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/12/mysql-notes-4/" class="article-date">
+	  <time datetime="2019-03-12T05:39:16.000Z" itemprop="datePublished">2019-03-12</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          增1INSERT [INTO] 表名 [(字段列表)] VALUES (值列表)[, (值列表), ...]
+
+如果要插入的值列表包含所有字段并且顺序一致，则可以省略字段列表。
+可同时插入多条数据记录！
+
+
+REPLACE 与 INSERT 完全一样，可互换。
+
+1INSERT [INTO] 表名 SET 字段名=值[, 字段名=值, ...]
+查1SELECT 字段列表 FROM 表名[ 其他子句]
+
+可来自多个表的多个字段
+其他子句可以不使用
+字段列表可以用*代替，表示所有字段
+
+删1...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/12/mysql-notes-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql-notes-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/12/mysql-notes-3/">MySQL 笔记 (3) 表的操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/12/mysql-notes-3/" class="article-date">
+	  <time datetime="2019-03-12T05:35:32.000Z" itemprop="datePublished">2019-03-12</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          创建表1CREATE [TEMPORARY] TABLE[ IF NOT EXISTS] [库名.]表名 ( 表的结构定义 )[ 表选项]
+
+每个字段必须有数据类型
+最后一个字段后不能有逗号
+TEMPORARY 临时表，会话结束时表自动消失
+
+对于字段的定义：
+1字段名 数据类型 [NOT NULL | NULL] [DEFAULT default_value] [AUTO_INCREMENT] [UNIQUE [KEY] | [PRIMARY] KEY] [COMMENT 'string...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/12/mysql-notes-3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql-notes-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/12/mysql-notes-2/">MySQL 笔记 (2) 数据库操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/12/mysql-notes-2/" class="article-date">
+	  <time datetime="2019-03-12T05:32:22.000Z" itemprop="datePublished">2019-03-12</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL-笔记/">MySQL 笔记</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          查看当前数据库1SELECT DATABASE();
+显示当前时间、用户名、数据库版本1SELECT now(), user(), version();
+创建库1CREATE DATABASE[ IF NOT EXISTS] 数据库名 数据库选项
+数据库选项：    CHARACTER SET charset_name    COLLATE collation_name
+查看已有库1SHOW DATABASES[ LIKE 'PATTERN']
+查看当前库信息1SHOW CREATE DA...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/03/12/mysql-notes-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -848,7 +886,7 @@ Android 向日葵 (alpha)Android向日葵目前是作为一个alpha版本发布�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
   </nav>
 
 </section>

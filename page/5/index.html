@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-SpringBoot2-1-JavaEE"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-django-start-guide-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/21/SpringBoot2-1-JavaEE/">Spring Boot 2精髓 - (1) JavaEE简介</a>
+      <a class="article-title" href="/2019/01/09/django-start-guide-7/">Django入门与实践-第7章：模板引擎设置</a>
     </h1>
   
 
@@ -273,28 +273,25 @@
     
     <div class="article-meta">
       
-	<a href="/2018/12/21/SpringBoot2-1-JavaEE/" class="article-date">
-	  <time datetime="2018-12-21T13:48:39.000Z" itemprop="datePublished">2018-12-21</time>
+	<a href="/2019/01/09/django-start-guide-7/" class="article-date">
+	  <time datetime="2019-01-09T15:18:36.000Z" itemprop="datePublished">2019-01-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-Java EEJava EE 架构Java EE 是一种企业应用的软件架构 。
-作为企业应用或者互联网应用的架构， 总有如下功能需求， JavaEE有相应的规范实现与之 对应 。
-
-Web 支持 : 企业应用、互联网应用越来越多的是基于 B/S 的结构， Java EE 对应的有Serviet规范，规定了 Web 容器、 Serviet 组件 ， 还设有 JSP&amp;JSTL 处理动态页面 。
-
-事务支持: 提供事务管理器，支持管理事务，如单一数据库、 多个数据库，以及数据 库和其他...
+          在manage.py所在的目录创建一个名为 templates的新文件夹：
+1234567myproject/ |-- myproject/ |    |-- boards/ |    |-- myproject/ |    |-- templates/   &lt;-- 这里 |    +-- manage.py +-- venv/
+templates/home.html
+123456789101112131415&lt;!DOCTYPE html&gt;&lt;html&gt;  &l...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/21/SpringBoot2-1-JavaEE/#more">阅读全文</a>
+          <a href="/2019/01/09/django-start-guide-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -313,7 +310,7 @@ Web 支持 : 企业应用、互联网应用越来越多的是基于 B/S 的结�
 
 
   
-    <article id="post-httpie"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-django-start-guide-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -321,7 +318,7 @@ Web 支持 : 企业应用、互联网应用越来越多的是基于 B/S 的结�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/21/httpie/">httpie</a>
+      <a class="article-title" href="/2019/01/09/django-start-guide-6/">Django入门与实践-第6章：第一个视图函数</a>
     </h1>
   
 
@@ -329,36 +326,23 @@ Web 支持 : 企业应用、互联网应用越来越多的是基于 B/S 的结�
     
     <div class="article-meta">
       
-	<a href="/2018/12/21/httpie/" class="article-date">
-	  <time datetime="2018-12-21T08:38:35.000Z" itemprop="datePublished">2018-12-21</time>
+	<a href="/2019/01/09/django-start-guide-6/" class="article-date">
+	  <time datetime="2019-01-09T15:12:57.000Z" itemprop="datePublished">2019-01-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/工具/">工具</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          HTTPie—aitch-tee-tee-pie—是一个命令行HTTP客户端，具有直观的UI、JSON支持、语法高亮显示、类似wget的下载、插件等。
-
-HTTPie由一个单独的http命令组成，该命令被设计用于与http服务器、RESTful api和web服务进行无痛调试和交互:
-
-合理的默认值
-表达和直观的命令语法
-彩色和格式化的终端输出
-内置的JSON支持
-持久会话
-表单和文件上传
-HTTPS、代理和身份验证支持
-支持任意请求数据和标题
-Wget-like下载
-扩展
-支持Linux...
+          boards/views.py
+12345678910111213from django.http import HttpResponsefrom .models import Boarddef home(request):    boards = Board.objects.all()    boards_names = list()    for board in boards:        boards_names.append(board.name)    response_ht...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/21/httpie/#more">阅读全文</a>
+          <a href="/2019/01/09/django-start-guide-6/#more">阅读全文</a>
         </p>
       
     </div>
@@ -377,7 +361,7 @@ Wget-like下载
 
 
   
-    <article id="post-ory-editor-readme"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-django-start-guide-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -385,7 +369,7 @@ Wget-like下载
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/15/ory-editor-readme/">ORY编辑器</a>
+      <a class="article-title" href="/2019/01/09/django-start-guide-5/">Django入门与实践-第5章：模型设计</a>
     </h1>
   
 
@@ -393,8 +377,323 @@ Wget-like下载
     
     <div class="article-meta">
       
-	<a href="/2018/12/15/ory-editor-readme/" class="article-date">
-	  <time datetime="2018-12-14T23:48:17.000Z" itemprop="datePublished">2018-12-15</time>
+	<a href="/2019/01/09/django-start-guide-5/" class="article-date">
+	  <time datetime="2019-01-09T14:23:52.000Z" itemprop="datePublished">2019-01-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          模型这些模型基本上代表了应用程序的数据库设计。
+
+Board
+Topic
+Post
+
+User 模型被命名为内置应用叫 auth，它以命名空间 django.contrib.auth 的形式出现在 INSTALLED_APPS 配置中。
+boards/models.py:
+1234567891011121314151617181920from django.db import modelsfrom django.contrib.auth.models import Userclass Bo...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/09/django-start-guide-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-django-start-guide-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/09/django-start-guide-4/">Django入门与实践-第4章：系统设计</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/09/django-start-guide-4/" class="article-date">
+	  <time datetime="2019-01-09T13:58:10.000Z" itemprop="datePublished">2019-01-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          论坛项目用例图
+几个论坛版块（boards），每个版块像一个分类一样
+指定的版块里面，用户可以通过创建新主题（Topic）开始讨论
+其他用户可以参与讨论回复
+
+
+类图
+
+Board：版块
+Topic：主题
+Post：帖子（译注：其实就是主题的回复或评论）
+
+这是模型最基本的内容：
+
+
+Board 模型
+
+name字段必须是唯一的，为了避免有重复的名称。
+description 用于说明这个版块是做什么用的。
+
+
+Topic 模型
+
+subject 表示主题内容，
+last_update 用...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/09/django-start-guide-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-django-start-guide-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/09/django-start-guide-3/">Django入门与实践-第3章：Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/09/django-start-guide-3/" class="article-date">
+	  <time datetime="2019-01-09T13:33:36.000Z" itemprop="datePublished">2019-01-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          现在来写我们的第一个视图(view)
+boards应用程序中的views.py文件
+views.py
+1234from django.http import HttpResponsedef home(request):    return HttpResponse('Hello, World!')
+urls.py
+123456789from django.conf.urls import urlfrom django.contrib import adminfrom boards impo...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/09/django-start-guide-3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-django-start-guide-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/09/django-start-guide-2/">Django入门与实践-第2章：创建项目</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/09/django-start-guide-2/" class="article-date">
+	  <time datetime="2019-01-09T13:14:48.000Z" itemprop="datePublished">2019-01-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          启动一个新项目创建一个新的 Django 项目：
+1django-admin startproject myproject
+myproject目录结构:
+123456789myproject/                  &lt;-- 高级别的文件夹 |-- myproject/             &lt;-- Django项目文件夹 |    |-- myproject/ |    |    |-- __init__.py |    |    |-- settings.py ...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/09/django-start-guide-2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-django-start-guide-1"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/09/django-start-guide-1/">Django入门与实践-第1章：环境搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/09/django-start-guide-1/" class="article-date">
+	  <time datetime="2019-01-09T12:33:52.000Z" itemprop="datePublished">2019-01-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          为什么要学习Django?Django是一个用python编写的Web框架。
+Web框架, 提供了一系列工具和功能:
+
+安全功能
+数据库访问
+会话
+模板处理
+URL路由
+国际化
+本地化
+等等
+
+
+python软件包资料库（pypi）拥有超过11.6万个软件包
+
+Django是用python编写的最流行的web框架之一。提供了各种各样的开箱即用的功能:
+
+用于开发和测试的独立Web服务器
+缓存
+中间件系统
+ORM
+模板引擎
+表单处理
+基于Python单元测试的工具接口
+
+Django还自带内...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/09/django-start-guide-1/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-You-need-to-know-css"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/23/You-need-to-know-css/">Web开发者应该掌握的CSS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/23/You-need-to-know-css/" class="article-date">
+	  <time datetime="2018-12-23T15:30:04.000Z" itemprop="datePublished">2018-12-23</time>
 	</a>
 
       
@@ -405,17 +704,20 @@ Wget-like下载
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          下一代，高度定制的内容编辑器为浏览器-React和Redux。所见即所得。https://ory-editor.aeneas.io
-ORY编辑器是一个智能、可扩展和现代的编辑器(“所见即所得”)，用于用React编写的web。如果您受够了contenteditable的限制，那么您是正确的。
-
-ORY编辑器用于德国最大的电子学习网站www.serlo.org(每月约800k uniques)，以改善wiki的体验。
-查看演示在ory-editor.aeneas.io!
+                          
 
 
-重要的: 此编辑...
+原作者发布地址: github
+
+在线查看🌏 你需要了解css
+快速开始一些可以帮助你快速启动本项目的操作：
+
+clone 这个仓库: https://github.com/l-hammer/You-need-to-know-css.git
+用yarn 或者 npm全局安装 docsify-cli: npm install docsify-cli -g (or yarn global add docsify-cli)
+在终端运行命令 docsify ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/15/ory-editor-readme/#more">阅读全文</a>
+          <a href="/2018/12/23/You-need-to-know-css/#more">阅读全文</a>
         </p>
       
     </div>
@@ -434,7 +736,7 @@ ORY编辑器用于德国最大的电子学习网站www.serlo.org(每月约800k u
 
 
   
-    <article id="post-ory-editor-tutorials"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-frontend-tech-list"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -442,7 +744,7 @@ ORY编辑器用于德国最大的电子学习网站www.serlo.org(每月约800k u
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/14/ory-editor-tutorials/">ORY编辑器 (4)教程</a>
+      <a class="article-title" href="/2018/12/23/frontend-tech-list/">前端技术清单</a>
     </h1>
   
 
@@ -450,280 +752,8 @@ ORY编辑器用于德国最大的电子学习网站www.serlo.org(每月约800k u
     
     <div class="article-meta">
       
-	<a href="/2018/12/14/ory-editor-tutorials/" class="article-date">
-	  <time datetime="2018-12-14T14:15:14.000Z" itemprop="datePublished">2018-12-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/React/">React</a><a class="article-category-link" href="/categories/React/ORY编辑器/">ORY编辑器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          ReactJS例子在本节中，我们将创建一个使用ORY编辑器的最小化react应用程序。在我们跳过之前，请确保node.js已安装在您的系统上。
-目前，ORY编辑器只能通过npm获得，并且在ReactJS环境中工作得最好。
-ReactJS我们的目标是创建一个使用编辑器的ReactJS应用程序。为了在本教程中搭建react应用程序，我们使用create-react-app
-12$ npm i -g create-react-app$ create-react-app .
-使用npm安装编辑器:...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/14/ory-editor-tutorials/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-ory-editor-ui"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/14/ory-editor-ui/">ORY编辑器 (3)UI组件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/14/ory-editor-ui/" class="article-date">
-	  <time datetime="2018-12-14T13:48:41.000Z" itemprop="datePublished">2018-12-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/React/">React</a><a class="article-category-link" href="/categories/React/ORY编辑器/">ORY编辑器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          包编辑器由多个包组成。一个元包在ory-editor可用。
-ory-editor-core这个包是ORY编辑器的核心。它包含创建和修改布局的逻辑，并负责处理插件。
-ory-editor-ui这个存储库包含基于callemall/material-ui的ORY Editor UI React组件。虽然您不需要使用它们，但是它们提供了一种开始使用ORY编辑器的简单方法。
-ory-editor-renderer这个包包含ORY编辑器状态的渲染组件。目前，只支持HTML渲染。HTML渲染组件负责输...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/14/ory-editor-ui/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-ORY-Editor-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/14/ORY-Editor-2/">ORY编辑器 (2)ory-editor-core</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/14/ORY-Editor-2/" class="article-date">
-	  <time datetime="2018-12-14T13:01:14.000Z" itemprop="datePublished">2018-12-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/React/">React</a><a class="article-category-link" href="/categories/React/ORY编辑器/">ORY编辑器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          Coreory-editor-core
-其核心是ORY编辑器的主系统。它包含创建和修改布局的逻辑，并负责处理插件。
-开始ORY编辑器使用Redux存储来管理内部状态。创建新Editor实例时。
-123import Editor from 'ory-editor-core'const editor = new Editor()
-Redux store也被创建。因此，在应用程序生命周期中只实例化Editor一次非常重要(这称为单例模式)。
-1234import Editor from 'ory...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/14/ORY-Editor-2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-ORY-Editor-1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/14/ORY-Editor-1/">ORY编辑器 (1)介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/14/ORY-Editor-1/" class="article-date">
-	  <time datetime="2018-12-14T12:22:03.000Z" itemprop="datePublished">2018-12-14</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/React/">React</a><a class="article-category-link" href="/categories/React/ORY编辑器/">ORY编辑器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          介绍欢迎来到ORY编辑器指南。请注意，ORY编辑器需要大量的关于ReactJS、构建工具(如webpack)和ES6的知识。如果你缺乏这方面的知识，请在我们的聊天中寻求帮助。
-示范眼见为实，让我们从一个演示开始!
-
-一个可用的演示在editor.ory.sh，所以去试试它自己!
-为什么它是不同的在创建ORY之前，我们建立了类似维基百科的东西，但只是为了学习。内容是众包的，每个月有超过50万人使用这个平台。我们必须认识到，现有的开源内容编辑解决方案存在以下三个缺陷之一:
-
-制作的标记非常可怕...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/14/ORY-Editor-1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-react-jsonschema-form"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/12/react-jsonschema-form/">react-jsonschema-form</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/12/react-jsonschema-form/" class="article-date">
-	  <time datetime="2018-12-12T02:38:08.000Z" itemprop="datePublished">2018-12-12</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/React/">React</a><a class="article-category-link" href="/categories/React/第三方库/">第三方库</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          使用JSON Schema构建Web表单的React组件。https://mozilla-services.github.io/react-jsonschema-form
-一个简单的React组件，能够从JSON模式构建HTML表单，默认情况下使用Bootstrap语义。
-一个活动的游乐场在gh-pages上面。
-
-设计哲学response-jsonschema-form旨在基于JSON模式自动生成一个response表单。它是kinto-admin项目中的一个主要组件。如果您想为任何数据...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/12/12/react-jsonschema-form/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-mqyqingfeng-blog"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/06/mqyqingfeng-blog/">JavaScript[冴羽的博客]</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/12/06/mqyqingfeng-blog/" class="article-date">
-	  <time datetime="2018-12-06T05:09:27.000Z" itemprop="datePublished">2018-12-06</time>
+	<a href="/2018/12/23/frontend-tech-list/" class="article-date">
+	  <time datetime="2018-12-23T14:37:09.000Z" itemprop="datePublished">2018-12-23</time>
 	</a>
 
       
@@ -737,24 +767,13 @@ Redux store也被创建。因此，在应用程序生命周期中只实例化Edi
           
 原作者发布地址: github
 
-专栏
-掘金主页
-segmentfault主页
-新开了 知乎专栏，欢迎关注
 
-深入系列目录
-JavaScirpt深入之从原型到原型链
-JavaScript深入之词法作用域和动态作用域
-JavaScript深入之执行上下文栈
-JavaScript深入之变量对象
-JavaScript深入之作用域链
-JavaScript深入之从ECMAScript规范解读this
-JavaScript深入之执行上下文
-JavaScript深入之闭包
-JavaScript深入之参...
+有同学反馈说清单内容较多，一次无法读完，过了一段时间回来就记不清阅读进度了。为了便于大家分次阅读，我制作了一个页面，在每篇文章前加上选择框（选中checkbox表示已读）用于记录你已经读过的文章，便于下次回来时继续阅读。页面链接：Frontend Tech List
+
+前端技术清单学习文章的知识往往是碎片化的。而前端涉及到的面很广，这些知识如果不进行有效梳理，则无法相互串联、形成体系。因此，我结合工作体会将抽象出了一些前端基础能力，并将看过、写过的一些...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/06/mqyqingfeng-blog/#more">阅读全文</a>
+          <a href="/2018/12/23/frontend-tech-list/#more">阅读全文</a>
         </p>
       
     </div>
@@ -773,7 +792,7 @@ JavaScript深入之参...
 
 
   
-    <article id="post-minio"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-android-sunflower"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -781,7 +800,7 @@ JavaScript深入之参...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/12/03/minio/">Minio - 私有云存储</a>
+      <a class="article-title" href="/2018/12/23/android-sunflower/">Android 向日葵</a>
     </h1>
   
 
@@ -789,24 +808,24 @@ JavaScript深入之参...
     
     <div class="article-meta">
       
-	<a href="/2018/12/03/minio/" class="article-date">
-	  <time datetime="2018-12-03T03:01:43.000Z" itemprop="datePublished">2018-12-03</time>
+	<a href="/2018/12/23/android-sunflower/" class="article-date">
+	  <time datetime="2018-12-23T13:22:33.000Z" itemprop="datePublished">2018-12-23</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/GitHub精选/">GitHub精选</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android-Jetpack/">Android Jetpack</a><a class="article-category-link" href="/categories/Android/Android-Jetpack/GitHub-精选/">GitHub 精选</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          Minio是一款高性能的分布式对象存储服务器，专为其设计大型私有云基础设施。Minio被广泛部署在美国世界上有超过166.1M+的docker拉取。
-Minio是一个开源的对象存储服务器，与Amazon S3 api兼容:https://minio.io/downloads.html#downl…
-Minio是Apache License v2.0下发布的对象存储服务器。它与Amazon S3云存储服务兼容。它最适合存储非结构化数据，如照片、视频、日志文件、备份和容器/ VM映像。对象的大...
+          一个园艺应用程序说明Android开发最佳实践与Android Jetpack.
+Android 向日葵 (alpha)Android向日葵目前是作为一个alpha版本发布的，正在进行大量的开发。要查看最新的更改，请访问版本页面.请注意，一些更改(如数据库模式修改)在此alpha期间不向后兼容，可能会导致应用程序崩溃。在这种情况下，请卸载并重新安装应用程序.
+介绍Android Jetpack是一套组件、工具和指南，用来制作优秀的Android应用程序。它们将现有的支持库和体系结构组件组合...
         </p>
         <p class="article-more-link">
-          <a href="/2018/12/03/minio/#more">阅读全文</a>
+          <a href="/2018/12/23/android-sunflower/#more">阅读全文</a>
         </p>
       
     </div>
@@ -829,7 +848,7 @@ Minio是Apache License v2.0下发布的对象存储服务器。它与Amazon S3�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/6/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/6/">下一页 &raquo;</a>
   </nav>
 
 </section>

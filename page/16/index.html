@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-Anko-SQLite"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-my-common-grammar7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/03/Anko-SQLite/">Anko SQLite</a>
+      <a class="article-title" href="/2017/12/09/my-common-grammar7/">MySQL简单操作(7)-运算符和函数</a>
     </h1>
   
 
@@ -273,12 +273,239 @@
     
     <div class="article-meta">
       
-	<a href="/2017/11/03/Anko-SQLite/" class="article-date">
-	  <time datetime="2017-11-03T03:05:26.000Z" itemprop="datePublished">2017-11-03</time>
+	<a href="/2017/12/09/my-common-grammar7/" class="article-date">
+	  <time datetime="2017-12-09T04:25:25.000Z" itemprop="datePublished">2017-12-09</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          字符函数
+
+
+函数名
+描述
+
+
+
+
+CONCAT()
+字符连接
+
+
+CONCAT_WS()
+使用指定的分隔符进行字符连接
+
+
+FORMAT()
+数字格式化
+
+
+LOWER()
+转换成小写字母
+
+
+UPPER()
+转换成大写字母
+
+
+LEFT()
+获取左侧字符
+
+
+RIGHT()
+获取右侧字符
+
+
+LENGTH()
+获取字符串长度
+
+
+LTRIM()
+删除前导空格
+
+
+RTRIM()
+删除后导空格
+
+
+TRIM()
+删除前导空格和后导空格
+
+
+SUBSTRING()
+字符串截取
+
+
+[NOT...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar7/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar6"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar6/">MySQL简单操作(6)-子查询与连接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar6/" class="article-date">
+	  <time datetime="2017-12-09T03:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          子查询子查询（Subquery）是指出现在其他SQL语句内的SELECT子句
+例如：
+1SELECT * FROM t1 WHERE col1 = (SELECT col2 FROM t2);
+其中 SELECT * FROM t1 称为Outer Query/Outer Statement；SELECT col2 FROM t2 称为Subquery
+
+子查询指嵌套在查询内部，且必须始终出现在圆括号內
+子查询可以包括多个关键字或条件，如 DISTINCT,GROUP BY,ORDER B...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/09/my-common-grammar5/">MySQL简单操作(5)-操作数据表中的记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/09/my-common-grammar5/" class="article-date">
+	  <time datetime="2017-12-09T02:25:25.000Z" itemprop="datePublished">2017-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          插入记录
+INSERT
+  1INSERT [INTO] tal_name [(col_name,...)] &#123;VALUES|VALUE&#125;(&#123;expr|DEFAULT&#125;,...),(...),...;
+
+expr 表达式
+举例：
+1INSERT users VALUES(NULL,'Tom','123',25,1);
+
+自动递增的字段设置成NULL或DEFAULT将自增的值
+
+
+
+
+INSERT SET
+  1INSERT [INTO] tal_na...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/09/my-common-grammar5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar4/">MySQL简单操作(4)-约束以及修改数据表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar4/" class="article-date">
+	  <time datetime="2017-12-08T15:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -286,25 +513,21 @@
       
         <p class="article-excerpt-content">
           
-您是否厌倦了使用Android Cursor解析SQLite查询结果?您必须编写大量的样板代码来解析查询结果行，并将其封装在无数的try..finally块中，以便正确地关闭所有打开的资源。
-Anko提供了许多扩展功能，以简化与SQLite数据库的工作。
-目录
-在项目中使用Anko SQLite
-访问数据库
-创建和删除表
-插入数据
-查询数据
-解析查询结果
-自定义行解析器
-Cursor流
-更新值
-事务
+约束保障数据的完整性和一致性
+约束分为表级约束和列级约束
+约束类型包括: NOT NULL(非空约束) PRIMARY KEY(主键约束) UNIQUE KEY(唯一约束) DEFAULT(默认约束) FOREIGN KEY(外键约束)
 
+FOREIGN KEY(外键约束)
+保持数据一致性，完整性
+实现一对一或一对多关系
 
-在项目中使用Anko SQLite将anko-sqlite的依赖添加到您的build...
+外键约束的要求
+父表和子表必须使用相同的存储引擎，而且禁止使用临时表
+数据表的存储引擎只能为InnoDB
+外键列和参考列必须具有相似的数据类型。其中数字长度或是否符号...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/03/Anko-SQLite/#more">阅读全文</a>
+          <a href="/2017/12/08/my-common-grammar4/#more">阅读全文</a>
         </p>
       
     </div>
@@ -323,7 +546,7 @@ Cursor流
 
 
   
-    <article id="post-Anko-Layouts"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-my-common-grammar3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -331,7 +554,7 @@ Cursor流
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Layouts/">Anko 布局</a>
+      <a class="article-title" href="/2017/12/08/my-common-grammar3/">MySQL简单操作(3)-数据表</a>
     </h1>
   
 
@@ -339,12 +562,12 @@ Cursor流
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/Anko-Layouts/" class="article-date">
-	  <time datetime="2017-11-02T10:56:23.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/12/08/my-common-grammar3/" class="article-date">
+	  <time datetime="2017-12-08T14:25:25.000Z" itemprop="datePublished">2017-12-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
 
       
     </div>
@@ -352,41 +575,13 @@ Cursor流
       
         <p class="article-excerpt-content">
           
-
-为什么Anko布局?
-DSL的原因?
-支持现有的代码
-它是如何工作的
-它是可扩展的吗?
-
-
-在你的项目中使用Anko Layouts
-理解Anko
-基础知识
-AnkoComponent
-辅助块
-主题块
-布局和LayoutParams
-Listeners
-定制的协程上下文
-使用资源标识符
-实例简化符号
-UI包装
-Include标签
-
-
-Anko支持插件
-安装Anko支持插件
-使用插件
-XML DSL转换器
-
-
-
-
-为什么Anko布局?DSL的原因?默认情况下，Android中的UI是用X...
+创建数据表
+  1234CREATE TABLE [IF NOT EXISTS] table_name (    column_name data_type [NULL | NOT NULL | [AUTO_INCREMENT] PRIMARY KEY] [UNIQUE KEY] [DEFAULT default_value],    ...);
+  举例：
+  12345CREATE TABLE tb1 (    username VARCHAR(20),    age TINYINT...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Layouts/#more">阅读全文</a>
+          <a href="/2017/12/08/my-common-grammar3/#more">阅读全文</a>
         </p>
       
     </div>
@@ -405,7 +600,7 @@ XML DSL转换器
 
 
   
-    <article id="post-Anko-Commons"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-my-common-grammar2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -413,7 +608,7 @@ XML DSL转换器
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/Anko-Commons/">Anko 通用模块</a>
+      <a class="article-title" href="/2017/12/08/my-common-grammar2/">MySQL简单操作(2)-数据类型</a>
     </h1>
   
 
@@ -421,12 +616,179 @@ XML DSL转换器
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/Anko-Commons/" class="article-date">
-	  <time datetime="2017-11-02T09:24:52.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/12/08/my-common-grammar2/" class="article-date">
+	  <time datetime="2017-12-08T13:25:25.000Z" itemprop="datePublished">2017-12-08</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          整型
+
+
+数据类型
+存储范围
+字节
+
+
+
+
+TINYINT
+有符号：-128～127；无符号：0～255
+1
+
+
+SMALLINT
+有符号：-32768～32767；无符号：0～65535
+2
+
+
+MEDIUMINT
+有符号：-8388608～8388607；无符号：0～16777215
+3
+
+
+INT
+有符号：-2^31～2^31-1；无符号：0～2^32-1
+4
+
+
+BIGINT
+有符号：-2^63～2^63-1；无符号：0～2^64-1
+8
+
+
+
+浮点型FLOAT[M,D]DOUBL...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar2/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-my-common-grammar"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/08/my-common-grammar/">MySQL简单操作(1)-数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/08/my-common-grammar/" class="article-date">
+	  <time datetime="2017-12-08T12:25:25.000Z" itemprop="datePublished">2017-12-08</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a><a class="article-category-link" href="/categories/MySQL/MySQL简单操作/">MySQL简单操作</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          登陆/退出1mysql -u`username` -p`password` -P`port` -h`host`
+
+MySQL默认端口号 3306
+MySQL超级用户名 root
+
+退出
+
+mysql &gt; exit;
+mysql &gt; quit;
+mysql &gt; \q;
+
+修改提示符1shell&gt;mysql -uroot -proot --prompt 提示符
+或
+1mysql&gt;prompt 提示符
+
+
+
+参数
+描述
+
+
+
+
+\D
+日期
+
+
+\d
+当前数据库
+
+
+...
+        </p>
+        <p class="article-more-link">
+          <a href="/2017/12/08/my-common-grammar/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-BrowserPlugin"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/12/04/BrowserPlugin/">SampleBrowserPlugin介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/12/04/BrowserPlugin/" class="article-date">
+	  <time datetime="2017-12-04T14:56:21.000Z" itemprop="datePublished">2017-12-04</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Browser-Plugin/">Browser Plugin</a>
 
       
     </div>
@@ -434,39 +796,13 @@ XML DSL转换器
       
         <p class="article-excerpt-content">
           
-目录
-在您的项目中使用anko-commons助手
-Intents
-Intent构建器函数
-有用Intent调用
+对于Android浏览器插件的开发可以参考源码的实例,development/samples/browseplugin实例。本文对此实例进行介绍。
 
-
-Dialogs
-Toasts
-SnackBars
-Alerts
-Selectors
-进度dialogs
-
-
-日志
-强风格
-日志记录器对象风格
-
-
-Misc
-颜色
-维度值
-applyRecursively()
-
-
-
-
-在您的项目中使用anko-commons助手添加anko-commons到对您的build.gradle的依赖:
-1234dependencies &#123...
+介绍这个示例插件是为了给插件开发者一个参考点，看看android浏览器插件是如何创建的，以及如何使用可用的APIs。一个插件就像标准的apk一样被打包，可以通过市场或adb安装。示例插件尝试尽可能多地使用APIs，但不幸的是，并不是所有的APIs都被覆盖。
+试图让一个插件演示一个屏幕上所有可能的API交互是不现实的。另一方面，我们也不希望每...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/Anko-Commons/#more">阅读全文</a>
+          <a href="/2017/12/04/BrowserPlugin/#more">阅读全文</a>
         </p>
       
     </div>
@@ -485,7 +821,7 @@ applyRecursively()
 
 
   
-    <article id="post-anko"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-sdkman"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -493,7 +829,7 @@ applyRecursively()
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/anko/">Anko 简介</a>
+      <a class="article-title" href="/2017/11/30/sdkman/">SDKMAN! 软件开发工具包管理器</a>
     </h1>
   
 
@@ -501,12 +837,12 @@ applyRecursively()
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/anko/" class="article-date">
-	  <time datetime="2017-11-02T09:02:35.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/11/30/sdkman/" class="article-date">
+	  <time datetime="2017-11-30T05:11:25.000Z" itemprop="datePublished">2017-11-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a><a class="article-category-link" href="/categories/Kotlin/Anko/">Anko</a>
+    <a class="article-category-link" href="/categories/包管理器/">包管理器</a>
 
       
     </div>
@@ -514,22 +850,12 @@ applyRecursively()
       
         <p class="article-excerpt-content">
           
-Anko是一个Kotlin库，它使Android应用程序开发的速度更快、更容易。它使您的代码干净、易于阅读，并且让您忘记了Android SDK的粗糙边缘。
-Anko由几个部分组成:
+SDKMAN!是在大多数Unix系统上管理多个软件开发套件的并行版本的工具。它提供了一个方便的命令行接口(CLI)和用于安装、切换、删除和列出候选对象的API。以前被称为GVM的Groovy环境管理器，它是由非常有用的RVM和rbenv工具所启发的，这些工具在Ruby社区中广泛使用。
 
-Anko Commons:一个全是助手的轻量级的库:
-Intents;
-Dialogs和toasts;
-Logging;
-资源和尺寸;
-
-
-Anko Layouts:一种快速和类型安全的方式来编写动态的Android布局
-Anko SQLite:用于Android SQLite的查询DSL和解析器集合
-A...
+安装在类unix平台上安装SDKMAN!，就像以前一样容易。SDKMAN!在Mac OSX、Linux、Cygwin、Solaris和FreeBSD上可以顺利安装。我们还支持Bash和ZSH shell。...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/anko/#more">阅读全文</a>
+          <a href="/2017/11/30/sdkman/#more">阅读全文</a>
         </p>
       
     </div>
@@ -548,7 +874,7 @@ A...
 
 
   
-    <article id="post-ADBShell"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-cocoapods"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -556,7 +882,7 @@ A...
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/ADBShell/">ADB Shell</a>
+      <a class="article-title" href="/2017/11/30/cocoapods/">CocoaPods 简介</a>
     </h1>
   
 
@@ -564,326 +890,27 @@ A...
     
     <div class="article-meta">
       
-	<a href="/2017/11/02/ADBShell/" class="article-date">
-	  <time datetime="2017-11-02T05:09:20.000Z" itemprop="datePublished">2017-11-02</time>
+	<a href="/2017/11/30/cocoapods/" class="article-date">
+	  <time datetime="2017-11-30T05:03:18.000Z" itemprop="datePublished">2017-11-30</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/ADB/">ADB</a>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a><a class="article-category-link" href="/categories/iOS/包管理器/">包管理器</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          
-Android调试桥(adb)是一种命令行工具，可以让您与仿真器或连接的Android设备进行通信。您可以在android sdk/platform-tools中找到adb工具，或者下载adb工具包。
-目录
-ADB调试
-无线
-包管理器
-文件管理器
-网络
-调试
-截图
-系统
+          CocoaPods是Swift和Objective-C Cocoa项目的一个依赖关系管理器。它有超过4万个libraries，在超过280万个应用程序中被使用。CocoaPods可以帮助你优雅地扩展你的项目。
 
-
-
-ADB调试adb devices打印所有附加的模拟器/设备的列表
-1adb devices
-打印所有附加的模拟器/设备的列表
-12e4b25377        deviceemulator-5554  devic...
+安装CocoaPods是用Ruby构建的，在OS X上默认安装有Ruby，我们建议你使用默认的Ruby。
+使用默认的Ruby安装要求您在安装gems时使用sudo。指南中还有进一步的安装说明。
+12# Xcode 8 + 9$ sudo gem install cocoapods
+...
         </p>
         <p class="article-more-link">
-          <a href="/2017/11/02/ADBShell/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-MasteringAndroidNDKBuildSystem2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/02/MasteringAndroidNDKBuildSystem2/">掌握Android NDK构建系统——第2部分:独立的工具链</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/" class="article-date">
-	  <time datetime="2017-11-02T03:31:23.000Z" itemprop="datePublished">2017-11-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/NDK/">NDK</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第2部分:独立的工具链原英文文章
-
-这是“掌握NDK”的第2部分。在前面的部分(第1部分)中，我们介绍了如何使用ndk-build构建Android本地项目，我们还介绍了一些高级技术来管理和定制大型项目的构建脚本。
-尽管对于大多数Android本地项目来说，ndk-build可能已经足够了，但是在某些情况下仍然可能需要独立的工具链。例如，如果您已经有一个c/c++项目，它可能非常复杂，并且有一个复杂的makefile。在这种情况下，你可能不想把...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/02/MasteringAndroidNDKBuildSystem2/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-MasteringAndroidNDKBuildSystem1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/MasteringAndroidNDKBuildSystem1/">掌握Android NDK构建系统——第1部分:使用ndk-build技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/" class="article-date">
-	  <time datetime="2017-11-01T10:31:23.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/NDK/">NDK</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]掌握Android NDK构建系统——第1部分:使用ndk-build技巧原英文文章
-
-这篇文章不是一个“Hello world!”类型的NDK”教程。尽管我仍将简要介绍ndk构建的基本知识，但这并不是本文的重点。相反，我将总结一些非常有用的NDK技巧和我在项目中使用的技巧。希望这些建议对于那些想要建立一些实际项目的人来说是非常有用的，而不是一个学习NDK的玩具项目。因此，目标读者是中或高级Android开发人员。这篇文章包含两个部分:
-
-第1部分:ndk-build 在这一部分中...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/MasteringAndroidNDKBuildSystem1/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-AndroidNDKNativeProgramLauncher"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/AndroidNDKNativeProgramLauncher/">Android原生程序启动工具</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/AndroidNDKNativeProgramLauncher/" class="article-date">
-	  <time datetime="2017-11-01T08:38:27.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/NDK/">NDK</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          [翻译]Android原生程序启动工具
-
-介绍
-主要功能
-入门指南
-下载地址
-提供了什么?
-使用说明
-一些细节
-
-
-示例
-示例1
-示例2
-
-
-
-
-介绍在使用原生代码开发Android应用程序时，我们通常需要使用纯原生模式来调试它(使用NDK编译代码，生成可执行文件，并通过adb shell执行它)。有时，我们甚至不想花时间开发Android应用，因为我们只是想测试一些原生函数。
-以处理OpenCL和GPU为例。编写的程序中超过80%将是性能和基准代码。由于它们直接操作系统驱动程序或硬件，所...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/11/01/AndroidNDKNativeProgramLauncher/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-App研发录-笔记-二"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/App研发录-笔记-二/">App研发录 笔记二: App开发中的高级技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/App研发录-笔记-二/" class="article-date">
-	  <time datetime="2017-10-27T09:50:58.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/读书笔记/">读书笔记</a><a class="article-category-link" href="/categories/Android/读书笔记/App研发录/">App研发录</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-第二部分 App开发中的高级技巧
-Crash 异常收集与统计异常收集UncaughtExceptionHandler - 用于处理未捕获的异常 (App级别)
- 1 
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/App研发录-笔记-二/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-RxSwift-Warnings"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/27/RxSwift-Warnings/">RxSwift 警告</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/27/RxSwift-Warnings/" class="article-date">
-	  <time datetime="2017-10-27T06:02:45.000Z" itemprop="datePublished">2017-10-27</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/iOS/">iOS</a><a class="article-category-link" href="/categories/iOS/Swift/">Swift</a><a class="article-category-link" href="/categories/iOS/Swift/RxSwift/">RxSwift</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          
-警告
-未使用 disposable
-未使用 observable 序列
-
-
-未使用 disposable (unused-disposable)下面的内容对于subscribe*、bind*和drive*家族函数 返回Disposable。
-你会收到这样的警告:
-1234567891011let xs: Observable&lt;E&gt; ....xs  .filter &#123; ... &#125;  .map &#123; ... &#125;  .switchLatest(...
-        </p>
-        <p class="article-more-link">
-          <a href="/2017/10/27/RxSwift-Warnings/#more">阅读全文</a>
+          <a href="/2017/11/30/cocoapods/#more">阅读全文</a>
         </p>
       
     </div>
@@ -906,7 +933,7 @@ Crash 异常收集与统计异常收集UncaughtExceptionHandler - 用于处理�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/15/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/17/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/15/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/17/">下一页 &raquo;</a>
   </nav>
 
 </section>

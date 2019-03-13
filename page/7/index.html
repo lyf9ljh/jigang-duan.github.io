@@ -257,7 +257,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-yeoman-authoring8"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-B"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -265,7 +265,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring8/">编写自己的Yeoman生成器-8.测试生成器</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-B/">Spring Boot 2精髓 - (11) MongoDB</a>
     </h1>
   
 
@@ -273,230 +273,12 @@
     
     <div class="article-meta">
       
-	<a href="/2018/08/30/yeoman-authoring8/" class="article-date">
-	  <time datetime="2018-08-29T16:40:40.000Z" itemprop="datePublished">2018-08-30</time>
+	<a href="/2018/12/22/SpringBoot2-B/" class="article-date">
+	  <time datetime="2018-12-22T07:43:19.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          继续阅读以了解有关Yeoman添加的测试助手的更多信息，以减轻单元测试生成器的痛苦。
-以下示例假设您在BDD模式下使用Mocha。全局概念应该很容易应用于您选择的单元测试框架
-组织你的测试保持测试简单易于编辑非常重要。
-通常，组织测试的最佳方法是将每个生成器和子生成器分隔为自己的describe块。然后，describe为您的生成器接受的每个选项添加一个块。然后，it为每个断言（或相关断言）使用一个块。
-在代码中，您应该得到类似于此的结构：
-12345678describe('backbo...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring8/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-yeoman-authoring7"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring7/">编写自己的Yeoman生成器-7.管理配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/30/yeoman-authoring7/" class="article-date">
-	  <time datetime="2018-08-29T16:23:40.000Z" itemprop="datePublished">2018-08-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          存储用户配置选项并在子生成器之间共享它们是一项常见任务。例如，通常共享首选项，如语言（用户使用CoffeeScript吗？），样式选项（用空格或制表符缩进）等。
-这些配置可以通过Yeoman Storage API存储在.yo-rc.json文件中。可以通过generator.config对象访问此API 。
-以下是您将使用的一些常用方法。
-方法this.config.save()
-此方法将配置写入.yo-rc.json文件。如果该文件尚不存在，则该save方法将创建该文件。
-该.yo-r...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring7/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-yeoman-authoring6"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring6/">编写自己的Yeoman生成器-6.使用文件系统</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/30/yeoman-authoring6/" class="article-date">
-	  <time datetime="2018-08-29T16:23:20.000Z" itemprop="datePublished">2018-08-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          位置上下文和路径Yeoman文件实用程序基于您在磁盘上始终有两个位置上下文的想法。这些上下文是您的生成器最有可能读取和写入的文件夹。
-目标上下文第一个上下文是目标上下文。目标是Yeoman将脚手架新应用程序的文件夹。它是您的用户项目文件夹，它是您编写大部分脚手架的地方。
-目标上下文定义为当前工作目录或包含.yo-rc.json文件的最近父文件夹。该.yo-rc.json文件定义了Yeoman项目的根。此文件允许您的用户在子目录中运行命令并让它们在项目上工作。这确保了最终用户的一致行为。
-你...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring6/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-yeoman-authoring5"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/30/yeoman-authoring5/">编写自己的Yeoman生成器-5.依赖关系管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/30/yeoman-authoring5/" class="article-date">
-	  <time datetime="2018-08-29T16:06:07.000Z" itemprop="datePublished">2018-08-30</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          一旦运行了生成器，通常需要运行npm(或Yarn)和Bower来安装生成器所需的任何附加依赖项。
-由于这些任务非常频繁，Yeoman已经把它们抽象出来了。我们还将介绍如何通过其他工具启动安装。
-
-注意，Yeoman提供的安装助手将自动安排安装作为install队列的一部分运行一次。如果您需要在它们运行之后运行任何东西，请使用end队列。
-
-NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使多个生成器多次调用命令，Yeoman也会确保命令只运行...
-        </p>
-        <p class="article-more-link">
-          <a href="/2018/08/30/yeoman-authoring5/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-yeoman-authoring4"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring4/">编写自己的Yeoman生成器-4.组合性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/08/29/yeoman-authoring4/" class="article-date">
-	  <time datetime="2018-08-29T15:32:44.000Z" itemprop="datePublished">2018-08-29</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
@@ -504,16 +286,18 @@ NPM您只需要调用this.npmInstall()即可运行npm安装。npm install即使�
       
         <p class="article-excerpt-content">
           
-组合性是一种将较小的部件组合在一起构成一件大事的方法。排序像Voltron®
 
-Yeoman为生成器提供了多种方式来建立共同点。重写相同的功能没有任何意义，因此提供了一个API来在其他生成器中使用生成器。
-在Yeoman中，可组合性可以通过两种方式启动：
+支持各种编程语言， Java、 C++、 PHP、 C#、 Python 等
+面向文档存储，文档格式是类似 JSON 的 BSON 格式
+提供丰富的查询功能，支持对数据建立索引
+模式自由，不需要事先定义文档格式，可以任意改变文档格式
 
-生成器可以决定与另一个生成器（例如，generator-backbone使用generator-mocha）组合。
-最终用户也可以发起合成（例如，Simon想要生成具有SASS和Rails的Backbone项目）。注意：最终用户发起的...
+安装 MongoDB进入 bin 目录，有以下常用命令:
+
+mongod，启动 MongoDB 数据库。通常需要指定一个数据存放的目录，默认是/data/db。 如果启动的时候没有创建/data/巾 ，则会启动失败。可以通过--dbpath 参数指定特定...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring4/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-B/#more">阅读全文</a>
         </p>
       
     </div>
@@ -532,7 +316,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring3"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-A"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -540,7 +324,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring3/">编写自己的Yeoman生成器-3.与用户交互</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-A/">Spring Boot 2精髓 - (10) REST</a>
     </h1>
   
 
@@ -548,24 +332,32 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring3/" class="article-date">
-	  <time datetime="2018-08-29T15:00:05.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/12/22/SpringBoot2-A/" class="article-date">
+	  <time datetime="2018-12-22T07:16:11.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          您的生成器将与最终用户进行大量交互。默认情况下，Yeoman在终端上运行，但它也支持不同工具可以提供的自定义用户界面。例如，没有什么能阻止Yeoman生成器在编辑器或独立应用程序之类的图形工具中运行。
-为了实现这种灵活性，Yeoman提供了一组用户界面元素抽象。作为作者，您有责任在与最终用户交互时仅使用这些抽象。使用其他方法可能会阻止您的生成器在不同的Yeoman工具中正确运行。
-例如，永远不要使用console.log()或process.stdout.write()输出内容很重要。使用...
+          
+REST 简介REST，即Representational State Transfer的缩写，翻译为表现层状态转化
+
+资源: 网络上的一个实体, 以用 一个 U阳(统一 资源定位符〉指向它，每种资源对应一个特定的 URI
+表现层: “资源”具体呈现出来的 形式称为它的“表现层”( Representation) 
+状态转化: 服务器端发生“状态转化”( State Transfer)。 而这种转化是建立在表现层之上的
+
+REST 风格的架构
+使用api作为Web上下文
+增加版本标识
+标...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring3/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-A/#more">阅读全文</a>
         </p>
       
     </div>
@@ -584,7 +376,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-9"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -592,7 +384,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring2/">编写自己的Yeoman生成器-2.运行时上下文</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-9/">Spring Boot 2精髓 - (9) 单元测试</a>
     </h1>
   
 
@@ -600,27 +392,22 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring2/" class="article-date">
-	  <time datetime="2018-08-29T14:30:47.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/12/22/SpringBoot2-9/" class="article-date">
+	  <time datetime="2018-12-22T07:13:40.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          编写生成器时要掌握的最重要的概念之一是方法的运行方式和上下文。
-原型方法作为动作直接附加到Generator原型的每个方法都被认为是一项任务。每个任务都由Yeoman环境运行循环按顺序运行。
-换句话说，返回的对象上的每个函数Object.getPrototypeOf(Generator)都将自动运行。
-辅助方法和私有方法既然您知道原型方法被认为是一项任务，您可能想知道如何定义不会自动调用的辅助方法或私有方法。有三种不同的方法可以实现这一目标。
-
-方法名称下划线前缀（例如_private_m...
+          
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring2/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-9/#more">阅读全文</a>
         </p>
       
     </div>
@@ -639,7 +426,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-yeoman-authoring"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-8"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -647,7 +434,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/29/yeoman-authoring/">编写自己的Yeoman生成器-1.入门</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-8/">Spring Boot 2精髓 - (8) 部署</a>
     </h1>
   
 
@@ -655,28 +442,25 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/29/yeoman-authoring/" class="article-date">
-	  <time datetime="2018-08-29T12:18:35.000Z" itemprop="datePublished">2018-08-29</time>
+	<a href="/2018/12/22/SpringBoot2-8/" class="article-date">
+	  <time datetime="2018-12-22T06:53:27.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a><a class="article-category-link" href="/categories/Node-js/编写自己的Yeoman生成器/">编写自己的Yeoman生成器</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          Generators(生成器)是Yeoman生态系统的基石。它们是yo为最终用户生成文件所运行的插件。
-阅读本节，您将学习如何创建和分发自己的内容。
-
-注意：我们构建了一个生成器 - Generator，以帮助用户开始使用自己的生成器。一旦理解了以下概念，请随意使用它来引导您自己的生成器。
-
-组织你的生成器设置为Node Module生成器的核心是Node.js模块
-首先，创建一个文件夹，在其中编写您的生成器。文件夹必须命名generator-name（name您的生成器的名称）。这很重要...
+          
+Spring Boot 应用部署通常会面临多个部署环境，如测试环境、线上环境、演示环境等
+以 jar文件运行SpringBoot默认以jar包方式运行， 可以在 Maven配置如下插件，将 SpringBoot导出成可执行 的 jar 文件
+123456789&lt;!-- Package as an executable jar --&gt;&lt;build&gt;    &lt;plugins&gt;        &lt;plugin&gt;            &lt;gro...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/29/yeoman-authoring/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-8/#more">阅读全文</a>
         </p>
       
     </div>
@@ -695,7 +479,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-vscode-extensions-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-7"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -703,7 +487,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-5/">VSCode Webview API</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-7/">Spring Boot 2精髓 - (7) 配置</a>
     </h1>
   
 
@@ -711,24 +495,31 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/11/vscode-extensions-5/" class="article-date">
-	  <time datetime="2018-08-11T09:54:45.000Z" itemprop="datePublished">2018-08-11</time>
+	<a href="/2018/12/22/SpringBoot2-7/" class="article-date">
+	  <time datetime="2018-12-22T06:18:24.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          webview API允许扩展在Visual Studio Code中创建完全可定制的视图。例如，内置的Markdown扩展使用webview来呈现Markdown预览。除了VS Code的原生api支持之外，webview还可以用来构建复杂的用户界面。
-可以将webview看作是您的扩展控制的VS Code中的iframe。一个webview可以呈现这个框架中几乎所有的HTML内容，它通过消息传递与扩展通信。这种自由使webview变得非常强大，并打开了一个全新的扩展范围。
-我应该使用w...
+          
+配置 Spring Bootapplication.properties
+服务器配置
+server.address 服务器IP 绑定地址，如果你的主机上有多个网卡，可以绑定一个 IP 地址
+server.session.timeout 会话过期时间，以秒为单位
+server.eηor.path 服务器出错后的处理路径/error
+server.servlet contextpath Spring Boot应用的上下文
+server.port Spring Boot 应用监听端口
+
+使用其...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-5/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-7/#more">阅读全文</a>
         </p>
       
     </div>
@@ -747,7 +538,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
 
   
-    <article id="post-vscode-extensions-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-SpringBoot2-6"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -755,7 +546,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/11/vscode-extensions-4/">例子——语言服务器</a>
+      <a class="article-title" href="/2018/12/22/SpringBoot2-6/">Spring Boot 2精髓 - (6) Spring Data JPA</a>
     </h1>
   
 
@@ -763,25 +554,269 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
     
     <div class="article-meta">
       
-	<a href="/2018/08/11/vscode-extensions-4/" class="article-date">
-	  <time datetime="2018-08-11T08:01:10.000Z" itemprop="datePublished">2018-08-11</time>
+	<a href="/2018/12/22/SpringBoot2-6/" class="article-date">
+	  <time datetime="2018-12-22T05:27:16.000Z" itemprop="datePublished">2018-12-22</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a><a class="article-category-link" href="/categories/VS-Code/插件/">插件</a>
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p class="article-excerpt-content">
-          简要概述语言服务器和语言服务器协议语言服务器是一种特殊的扩展，支持VS代码中许多编程语言的编辑体验。使用语言服务器，您可以实现VS代码中支持的自动完成、错误检查(诊断)、快速定义和许多其他语言特性。
-然而，在VS代码中实现对语言特性的支持时，我们发现了三个常见问题:
-首先，语言服务器通常是用它们的本地编程语言实现的，这在将它们与具有节点的VS代码集成方面提出了挑战。js运行时。
-此外，语言特性可能是资源密集型的。例如，要正确地验证一个文件，Language Server需要解析大量文件，为...
+          
+以 Java Entity为中心， 将实体和实体关系对应到数据库的表和表关系， 这类工具通常就是 ORM (Object Relational Mapping)工具。 对实体和实体关系的操作会映射到 数据库操作。
+SpringData JPA，它在 JPA 提供的简单语义上做了一定的封装，满足 CRUD 查询
+SpringData，它为 Spring框架对访问 SQL和 NoSQL数据库提供了一致的方式
+集成 Spring Data JPA1234&lt;dependency&gt;  ...
         </p>
         <p class="article-more-link">
-          <a href="/2018/08/11/vscode-extensions-4/#more">阅读全文</a>
+          <a href="/2018/12/22/SpringBoot2-6/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-SpringBoot2-5"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/22/SpringBoot2-5/">Spring Boot 2精髓 - (5) 数据库访问</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/22/SpringBoot2-5/" class="article-date">
+	  <time datetime="2018-12-22T01:54:42.000Z" itemprop="datePublished">2018-12-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+JDBCTemplate是Spring 自带的，在JDBC的基础上做了一定封装
+BeetlSQL是笔者研发的，除了封装了 JDBC操作，还带有 SQL 管理、跨数据库平台支持等企业功能
+以SQL为核心的数据库访问更为灵活，更能适应大型的互联网和企业应用，学习门槛较低
+以对象方式访问数据库更适合较为简单的系统或者工具类系统，学习门槛刚开始较低，但因为 ORM(Object Relational Mapping)持久化上下文等概念过于复杂
+配置数据源数据库连接池 HikariCP
+12345...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/12/22/SpringBoot2-5/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-SpringBoot2-4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/22/SpringBoot2-4/">Spring Boot 2精髓 - (4) 视图技术</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/22/SpringBoot2-4/" class="article-date">
+	  <time datetime="2018-12-21T18:23:20.000Z" itemprop="datePublished">2018-12-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+Beetl 模板引擎特点:
+
+功能完备
+
+语法和使用习俗简单, 类似 JavaScript 语法和习俗
+
+超高的性能
+
+易于整合
+
+支持模板单独开发和测试
+
+扩展和个性化。 Beet!支持自定义方法、格式化函数、虚拟属性、标签和 HTML 标签。同时 也支持自定义占位符和控制语句起始符号。
+
+
+依赖beetl-framework-starter
+定界符号和占位符Beetl 支持自定义定界符号和占位符号 ， 默认使用&lt;%%&gt;作为定界符号，使用${}作为占位符号
+变量全局变量全局...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/12/22/SpringBoot2-4/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-SpringBoot2-3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/22/SpringBoot2-3/">Spring Boot 2精髓 - (3) MVC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/22/SpringBoot2-3/" class="article-date">
+	  <time datetime="2018-12-21T16:27:44.000Z" itemprop="datePublished">2018-12-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+MVC 框架会处理如下技术需求 :
+
+HTTP URL 映射到 Controller某个方法
+HTTP 参数映射到 Controller 方法的参数上，比如参数映射到某个 Java 对象，或者上 传附件映射到某个 File对象上:
+参数的校验;
+MVC 错误处理
+MVC 中如何调用视图
+MVC 中如何序列化对象成 JSON
+拦截器等高级定制
+
+集成MVC框架引入依赖1234&lt;depeηdency&gt;    &lt;groupid&gt;org.springframework.b...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/12/22/SpringBoot2-3/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-SpringBoot2-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/21/SpringBoot2-2/">Spring Boot 2精髓 - (2) 基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/21/SpringBoot2-2/" class="article-date">
+	  <time datetime="2018-12-21T15:27:17.000Z" itemprop="datePublished">2018-12-21</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Spring/">Spring</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/">Spring Boot</a><a class="article-category-link" href="/categories/Spring/Spring-Boot/精髓/">精髓</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          
+开发工具
+JDK8+
+
+Maven
+
+使构建项目变得很容易， Maven 屏蔽了构建的复杂过程。比如，你只需要输入 maven package 就可以构建整个 Java 项目。
+统一了构建项目的方式，不同人、不同公司的项目都有同样的描述项目和构建项目的 方式， Maven 通过 pom.xml 来描述项目，井提供一系列插件来构建项目 。只要熟悉了 Maven，就熟悉了所有项目的构建方式 。
+提出了一套开发项目的最佳实践，而不用每个项目都有不同结构和构建方式，比如源 代码在 src/mai...
+        </p>
+        <p class="article-more-link">
+          <a href="/2018/12/21/SpringBoot2-2/#more">阅读全文</a>
         </p>
       
     </div>
@@ -804,7 +839,7 @@ Yeoman为生成器提供了多种方式来建立共同点。重写相同的功�
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/8/">下一页 &raquo;</a>
   </nav>
 
 </section>
