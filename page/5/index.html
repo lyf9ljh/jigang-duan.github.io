@@ -257,110 +257,6 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-django-start-guide-7"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-7/">Django入门与实践-第7章：模板引擎设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/01/09/django-start-guide-7/" class="article-date">
-	  <time datetime="2019-01-09T15:18:36.000Z" itemprop="datePublished">2019-01-09</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          在manage.py所在的目录创建一个名为 templates的新文件夹：
-1234567myproject/ |-- myproject/ |    |-- boards/ |    |-- myproject/ |    |-- templates/   &lt;-- 这里 |    +-- manage.py +-- venv/
-templates/home.html
-123456789101112131415&lt;!DOCTYPE html&gt;&lt;html&gt;  &l...
-        </p>
-        <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-7/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-django-start-guide-6"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/09/django-start-guide-6/">Django入门与实践-第6章：第一个视图函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/01/09/django-start-guide-6/" class="article-date">
-	  <time datetime="2019-01-09T15:12:57.000Z" itemprop="datePublished">2019-01-09</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Python/">Python</a><a class="article-category-link" href="/categories/Python/Django/">Django</a><a class="article-category-link" href="/categories/Python/Django/Django入门指南/">Django入门指南</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          boards/views.py
-12345678910111213from django.http import HttpResponsefrom .models import Boarddef home(request):    boards = Board.objects.all()    boards_names = list()    for board in boards:        boards_names.append(board.name)    response_ht...
-        </p>
-        <p class="article-more-link">
-          <a href="/2019/01/09/django-start-guide-6/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
     <article id="post-django-start-guide-5"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -658,6 +554,131 @@ Django还自带内...
         </p>
         <p class="article-more-link">
           <a href="/2019/01/09/django-start-guide-1/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-json-api"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/05/json-api/">JSON:API规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/05/json-api/" class="article-date">
+	  <time datetime="2019-01-05T06:19:04.000Z" itemprop="datePublished">2019-01-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/JSON-API/">JSON API</a><a class="article-category-link" href="/categories/JSON-API/规范/">规范</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          英文原址
+JSON:API版本，目前是1.0版。新版本的JSON:API将始终向后兼容使用永不删除，只添加策略。
+介绍JSON:API是关于客户机应该如何请求获取或修改资源，以及服务器应该如何响应这些请求的规范。
+JSON:API旨在将请求数量和客户机与服务器之间传输的数据量最小化。这种效率是在不损害可读性、灵活性或可发现性的情况下实现的。
+JSON:API需要使用JSON:API媒体类型(application/vnd.api+json)来交换数据。
+约定本文件中必须、一定不能`、REQ...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/05/json-api/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-点餐系统"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/01/02/点餐系统/">点餐系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/01/02/点餐系统/" class="article-date">
+	  <time datetime="2019-01-02T04:34:26.000Z" itemprop="datePublished">2019-01-02</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/实例/">实例</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          介绍基础介绍
+买家（微信）
+微信点餐
+微信支付
+微信通知（模版消息）
+
+
+卖家（PC）管理系统
+扫描登录
+订单
+商品
+类目
+
+
+
+技术要点前后端分离 —— RestFul
+前端Vue —— WebApp
+后端Spring Boot —— Bootstrap+Freemarker+JQuery
+Spring Boot —— 数据库 —— JPA —— MyBatis
+Spring Boot —— 缓存 —— Redis —— 分布式Session + 分布式锁
+Spring Boot —— ...
+        </p>
+        <p class="article-more-link">
+          <a href="/2019/01/02/点餐系统/#more">阅读全文</a>
         </p>
       
     </div>
